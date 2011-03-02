@@ -1,0 +1,68 @@
+" Velocity macro syntax file
+" Language:     Velocity
+" Maintainer:   William Webber (william@williamwebber.com)
+" URL:         
+" Last Change:  2002 March 6
+
+" see http://jakarta.apache.org/velocity for more information on the
+" Velocity macro language.
+"
+" This file is based on the webmacro syntax file
+
+" For version 5.x: Clear all syntax items
+" For version 6.x: Quit when a syntax file was already loaded
+if !exists("main_syntax")
+  if version < 600
+    syntax clear
+  elseif exists("b:current_syntax")
+  finish
+endif
+  let main_syntax = 'velocity'
+endif
+
+
+if version < 600
+  source $VIM/vim58/syntax/html.vim
+else
+  runtime! syntax/html.vim
+  unlet b:current_syntax
+endif
+
+syn cluster htmlPreProc add=velocityIf,velocityEnd,velocityComment,velocityForEach,velocityVariable
+
+syn match velocityIf "#if \?(\(([^)]*)\)*[^)]*)" 
+syn match velocityForEach "#foreach.*)" 
+syn match velocitySet "#set.*)"
+syn match velocityEnd "#end"
+syn match velocityElseIf "#elseif\?(\(([^)]*)\)*[^)]*)"
+syn match velocityElse "#else"
+syn match velocityComment "##.*"
+syn match velocityMacroCall "#\i*([^)]*)"
+syn match velocityVariable "\$!\={\=[a-zA-Z][a-zA-Z0-9_.-]*\(()\)\=}\="
+syn region velocityCommentR start="#\*" end="\*#" 
+
+hi link velocityComment Comment
+hi link velocityCommentR Comment
+hi link velocitySet Statement
+hi link velocityIf Statement
+hi link velocityElse Statement
+hi link velocityElseIf Statement
+hi link velocityForEach Statement
+hi link velocityEnd Statement
+hi link velocityMacroCall Statement
+"hi link velocitySet PreProc
+"hi link velocityIf PreProc
+"hi link velocityElse PreProc
+"hi link velocityElseIf PreProc
+"hi link velocityForEach PreProc
+"hi link velocityEnd PreProc
+"hi link velocityMacroCall PreProc
+hi link velocityVariable Special
+
+let b:current_syntax = "velocity"
+
+if main_syntax == 'velocity'
+  unlet main_syntax
+endif
+
+
