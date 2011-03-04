@@ -88,6 +88,7 @@ set wildmode=longest,list,full
 set wildmenu
 set nobackup
 set nowritebackup
+syntax on
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
