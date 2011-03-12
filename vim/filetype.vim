@@ -8,4 +8,5 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.sass setfiletype sass
   au! BufRead,BufNewFile *.rake setfiletype ruby
   au! BufRead,BufNewFile *.proto setfiletype proto
+  au! BufRead,BufNewFile Gemfile setfiletype ruby
 augroup END

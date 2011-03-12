@@ -32,6 +32,14 @@ if has("autocmd")
   autocmd Filetype python set keywordprg=pydoc
   autocmd Filetype python set iskeyword=a-z,A-Z,48-57,_,.  
 
+  autocmd Filetype ruby set tabstop=2
+  autocmd Filetype ruby set shiftwidth=2
+  autocmd Filetype ruby set smarttab
+  autocmd Filetype ruby set expandtab
+  autocmd Filetype ruby set softtabstop=0
+  autocmd Filetype ruby set autoindent
+  autocmd Filetype ruby set enc=utf-8
+
   autocmd Filetype javascript set tabstop=2
   autocmd Filetype javascript set shiftwidth=2
   autocmd Filetype javascript set smarttab
@@ -57,6 +65,22 @@ if has("autocmd")
   autocmd Filetype css set autoindent
   autocmd Filetype css set enc=utf-8
 
+  autocmd Filetype html set tabstop=2
+  autocmd Filetype html set shiftwidth=2
+  autocmd Filetype html set smarttab
+  autocmd Filetype html set expandtab
+  autocmd Filetype html set softtabstop=2
+  autocmd Filetype html set autoindent
+  autocmd Filetype html set enc=utf-8
+
+  autocmd Filetype haml set tabstop=2
+  autocmd Filetype haml set shiftwidth=2
+  autocmd Filetype haml set smarttab
+  autocmd Filetype haml set expandtab
+  autocmd Filetype haml set softtabstop=2
+  autocmd Filetype haml set autoindent
+  autocmd Filetype haml set enc=utf-8
+
   autocmd Filetype java nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>  
@@ -79,7 +103,7 @@ set linebreak
 set hidden             " Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes) in terminals
 set foldmethod=syntax
-set foldlevelstart=1
+set foldlevelstart=2
 set nocp
 set completeopt=menu
 set wildignore=*.o,*.pyc,*.pyo
