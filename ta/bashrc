@@ -1,0 +1,4 @@
+source ~/.bash/ta/env.bash
+source ~/.bash/ta/aliases.bash
+source ~/.bash/ta/search.bash
+source ~/.bash/ta/automagic_trtop.bash
