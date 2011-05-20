@@ -1,0 +1,5 @@
+alias ll='ls -lh'
+alias la='ls -Alh'
+alias mem='top -o vsize'
+alias cpu='top -o cpu'
+alias svndiff='svn diff -x -uw'

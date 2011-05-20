@@ -40,6 +40,22 @@ if has("autocmd")
   autocmd Filetype ruby set autoindent
   autocmd Filetype ruby set enc=utf-8
 
+  autocmd Filetype sh set tabstop=2
+  autocmd Filetype sh set shiftwidth=2
+  autocmd Filetype sh set smarttab
+  autocmd Filetype sh set expandtab
+  autocmd Filetype sh set softtabstop=0
+  autocmd Filetype sh set autoindent
+  autocmd Filetype sh set enc=utf-8
+
+  autocmd Filetype zsh set tabstop=2
+  autocmd Filetype zsh set shiftwidth=2
+  autocmd Filetype zsh set smarttab
+  autocmd Filetype zsh set expandtab
+  autocmd Filetype zsh set softtabstop=0
+  autocmd Filetype zsh set autoindent
+  autocmd Filetype zsh set enc=utf-8
+
   autocmd Filetype javascript set tabstop=2
   autocmd Filetype javascript set shiftwidth=2
   autocmd Filetype javascript set smarttab
@@ -73,6 +89,14 @@ if has("autocmd")
   autocmd Filetype html set autoindent
   autocmd Filetype html set enc=utf-8
 
+  autocmd Filetype xml set tabstop=4
+  autocmd Filetype xml set shiftwidth=4
+  autocmd Filetype xml set smarttab
+  autocmd Filetype xml set expandtab
+  autocmd Filetype xml set softtabstop=4
+  autocmd Filetype xml set autoindent
+  autocmd Filetype xml set enc=utf-8
+
   autocmd Filetype haml set tabstop=2
   autocmd Filetype haml set shiftwidth=2
   autocmd Filetype haml set smarttab
@@ -84,6 +108,14 @@ if has("autocmd")
   autocmd Filetype java nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>  
+
+  autocmd Filetype ant set tabstop=2
+  autocmd Filetype ant set shiftwidth=2
+  autocmd Filetype ant set smarttab
+  autocmd Filetype ant set expandtab
+  autocmd Filetype ant set softtabstop=2
+  autocmd Filetype ant set autoindent
+  autocmd Filetype ant set enc=utf-8
 
 else
 

@@ -1,0 +1,11 @@
+Host *
+	Compression yes
+
+Host crawfish
+	User wasche
+
+Host lumberjack
+	User wasche
+
+Host *-dev
+	User root

@@ -1,0 +1,12 @@
+"1.0b6 (created: 2011/03/09 09:25:18)
+
+loadplugins '\.(js|penta)$'
+group user
+
+set passkeys+=^https?\://www\.google\.com/reader/:jAkv,ga,ge
+nnoremap <silent> <leader>d :toolbartoggle Web Developer Toolbar<CR>
+nnoremap <leader>g og 
+nnoremap <leader>G tg 
+nnoremap <M-f> /
+
+" vim: set ft=pentadactyl:
