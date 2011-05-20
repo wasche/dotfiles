@@ -8,6 +8,7 @@ base: $(HOME)/.vim \
 	$(HOME)/.subversion \
 	$(HOME)/.bash \
 	$(HOME)/.bashrc \
+	$(HOME)/.bash_profile \
 	$(HOME)/.zsh \
 	$(HOME)/.zshrc
 
