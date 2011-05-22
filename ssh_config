@@ -9,3 +9,6 @@ Host lumberjack
 
 Host *-dev
 	User root
+
+Host thenest
+	User kurakin
