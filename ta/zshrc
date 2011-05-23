@@ -1,3 +1,3 @@
-source ~/.zsh/ta/env.zsh
-source ~/.zsh/ta/completion.zsh
-source ~/.zsh/ta/aliases.zsh
+source ~/.zsh/special/env.zsh
+source ~/.zsh/special/completion.zsh
+source ~/.zsh/special/aliases.zsh

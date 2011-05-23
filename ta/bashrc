@@ -1,4 +1,4 @@
-source ~/.bash/ta/env.bash
-source ~/.bash/ta/aliases.bash
-source ~/.bash/ta/search.bash
-source ~/.bash/ta/automagic_trtop.bash
+source ~/.bash/special/env.bash
+source ~/.bash/special/aliases.bash
+source ~/.bash/special/search.bash
+source ~/.bash/special/automagic_trtop.bash

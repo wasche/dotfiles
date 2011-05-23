@@ -20,15 +20,9 @@ $(HOME)/.ssh/config: ssh_config
 	ln -fs $(abspath $<) $@
 
 ta-bash: ta/bash
-	ln -fs $(abspath $<) $(HOME)/.bash/ta
-
-ta-zsh: ta/zsh
-	ln -fs $(abspath $<) $(HOME)/.zsh/ta
-
-ta-bashrc: ta/bashrc
 	ln -fs $(abspath $<) $(HOME)/.bash/special
 
-ta-zshrc: ta/zshrc
+ta-zsh: ta/zsh
 	ln -fs $(abspath $<) $(HOME)/.zsh/special
 
-ta: ta-bash ta-bashrc ta-zsh ta-zshrc
+ta: ta-bash ta-zsh
