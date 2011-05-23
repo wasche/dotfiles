@@ -29,12 +29,13 @@ trtop()
 }
 
 # define profiles based on directories:
-zstyle ':chpwd:profiles:/Users/wasche/src(|/|/*)' profile ta
+zstyle ':chpwd:profiles:/Users/wasche/src/*' profile ta
 
 # configuration for profile 'ta':
 chpwd_profile_ta()
 {
-  [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-  print "chpwd(): Switching to profile: $profile"
+  #[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+  # skip if current dir is under $TRTOP
+  [[ ${PWD#${TRTOP}} != ${PWD} ]] && return 1
   findtrtop
 }

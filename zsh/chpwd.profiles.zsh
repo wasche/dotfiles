@@ -15,6 +15,4 @@ if [[ $ZSH_VERSION == 4.3.<3->* || $ZSH_VERSION == 4.<4->* || $ZSH_VERSION == <5
   }
   chpwd_functions=( ${chpwd_functions} chpwd_profiles )
 
-  print "directory profiles active"
-
 fi
