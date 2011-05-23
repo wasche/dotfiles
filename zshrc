@@ -2,6 +2,7 @@ source ~/.zsh/env.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/chpwd.profiles.zsh
+source ~/.zsh/prompt.zsh
 
 # todo check $OSTYPE == "darwin10.0"
 source ~/.zsh/macosx.zsh

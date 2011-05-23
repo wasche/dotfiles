@@ -2,7 +2,7 @@ export WHTOP="$HOME/src/warehouse"
 
 findtrtop()
 {
-	candidate=`pwd`
+	candidate=$PWD
 	while true; do
 		if [[ -e "$candidate/GNUmaster" &&  -e "$candidate/tr" && -e "$candidate/Crawlers" ]]; then
 			trtop $candidate
@@ -23,6 +23,7 @@ trtop()
 		oldscripts=$TRTOP/scripts:$TRTOP/scripts/build
 		export TRTOP=$1
 		export PATH=${PATH//:$oldscripts}:$TRTOP/scripts:$TRTOP/scripts/build
+    export SVN_BRANCH=$(svntr branch)    
 	else
 		echo $TRTOP
 	fi

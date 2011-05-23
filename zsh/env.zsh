@@ -65,24 +65,9 @@ sudo-command-line()
 zle -N sudo-command-line
 bindkey '^Os' sudo-command-line
 
-# jump behind the first work on the cmdline
-# useful to add options
-jump_after_command()
-{
-  local words
-  words=(${(z)BUFFER})
-
-  if (( ${#words} <= 1 )); then
-    CURSOR=${#BUFFER}
-  else
-    CURSOR=${#${words[1]}}
-  fi
-}
-zle -N jump_after_command
-bindkey '^x1' jump_after_command
-
 autoload zkbd
 # setup key accordingly
+# vim-style keybinds - hit ESC then these
 [[ -n "${key[Home]}" ]] && bindkey "${key[Home]}" beginning-of-line
 [[ -n "${key[End]}" ]] && bindkey "${key[End]}" end-of-line
 [[ -n "${key[Insert]}" ]] && bindkey "${key[Insert]}" overwrite-mode
@@ -94,41 +79,10 @@ bindkey ";5D" backward-word
 bindkey ";5C" forward-word
 
 [[ -f /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
+
 [[ -f ~/.dir_colors ]] && which dircolors >/dev/null 2>&1 && eval "`dircolors ~/.dir_colors -b`"
 
 autoload -Uz vcs_info
-
-local prompt_color
-if [[ $SSH_CLIENT == "" ]]; then
-  local prompt_color=cyan
-else
-  local prompt_color=green
-fi
-
-if [[ $UID == 0 ]]; then
-  local prompt_color=red
-fi
-
-local bgc="%B%F{black}"
-local fgc="%b%F{$prompt_color}"
-local error="%F{red}"
-local jobcolor="%F{blue}"
-local reset="%b%f"
-if [[ $(echo $ZSH_VERSION | cut -d. -f3) < 9 ]]; then
-  local bgc="%{$fg_bold[black]%}"
-  local fgc="%{$fg_no_bold[$prompt_color]%}"
-  local error="%{$fg[red]%}"
-  local jobcolor="%{$fg[blue]%}"
-  local reset="%{$reset_color%}"
-fi
-export PS1="$bgc($fgc%n$bgc@$fgc%m$bgc|$fgc%h$bgc @$fgc%t$bgc){$fgc%~$bgc}$reset"
-export PS1="${PS1}
-$bgc-$fgc%#$reset "
-export RPS1="$bgc(%b%1(j,$jobcolor,$reset)%j %(?,$reset,$error)%?$reset"
-
-local bgc=${bgc//[%]b/%%b}
-local fgc=${fgc//[%]b/%%b}
-local reset=${reset//[%]b/%%b}
 
 zle_highlight=(region:underline
                special:bold
