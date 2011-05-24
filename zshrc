@@ -1,11 +1,10 @@
-source ~/.zsh/env.zsh
-source ~/.zsh/completion.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/chpwd.profiles.zsh
-source ~/.zsh/prompt.zsh
+for config_file (~/.zsh/*.zsh) source $config_file
 
-# todo check $OSTYPE == "darwin10.0"
-source ~/.zsh/macosx.zsh
+if [[ ${OSTYPE#darwin} != $OSTYPE ]]; then
+  source ~/.zsh/os/macosx.zsh
+elif [[ ${OSTYPE#linux} != $OSTYPE ]]; then
+  source ~/.zsh/os/linux.zsh
+fi
 
 if [[ -f ~/.zsh/special/zshrc ]]; then
   source ~/.zsh/special/zshrc

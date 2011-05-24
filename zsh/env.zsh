@@ -1,4 +1,4 @@
-
+# use vi style keybinds
 bindkey -v
 
 if [[ -d ~/.gem/ruby/ ]] && ls ~/.gem/ruby/ >/dev/null 2>&1; then

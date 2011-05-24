@@ -37,9 +37,6 @@ alias v='vim'
 
 alias jobs='jobs -dlp'
 
-alias aptc='apt-cache'
-alias aptcs='apt-cache search'
-
 alias conflicts="svn st | egrep '^\s*C'"
 
 alias cpu='top -o cpu'
