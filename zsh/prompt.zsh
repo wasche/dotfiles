@@ -28,10 +28,9 @@ local cc="%{$fg[cyan]%}"
 local c="%{$reset_color%}"
 
 # the actual prompt
-BASE_PROMPT="$cm%n$c@$cy%m$c:$cG%2~$c"
+PROMPT="$cm%n$c@$cy%m$c:$cG%2~$c> "
 BASE_RPROMPT="%B%?%b $c$cg%*$c"
 
-PROMPT="$BASE_PROMPT○$c "
 RPROMPT=$BASE_RPROMPT
 
 update_prompt()
@@ -47,18 +46,11 @@ update_prompt()
     if [[ ! -z "$SVN_REV" ]]; then
       export RPROMPT="$RPROMPT ${cc}r$SVN_REV$c"
     fi
-
-    export PROMPT="$BASE_PROMPT±$c "
-
   elif $(git branch >/dev/null 2>/dev/null); then
     ref=$(git symbolic-ref HEAD 2>/dev/null) || return
     export GIT_BRANCH=${ref#refs/heads/}
 
-    export PROMPT="$BASE_PROMPT☿$c "
     export RPROMPT="$RPROMPT $cm$GIT_BRANCH$cg$(parse_git_dirty)$c"
-
-  else
-    export PROMPT="$BASE_PROMPT○$c "
   fi
 }
 
