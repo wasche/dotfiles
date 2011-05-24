@@ -1,3 +1,7 @@
-source ~/.zsh/special/env.zsh
-source ~/.zsh/special/completion.zsh
-source ~/.zsh/special/aliases.zsh
+for config_file (~/.zsh/special/*.zsh) source $config_file
+
+if [[ ${OSTYPE#darwin} != $OSTYPE ]]; then
+  source ~/.zsh/special/os/macosx.zsh
+elif [[ ${OSTYPE#linux} != $OSTYPE ]]; then
+  source ~/.zsh/special/os/linux.zsh
+fi

@@ -17,12 +17,20 @@ parse_git_dirty()
 }
 
 # colors
-local cm="%{$fg[magenta]%}"
-local cy="%{$fg[yellow]%}"
-local cg="%{$fg[green]%}"
-local cG="%{$fg_bold[green]%}"
-local cc="%{$fg[cyan]%}"
-local c="%{$reset_color%}"
+local cm="%F{magenta}"
+local cy="%F{yellow}"
+local cg="%F{green}"
+local cG="%F{green}"
+local cc="%F{cyan}"
+local c="%b%f"
+if [[ $ZSH_VERSION == 4.3.<9->* || $ZSH_VERSION == 4.<4->* || $ZSH_VERSION == <5->* ]] ; then
+  local cm="%{$fg[magenta]%}"
+  local cy="%{$fg[yellow]%}"
+  local cg="%{$fg[green]%}"
+  local cG="%{$fg_bold[green]%}"
+  local cc="%{$fg[cyan]%}"
+  local c="%{$reset_color%}"
+fi
 
 # the actual prompt
 BASE_PROMPT="$cm%n$c@$cy%m$c:$cG%2~$c"
@@ -35,7 +43,7 @@ update_prompt()
 {
   export RPROMPT="$BASE_RPROMPT"
 
-  if $(svn info >/dev/null 2>/dev/null); then
+  if [[ -d ./.svn ]]; then
     export SVN_REV=$(svn info | grep 'Revision: ' | cut -f 2 -d ' ')
     export SVN_DIR=$PWD
     if [[ ! -z "$SVN_BRANCH" ]]; then

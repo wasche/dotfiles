@@ -6,6 +6,8 @@ base: $(HOME)/.vim \
 	$(HOME)/.screenrc \
 	$(HOME)/.ackrc \
 	$(HOME)/.subversion \
+	$(HOME)/.gitconfig \
+	$(HOME)/.gitignore \
 	$(HOME)/.bash \
 	$(HOME)/.bashrc \
 	$(HOME)/.bash_profile \
