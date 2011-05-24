@@ -31,6 +31,7 @@ trtop()
 
 # define profiles based on directories:
 zstyle ':chpwd:profiles:/Users/wasche/src/*' profile ta
+zstyle ':chpwd:profiles:/home/site/*' profile ta
 
 # configuration for profile 'ta':
 chpwd_profile_ta()
