@@ -12,14 +12,33 @@ function gt() { gg tr/com/TripResearch/$@ }
 alias vc='vim $TRTOP/config/hsots/$(hostname -s).ini'
 alias fs='$TRTOP/scripts/find-string --relative'
 
-alias ja='ant -f $TRTOP/build.xml jar-applications'
-alias jj='make -C $TRTOP/site/js3 -j5'
-alias jc='make -C $TRTOP/site/css2 -j5'
-alias jt='ant -f $TRTOP/build.xml jar-tr'
-alias ju='ant -f $TRTOP/build.xml jar-unittests'
-alias jlt='ant -f $TRTOP/build.xml jar-livetools'
-
 alias sx='sudo $TRTOP/scripts/httpd_stop.sh'
+
+js()
+{
+  make -C $TRTOP/site/js3 -j5 "$@"
+}
+
+css()
+{
+  make -C $TRTOP/site/css2 -j5 "$@"
+}
+
+j()
+{
+  if [[ "$1" == "tr" ]]; then
+    ant -f $TRTOP/build.xml jar-tr
+  elif [[ "$1" == "app" ]]; then
+    ant -f $TRTOP/build.xml jar-applications
+  elif [[ "$1" == "unit" ]]; then
+    ant -f $TRTOP/build.xml jar-unittests
+  elif [[ "$1" == "lt" ]]; then
+    ant -f $TRTOP/build.xml jar-livetools
+  else
+    echo "Try again? (tr|app|unit|lt)" 1>&2
+    return 2
+  fi
+}
 
 function hc()
 {
