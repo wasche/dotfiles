@@ -33,12 +33,19 @@ BASE_RPROMPT="%B%?%b $c$cg%*$c"
 
 RPROMPT=$BASE_RPROMPT
 
+get_svn_cmd()
+{
+  which "svn.real" >/dev/null 2>&1 && echo "svn.real" && return
+  echo "svn"
+}
+
 update_prompt()
 {
   export RPROMPT="$BASE_RPROMPT"
 
   if [[ -d ./.svn ]]; then
-    export SVN_REV=$(svn info | grep 'Revision: ' | cut -f 2 -d ' ')
+    SVN="$(get_svn_cmd)"
+    export SVN_REV=$($SVN info | grep 'Revision: ' | cut -f 2 -d ' ')
     export SVN_DIR=$PWD
     if [[ ! -z "$SVN_BRANCH" ]]; then
       export RPROMPT="$RPROMPT $cm$SVN_BRANCH$c"
