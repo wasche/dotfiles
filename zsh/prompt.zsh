@@ -1,3 +1,6 @@
+autoload colors zsh/terminfo
+if [[ "$terminfo[colors]" -ge 8 ]]; then colors; fi
+
 parse_git_dirty()
 {
   gitstat=$(git status 2>/dev/null | grep '\(# Untracked\|# Changes\|# Changed but not updated:\)')
@@ -17,20 +20,12 @@ parse_git_dirty()
 }
 
 # colors
-local cm="%F{magenta}"
-local cy="%F{yellow}"
-local cg="%F{green}"
-local cG="%F{green}"
-local cc="%F{cyan}"
-local c="%b%f"
-if [[ $ZSH_VERSION == 4.3.<9->* || $ZSH_VERSION == 4.<4->* || $ZSH_VERSION == <5->* ]] ; then
-  local cm="%{$fg[magenta]%}"
-  local cy="%{$fg[yellow]%}"
-  local cg="%{$fg[green]%}"
-  local cG="%{$fg_bold[green]%}"
-  local cc="%{$fg[cyan]%}"
-  local c="%{$reset_color%}"
-fi
+local cm="%{$fg[magenta]%}"
+local cy="%{$fg[yellow]%}"
+local cg="%{$fg[green]%}"
+local cG="%{$fg_bold[green]%}"
+local cc="%{$fg[cyan]%}"
+local c="%{$reset_color%}"
 
 # the actual prompt
 BASE_PROMPT="$cm%n$c@$cy%m$c:$cG%2~$c"
