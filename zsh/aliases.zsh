@@ -19,21 +19,22 @@ alias la='la -Al'
 try_which gitk gitview
 alias ga="gitk --all $|"
 
-mvim_remote()
-{
-  if [[ $# > 0 ]]; then
-    mvim --remote-silent "$@"
-  else
-    mvim "$@"
-  fi
-}
-if which mvim >/dev/null 2>&1; then
-  alias vim="mvim_remote"
-  alias V='\vim -'
-else
-  alias V='vim -'
-fi
 alias v='vim'
+
+#mvim_remote()
+#{
+#  if [[ $# > 0 ]]; then
+#    mvim --remote-silent "$@"
+#  else
+#    mvim "$@"
+#  fi
+#}
+#if which mvim >/dev/null 2>&1; then
+#  alias vim="mvim_remote"
+#  alias V='\vim -'
+#else
+#  alias V='vim -'
+#fi
 
 alias jobs='jobs -dlp'
 

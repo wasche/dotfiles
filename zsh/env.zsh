@@ -18,10 +18,10 @@ fi
 export CC="gcc"
 
 export ANT_HOME=/usr/local/ant
+export ANT_OPTS=-Xmx500M;
 
-autoload -U compinit colors
+autoload -U compinit
 compinit
-colors
 
 # make zsh not kill background jobs when it closes
 setopt nohup
@@ -81,8 +81,6 @@ bindkey ";5C" forward-word
 [[ -f /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
 [[ -f ~/.dir_colors ]] && which dircolors >/dev/null 2>&1 && eval "`dircolors ~/.dir_colors -b`"
-
-autoload -Uz vcs_info
 
 zle_highlight=(region:underline
                special:bold

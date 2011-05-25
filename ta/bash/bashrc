@@ -1,4 +1,7 @@
-source ~/.bash/special/env.bash
-source ~/.bash/special/aliases.bash
-source ~/.bash/special/search.bash
-source ~/.bash/special/automagic_trtop.bash
+for config_file (~/.bash/special/*.bash) source $config_file
+
+if [[ ${OSTYPE#darwin} != $OSTYPE ]]; then
+  source ~/.bash/special/os/macosx.zsh
+elif [[ ${OSTYPE#linux} != $OSTYPE ]]; then
+  source ~/.bash/special/os/linux.zsh
+fi

@@ -1,6 +1,8 @@
 autoload colors zsh/terminfo
 if [[ "$terminfo[colors]" -ge 8 ]]; then colors; fi
 
+autoload -Uz vcs_info
+
 parse_git_dirty()
 {
   gitstat=$(git status 2>/dev/null | grep '\(# Untracked\|# Changes\|# Changed but not updated:\)')
