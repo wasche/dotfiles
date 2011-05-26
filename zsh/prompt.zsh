@@ -1,5 +1,6 @@
 autoload colors zsh/terminfo
-if [[ "$terminfo[colors]" -ge 8 ]]; then colors; fi
+#if [[ "$terminfo[colors]" -ge 8 ]]; then colors; fi
+colors
 
 autoload -Uz vcs_info
 
