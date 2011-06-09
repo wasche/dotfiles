@@ -9,4 +9,5 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.rake setfiletype ruby
   au! BufRead,BufNewFile *.proto setfiletype proto
   au! BufRead,BufNewFile Gemfile setfiletype ruby
+  au! BufRead,BufNewFile *.json setfiletype javascript
 augroup END

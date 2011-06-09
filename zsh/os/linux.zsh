@@ -4,6 +4,11 @@ if [[ "$PATH" != *$JAVA_HOME/bin* ]]; then
   export PATH=$PATH:$JAVA_HOME/bin
 fi
 
+export ANT_HOME=/usr/local/ant
+if [[ "$PATH" != *$ANT_HOME/bin* ]]; then
+  export PATH=$PATH:$ANT_HOME/bin
+fi
+
 export PATH=/usr/local/bin:$PATH
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
