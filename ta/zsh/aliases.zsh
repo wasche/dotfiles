@@ -40,6 +40,15 @@ j()
   fi
 }
 
+u()
+{
+  if [[ $# -gt 0 ]]; then
+    ENSURE_PURE_UNIT_TESTS=true javatr.sh org.junit.runner.JUnitCore "$@"
+  else
+    make -C $TRTOP test-html
+  fi
+}
+
 function hc()
 {
   if [[ $# -gt 0 ]]; then
