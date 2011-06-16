@@ -7,8 +7,21 @@ Host crawfish
 Host lumberjack
 	User wasche
 
+Host carrot
+	User root
+
+Host merge
+	User root
+
+Host merge2
+	User root
+
 Host *-dev
+	User root
+
+Host ruby
 	User root
 
 Host thenest
 	User kurakin
+

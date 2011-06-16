@@ -9,6 +9,10 @@ if [[ -d ~/.gem/ruby/ ]] && ls ~/.gem/ruby/ >/dev/null 2>&1; then
   done
 fi
 
+if [[ -d /usr/local/node/bin ]]; then
+  export PATH=$PATH:/usr/local/node/bin
+fi
+
 if which mvim >/dev/null 2>&1; then
   export EDITOR="mvim -f"
 else

@@ -32,8 +32,12 @@ j()
     ant -f $TRTOP/build.xml jar-applications
   elif [[ "$1" == "unit" ]]; then
     ant -f $TRTOP/build.xml jar-unittests
+  elif [[ "$1" == "func" ]]; then
+    ant -f $TRTOP/build.xml jar-functests
   elif [[ "$1" == "lt" ]]; then
     ant -f $TRTOP/build.xml jar-livetools
+  elif [[ "$1" == "cfg" ]]; then
+    make -C $TRTOP tree_setup
   else
     echo "Try again? (tr|app|unit|lt)" 1>&2
     return 2
