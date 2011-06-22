@@ -19,9 +19,23 @@ Host merge2
 Host *-dev
 	User root
 
+Host dev*n
+	User root
+
 Host ruby
 	User root
 
 Host thenest
 	User kurakin
 
+Host binky
+	User root
+
+Host bongo
+	User root
+
+Host jessica
+	User root
+
+Host roger
+	User root
