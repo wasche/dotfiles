@@ -56,11 +56,11 @@ u()
 function mc()
 {
   if [[ $# -gt 0 ]]; then
-    for i in 11211 11311 11411
+    for i in 11211 11311 11411; do
       echo $@ | nc localhost $i
     done
   else
-    for i in 11211 11311 11411
+    for i in 11211 11311 11411; do
       echo flush_all | nc localhost $i
     done
   fi
