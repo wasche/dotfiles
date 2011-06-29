@@ -66,6 +66,11 @@ function mc()
   fi
 }
 
+function inspect()
+{
+  javatr.sh com.tripadvisor.inspect.FileDefinitionInspector $@
+}
+
 function hc()
 {
   if [[ $# -gt 0 ]]; then

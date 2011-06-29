@@ -117,6 +117,12 @@ if has("autocmd")
   autocmd Filetype ant set autoindent
   autocmd Filetype ant set enc=utf-8
 
+  autocmd Filetype make set tabstop=4
+  autocmd Filetype make set shiftwidth=4
+  autocmd Filetype make set smarttab
+  autocmd Filetype make set noexpandtab
+  autocmd Filetype make set autoindent
+
 else
 
   set autoindent		" always set autoindenting on
