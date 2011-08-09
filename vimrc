@@ -123,6 +123,13 @@ if has("autocmd")
   autocmd Filetype make set noexpandtab
   autocmd Filetype make set autoindent
 
+  autocmd filetype go set tabstop=4
+  autocmd filetype go set shiftwidth=4
+  autocmd filetype go set noexpandtab
+  autocmd filetype go set autoindent
+  autocmd filetype go set smarttab
+  autocmd filetype go set enc=utf-8
+
 else
 
   set autoindent		" always set autoindenting on
@@ -156,6 +163,9 @@ syntax on
 map Q gq
 map <C-6> :e#<CR>
 map! <C-6> <Esc>:e#<CR>
+
+" GUndo
+nnoremap <F5> :GundoToggle<CR>
 
 " Set tabstop, softtabstop and shiftwidth to the same value
 command! -nargs=1 Stab call Stab(<args>)

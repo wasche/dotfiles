@@ -10,4 +10,5 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.proto setfiletype proto
   au! BufRead,BufNewFile Gemfile setfiletype ruby
   au! BufRead,BufNewFile *.json setfiletype javascript
+  au! BufRead,BufNewFile *.go setfiletype go
 augroup END
