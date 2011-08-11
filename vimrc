@@ -164,8 +164,26 @@ map Q gq
 map <C-6> :e#<CR>
 map! <C-6> <Esc>:e#<CR>
 
+" key mappings
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
+nnoremap <leader>w :bw<CR>
+nnoremap <leader>P :set paste!<CR>:set paste?<CR>
+
 " GUndo
-nnoremap <F5> :GundoToggle<CR>
+function! MyGundoToggle()
+  let g:gundo_width = &columns / 4
+  GundoToggle
+endfunction
+nnoremap <leader>u :call MyGundoToggle()<CR>
+let g:gundo_help = 0
+
+" miniBufExplorer
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModeSelTarget = 1
 
 " Set tabstop, softtabstop and shiftwidth to the same value
 command! -nargs=1 Stab call Stab(<args>)
@@ -193,4 +211,3 @@ function! SummarizeTabs()
     echohl None
   endtry
 endfunction
-
