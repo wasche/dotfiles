@@ -181,7 +181,7 @@ set incsearch		" Incremental search
 nmap <silent> <leader>h :silent :nohlsearch<CR>
 
 " catch trailing whitespace
-set listchars=tab:>,trail:·,eol:$
+set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 
 " GUndo
