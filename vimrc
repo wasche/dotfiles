@@ -123,6 +123,13 @@ if has("autocmd")
   autocmd Filetype make set noexpandtab
   autocmd Filetype make set autoindent
 
+  autocmd filetype go set tabstop=4
+  autocmd filetype go set shiftwidth=4
+  autocmd filetype go set noexpandtab
+  autocmd filetype go set autoindent
+  autocmd filetype go set smarttab
+  autocmd filetype go set enc=utf-8
+
 else
 
   set autoindent		" always set autoindenting on
@@ -135,27 +142,65 @@ set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
 set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
-set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set linebreak
-set hidden             " Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes) in terminals
+set hidden              " Hide buffers when they are abandoned
+set mouse=a             " Enable mouse usage (all modes) in terminals
 set foldmethod=syntax
 set foldlevelstart=2
 set nocp
 set completeopt=menu
 set wildignore=*.o,*.pyc,*.pyo
 set ruler
-set wildmode=longest,list,full
-set wildmenu
 set nobackup
 set nowritebackup
+set title
+set scrolloff=3
+set visualbell          " make the bell visual
 syntax on
+
+let mapleader = ","
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
 map <C-6> :e#<CR>
 map! <C-6> <Esc>:e#<CR>
+
+" key mappings
+nnoremap ' `
+nnoremap ` '
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
+nnoremap <leader>w :bw<CR>
+nnoremap <leader>P :set paste!<CR>:set paste?<CR>
+
+" highlight search terms
+set hlsearch
+set incsearch		" Incremental search
+nmap <silent> <leader>h :silent :nohlsearch<CR>
+
+" catch trailing whitespace
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
+" GUndo
+function! MyGundoToggle()
+  let g:gundo_width = &columns / 4
+  GundoToggle
+endfunction
+nnoremap <leader>u :call MyGundoToggle()<CR>
+let g:gundo_help = 0
+
+" miniBufExplorer
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModeSelTarget = 1
+
+" better tab completion
+set wildmenu
+set wildmode=longest,list,full
 
 " Set tabstop, softtabstop and shiftwidth to the same value
 command! -nargs=1 Stab call Stab(<args>)
@@ -183,4 +228,3 @@ function! SummarizeTabs()
     echohl None
   endtry
 endfunction
-

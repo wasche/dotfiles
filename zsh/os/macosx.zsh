@@ -4,6 +4,21 @@ if [[ -d /opt/local ]]; then
   MANPATH="/opt/local/share/man:$MANPATH"
 fi
 
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home"
+if [[ -d /usr/local/rvm ]]; then
+  PATH="$PATH:/usr/local/rvm/bin"
+fi
+
+export JAVA_HOME=`/usr/libexec/java_home`
+
+export ANT_HOME=/opt/local/share/java/apache-ant
+if [[ "$PATH" != *$ANT_HOME/bin* ]]; then
+  export PATH=$PATH:$ANT_HOME/bin
+fi
+
+PATH="$PATH:/usr/local/android:/Users/wasche/src/go-lang/bin"
 
 alias attach='open -a Mail.app'
+
+export GOROOT=/Users/wasche/src/go-lang
+export GOOS=darwin
+export GOARCH=amd64

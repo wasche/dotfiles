@@ -28,6 +28,9 @@ Host ruby
 Host thenest
 	User kurakin
 
+Host devsocial
+	User root
+
 Host binky
 	User root
 
