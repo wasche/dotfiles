@@ -20,3 +20,5 @@ PATH="$PATH:/usr/local/android:/Users/wasche/src/go-lang/bin"
 alias attach='open -a Mail.app'
 
 export GOROOT=/Users/wasche/src/go-lang
+export GOOS=darwin
+export GOARCH=amd64
