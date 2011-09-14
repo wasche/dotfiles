@@ -66,6 +66,21 @@ function mc()
   fi
 }
 
+function mcr()
+{
+  server="$1"
+  shift
+  if [[ $# -gt 0 ]]; then
+    for i in 11211 11311 11411; do
+      echo $@ | nc $server $i
+    done
+  else
+    for i in 11211 11311 11411; do
+      echo flush_all | nc $server $i
+    done
+  fi
+}
+
 function inspect()
 {
   javatr.sh com.tripadvisor.inspect.FileDefinitionInspector $@

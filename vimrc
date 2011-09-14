@@ -174,6 +174,7 @@ nnoremap <leader>n :bn<CR>
 nnoremap <leader>p :bp<CR>
 nnoremap <leader>w :bw<CR>
 nnoremap <leader>P :set paste!<CR>:set paste?<CR>
+nnoremap <leader>b :set binary noeol<CR>
 
 " highlight search terms
 set hlsearch
