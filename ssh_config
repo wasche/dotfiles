@@ -2,43 +2,59 @@ Host *
 	Compression yes
 
 Host crawfish
+	HostName crawfish
 	User wasche
 
 Host lumberjack
+	HostName lumberjack
 	User wasche
 
 Host carrot
+	HostName carrot
 	User root
 
 Host merge
+	HostName merge
 	User root
 
 Host merge2
+	HostName merge2
 	User root
 
 Host *-dev
+	User root
+
+Host wasche-dev
+	HostName wasche-dev
 	User root
 
 Host dev*n
 	User root
 
 Host ruby
+	HostName ruby
 	User root
 
 Host thenest
+	HostName thenest
 	User kurakin
 
 Host devsocial
+	HostName devsocial
 	User root
 
 Host binky
+	HostName binky
 	User root
 
 Host bongo
+	HostName bongo
 	User root
 
 Host jessica
+	HostName jessica
 	User root
 
 Host roger
+	HostName roger
 	User root
