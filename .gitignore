@@ -6,3 +6,5 @@ bash/os.bash
 zsh/os.zsh
 ta/bash/os.bash
 ta/zsh/os.zsh
+zsh/history
+subversion/README.txt
