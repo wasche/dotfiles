@@ -1,3 +1,1 @@
 for config_file (~/.zsh/special/*.zsh) source $config_file
-
-source ~/.zsh/special/os.zsh

@@ -39,7 +39,6 @@ DIRSTACKSIZE=50
 limit coredumpsize 10m
 
 HISTSIZE=20000
-mkdir -p ~/.zsh
 HISTFILE=~/.zsh/history
 SAVEHIST=20000
 

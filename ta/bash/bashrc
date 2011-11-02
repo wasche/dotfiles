@@ -1,3 +1,1 @@
 for config_file in ~/.bash/special/*.bash; do source $config_file; done
-
-source ~/.bash/special/os.bash
