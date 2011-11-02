@@ -1,3 +1,6 @@
 zsh/cache
 bash/special
 zsh/special
+*.swp
+bash/os.bash
+zsh/os.zsh
