@@ -40,6 +40,8 @@ j()
     ant -f $TRTOP/build.xml jar-livetools
   elif [[ "$1" == "cfg" ]]; then
     make -C $TRTOP tree_setup
+  elif [[ "$1" == "sql" ]]; then
+    ant -f $TRTOP/build.xml sql-generate-tr
   else
     echo "Try again? (tr|app|unit|f|lt|vfg)" 1>&2
     return 2

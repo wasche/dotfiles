@@ -1,1 +1,1 @@
-cd /home/site
+[[ -d /home/site ]] && cd /home/site

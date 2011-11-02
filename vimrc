@@ -105,6 +105,22 @@ if has("autocmd")
   autocmd Filetype haml set autoindent
   autocmd Filetype haml set enc=utf-8
 
+  autocmd Filetype jade set tabstop=2
+  autocmd Filetype jade set shiftwidth=2
+  autocmd Filetype jade set smarttab
+  autocmd Filetype jade set expandtab
+  autocmd Filetype jade set softtabstop=2
+  autocmd Filetype jade set autoindent
+  autocmd Filetype jade set enc=utf-8
+
+  autocmd Filetype stylus set tabstop=2
+  autocmd Filetype stylus set shiftwidth=2
+  autocmd Filetype stylus set smarttab
+  autocmd Filetype stylus set expandtab
+  autocmd Filetype stylus set softtabstop=2
+  autocmd Filetype stylus set autoindent
+  autocmd Filetype stylus set enc=utf-8
+
   autocmd Filetype java nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>  
@@ -129,6 +145,14 @@ if has("autocmd")
   autocmd filetype go set autoindent
   autocmd filetype go set smarttab
   autocmd filetype go set enc=utf-8
+
+  autocmd Filetype sql set tabstop=2
+  autocmd Filetype sql set shiftwidth=2
+  autocmd Filetype sql set smarttab
+  autocmd Filetype sql set expandtab
+  autocmd Filetype sql set softtabstop=2
+  autocmd Filetype sql set autoindent
+  autocmd Filetype sql set enc=utf-8
 
 else
 
@@ -175,6 +199,7 @@ nnoremap <leader>p :bp<CR>
 nnoremap <leader>w :bw<CR>
 nnoremap <leader>P :set paste!<CR>:set paste?<CR>
 nnoremap <leader>b :set binary noeol<CR>
+nnoremap <leader>m :! make<CR>
 
 " highlight search terms
 set hlsearch
