@@ -21,6 +21,10 @@ Host merge2
 	HostName merge2
 	User root
 
+Host merge3
+	HostName merge3
+	User root
+
 Host *-dev
 	User root
 
