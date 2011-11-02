@@ -12,7 +12,7 @@ fi
 export PATH=/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
-if whichi apt-cache >/dev/null 2>$1; then
+if whichi apt-cache >/dev/null 2>&1; then
   alias aptc='apt-cache'
   alias aptcs='apt-cache search'
 fi
@@ -24,3 +24,4 @@ if [[ -d /usr/local/go/bin ]]; then
   export GOARCH=amd64
   export PATH=$PATH:/usr/local/go/bin
 fi
+

@@ -1,1 +1,4 @@
 for config_file in ~/.bash/special/*.bash; do source $config_file; done
+
+# load os overrides last
+source ~/.bash/special/os.bash
