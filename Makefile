@@ -12,13 +12,18 @@ base: $(HOME)/.vim \
 	$(HOME)/.bashrc \
 	$(HOME)/.bash_profile \
 	$(HOME)/.zsh \
-	$(HOME)/.zshrc
+	$(HOME)/.zshrc \
+	$(HOME)/.pentadactyl/info/default/quickmarks
 
 $(HOME)/.%: %
 	ln -fs $(abspath $<) $@
 
 $(HOME)/.ssh/config: ssh_config
 	mkdir -p $(HOME)/.ssh
+	ln -fs $(abspath $<) $@
+
+$(HOME)/.pentadactyl/info/default/quickmarks: pentadactyl/info/default/quickmarks
+	mkdir -p $(HOME)/.pentadactyl/info/default
 	ln -fs $(abspath $<) $@
 
 ta-bash: ta/bash
