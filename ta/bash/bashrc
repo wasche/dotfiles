@@ -1,7 +1,3 @@
 for config_file in ~/.bash/special/*.bash; do source $config_file; done
 
-if [[ ${OSTYPE#darwin} != $OSTYPE ]]; then
-  source ~/.bash/special/os/macosx.bash
-elif [[ ${OSTYPE#linux} != $OSTYPE ]]; then
-  source ~/.bash/special/os/linux.bash
-fi
+source ~/.bash/special/os.bash

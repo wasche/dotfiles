@@ -1,7 +1,3 @@
 for config_file (~/.zsh/special/*.zsh) source $config_file
 
-if [[ ${OSTYPE#darwin} != $OSTYPE ]]; then
-  source ~/.zsh/special/os/macosx.zsh
-elif [[ ${OSTYPE#linux} != $OSTYPE ]]; then
-  source ~/.zsh/special/os/linux.zsh
-fi
+source ~/.zsh/special/os.zsh

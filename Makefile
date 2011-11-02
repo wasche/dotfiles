@@ -41,4 +41,10 @@ ta-bash: ta/bash
 ta-zsh: ta/zsh
 	ln -fs $(abspath $<) $(HOME)/.zsh/special
 
-ta: ta-bash ta-zsh
+$(HOME)/.bash/special/os.bash: ta/bash/os/$(OS).bash
+	ln -fs $(abspath $<) $@
+
+$(HOME)/.zsh/special/os.zsh: ta/zsh/os/$(OS).zsh
+	ln -fs $(abspath $<) $@
+
+ta: ta-bash ta-zsh $(HOME)/.bash/special/os.bash $(HOME)/.zsh/special/os.zsh
