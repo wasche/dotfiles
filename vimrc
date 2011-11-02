@@ -146,6 +146,14 @@ if has("autocmd")
   autocmd filetype go set smarttab
   autocmd filetype go set enc=utf-8
 
+  autocmd Filetype sql set tabstop=2
+  autocmd Filetype sql set shiftwidth=2
+  autocmd Filetype sql set smarttab
+  autocmd Filetype sql set expandtab
+  autocmd Filetype sql set softtabstop=2
+  autocmd Filetype sql set autoindent
+  autocmd Filetype sql set enc=utf-8
+
 else
 
   set autoindent		" always set autoindenting on
