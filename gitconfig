@@ -30,3 +30,6 @@
   autosetupmerge = true
 [core]
   excludesfile = /Users/wasche/.gitignore
+
+[github]
+  user = kurakin
