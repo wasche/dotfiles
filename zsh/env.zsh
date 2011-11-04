@@ -72,3 +72,6 @@ zle_highlight=(region:underline
                special:bold
               )
 
+# grep
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'

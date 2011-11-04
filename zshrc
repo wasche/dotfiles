@@ -2,6 +2,13 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/git-flow-completion/git-flow-completion.zsh
 
+source ~/.zsh/oh-my-zsh/lib/spectrum.zsh
+
+source ~/.zsh/oh-my-zsh/plugins/github/github.plugin.zsh
+source ~/.zsh/oh-my-zsh/plugins/node/node.plugin.zsh
+source ~/.zsh/oh-my-zsh/plugins/npm/npm.plugin.zsh
+source ~/.zsh/oh-my-zsh/plugins/python/python.plugin.zsh
+
 source ~/.zsh/chpwd.profiles.zsh
 source ~/.zsh/path.zsh
 source ~/.zsh/aliases.zsh

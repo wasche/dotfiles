@@ -19,9 +19,6 @@ alias la='ls -Al'
 try_which gitk gitview
 alias ga="gitk --all $|"
 
-# http://defunkt.io/hub/
-try_which git hub
-
 alias v='vim'
 
 #mvim_remote()
@@ -45,4 +42,8 @@ alias conflicts="svn st | egrep '^\s*C'"
 
 alias cpu='top -o cpu'
 alias mem='top -o vsize'
-alias up='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias history='fc -l 1'
