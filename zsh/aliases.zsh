@@ -19,6 +19,9 @@ alias la='ls -Al'
 try_which gitk gitview
 alias ga="gitk --all $|"
 
+# http://defunkt.io/hub/
+try_which git hub
+
 alias v='vim'
 
 #mvim_remote()
