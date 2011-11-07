@@ -43,6 +43,10 @@ Host thenest
 	HostName thenest
 	User kurakin
 
+Host wickedspiral.com
+	HostName wickedspiral.com
+	User kurakin
+
 Host devsocial
 	HostName devsocial
 	User root

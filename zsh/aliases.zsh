@@ -42,4 +42,8 @@ alias conflicts="svn st | egrep '^\s*C'"
 
 alias cpu='top -o cpu'
 alias mem='top -o vsize'
-alias up='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias history='fc -l 1'

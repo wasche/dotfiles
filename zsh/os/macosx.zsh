@@ -4,8 +4,8 @@ if [[ -d /opt/local ]]; then
   MANPATH="/opt/local/share/man:$MANPATH"
 fi
 
-if [[ -d /usr/local/rvm ]]; then
-  PATH="$PATH:/usr/local/rvm/bin"
+if which mvim >/dev/null 2>&1; then
+  export EDITOR="mvim -f"
 fi
 
 export JAVA_HOME=`/usr/libexec/java_home`

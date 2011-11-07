@@ -7,3 +7,9 @@
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "zsh/git-flow-completion"]
+	path = zsh/git-flow-completion
+	url = git://github.com/bobthecow/git-flow-completion.git

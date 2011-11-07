@@ -1,23 +1,4 @@
-# use vi style keybinds
-bindkey -v
-
-if [[ -d ~/.gem/ruby/ ]] && ls ~/.gem/ruby/ >/dev/null 2>&1; then
-  for dir in ~/.gem/ruby/*; do
-    if [[ -d $dir/bin ]]; then
-      export PATH="$dir/bin:$PATH"
-    fi
-  done
-fi
-
-if [[ -d /usr/local/node/bin ]]; then
-  export PATH=$PATH:/usr/local/node/bin
-fi
-
-if which mvim >/dev/null 2>&1; then
-  export EDITOR="mvim -f"
-else
-  export EDITOR="vim"
-fi
+export EDITOR="vim"
 
 export CC="gcc"
 
@@ -35,9 +16,11 @@ setopt extended_history auto_pushd inc_append_history hist_ignore_dups
 setopt hist_verify auto_continue multios interactive_comments autocd
 setopt extended_glob notify list_ambiguous
 
+# use vi style keybinds
+bindkey -v
+
 DIRSTACKSIZE=50
 limit coredumpsize 10m
-
 HISTSIZE=20000
 HISTFILE=~/.zsh/history
 SAVEHIST=20000
@@ -75,8 +58,8 @@ autoload zkbd
 [[ -n "${key[End]}" ]] && bindkey "${key[End]}" end-of-line
 [[ -n "${key[Insert]}" ]] && bindkey "${key[Insert]}" overwrite-mode
 [[ -n "${key[Delete]}" ]] && bindkey "${key[Delete]}" delete-char
-#[[ -n "${key[Up]}" ]] && bindkey "${key[Up]}" up-line-or-history
-#[[ -n "${key[Down]}" ]] && bindkey "${key[Down]}" down-line-or-history
+[[ -n "${key[Up]}" ]] && bindkey "${key[Up]}" history-substring-search-up
+[[ -n "${key[Down]}" ]] && bindkey "${key[Down]}" history-substring-search-down
 [[ -n "${key[Left]}" ]] && bindkey "${key[Left]}" backward-char
 bindkey ";5D" backward-word
 bindkey ";5C" forward-word
@@ -89,3 +72,6 @@ zle_highlight=(region:underline
                special:bold
               )
 
+# grep
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
