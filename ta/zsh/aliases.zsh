@@ -122,6 +122,11 @@ function tab()
   )
 }
 
+alias svn-status-conflicts="svntr st | egrep '^\s*C'"
+alias svn-status-deletes="svntr st | egrep '^\s*D'"
+alias svn-branch-update="svntr branch-update --script |& tee merge.log"
+alias svn-branch-diff="svntr diff -B"
+
 function onoz()
 {
   if [[ "$1" == "lb" ]] || [[ "$1" == "lookback" ]]; then
