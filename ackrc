@@ -1,2 +1,8 @@
---type-add=html=.vm
---type-add=java=Makefile.def,Makefile.gen
+--type-add
+java=Makefile.def,Makefile.gen
+--type-set
+m4=.m4
+--type-set
+vm=.vm
+-G
+^(data|langs)/|site/(js[23]|css2?)/.*-(c|gen)\.(js|css)
