@@ -8,6 +8,7 @@
 ###   keychain             (Mac OS X)
 ###   windows-cryptoapi    (Windows)
 # password-stores = keychain
+password-stores = gnome-keyring keychain
 
 [helpers]
 editor-cmd = vim
