@@ -13,3 +13,5 @@ fi
 if [[ -d /usr/local/rvm ]]; then
   PATH="$PATH:/usr/local/rvm/bin"
 fi
+
+export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH

@@ -2,6 +2,7 @@ OS=$(shell ./os.sh)
 
 base: $(HOME)/.vim \
 	$(HOME)/.vimrc \
+	$(HOME)/.jshintrc \
 	$(HOME)/.ssh/config \
 	$(HOME)/.pentadactylrc \
 	$(HOME)/.screenrc \

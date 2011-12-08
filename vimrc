@@ -1,9 +1,22 @@
-set background=dark
-colorscheme desert
-
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" setup vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+
+filetype plugin indent on " needed by vundle
+
+set background=dark
+colorscheme desert
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")

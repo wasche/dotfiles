@@ -13,3 +13,12 @@
 [submodule "zsh/git-flow-completion"]
 	path = zsh/git-flow-completion
 	url = git://github.com/bobthecow/git-flow-completion.git
+[submodule "vim/bundle/vundle"]
+	path = vim/bundle/vundle
+	url = http://github.com/gmarik/vundle.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
