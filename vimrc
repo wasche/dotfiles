@@ -189,12 +189,17 @@ set nocp
 set completeopt=menu
 set wildignore=*.o,*.pyc,*.pyo
 set ruler
-set nobackup
-set nowritebackup
 set title
 set scrolloff=3
 set visualbell          " make the bell visual
 syntax on
+
+" backups/swap
+set backupdir=~/.vim/tmp,.
+set directory=~/.vim/tmp,.
+"set nobackup
+"set nowritebackup
+set noswapfile
 
 let mapleader = ","
 
