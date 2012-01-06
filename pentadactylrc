@@ -3,6 +3,10 @@
 loadplugins '\.(js|penta)$'
 group user
 
+" use duckduckgo as the default search engine
+set defsearch=duckduckgo
+
+" allow keybinds to work in google reader
 set passkeys+=^https?\://www\.google\.com/reader/:jAkv,ga,ge
 
 autocmd LocationChange 'spreadsheets\.google\.com' :normal gi
