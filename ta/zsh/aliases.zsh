@@ -48,6 +48,22 @@ j()
   fi
 }
 
+ie()
+{
+  if [[ "$1" == "6" ]]; then
+    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest01.tripadvisor.com 2>&1 > /dev/null &
+  elif [[ "$1" == "7" ]]; then
+    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest02.tripadvisor.com 2>&1 > /dev/null &
+  elif [[ "$1" == "8" ]]; then
+    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest03.tripadvisor.com 2>&1 > /dev/null &
+  elif [[ "$1" == "9" ]]; then
+    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest04.tripadvisor.com 2>&1 > /dev/null &
+  else
+    echo "Try again? (6|7|8|9)" 1>&2
+    return 2
+  fi
+}
+
 u()
 {
   if [[ $# -gt 0 ]]; then
@@ -132,10 +148,12 @@ function onoz()
   if [[ "$1" == "lb" ]] || [[ "$1" == "lookback" ]]; then
     shift
     # $HOME/bin/lookback_tail
-  elif [[ "$1" == "trip" ]]; then
-    highlight_tail /etc/httpd-MAINLINE/logs/tripadvisor.log
+  elif [[ "$1" == "trip" ]] || [[ "$1" == "ta" ]]; then
+    shift
+    htail /etc/httpd-MAINLINE/logs/tripadvisor.log --highlight=red:ERROR --highlight=yellow:WARN $@
   elif [[ "$1" == "access" ]]; then
-    highlight_tail /etc/httpd-MAINLINE/logs/access_log
+    shift
+    htail /etc/httpd-MAINLINE/logs/access_log --highlight=green:200 --highlight=red:404 --highlight=red:500 $@
   else
     echo "Try again? (lb|trip|access)" 1>&2
     return 2
