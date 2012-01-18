@@ -18,6 +18,7 @@ filetype plugin indent on " needed by vundle
 set background=dark
 colorscheme desert
 
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
@@ -26,6 +27,10 @@ if has("autocmd")
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
+
+  " Use syntax folding for most filetypes, but open all folds by default
+  autocmd Syntax c,cpp,vim,xml,html,xhtml,java,javascript setlocal foldmethod=syntax
+  autocmd Syntax c,cpp,vim,xml,html,xhtml,java,javascript,perl normal zR
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -102,6 +107,14 @@ if has("autocmd")
   autocmd Filetype html set autoindent
   autocmd Filetype html set enc=utf-8
 
+  autocmd Filetype velocity set tabstop=2
+  autocmd Filetype velocity set shiftwidth=2
+  autocmd Filetype velocity set smarttab
+  autocmd Filetype velocity set expandtab
+  autocmd Filetype velocity set softtabstop=2
+  autocmd Filetype velocity set autoindent
+  autocmd Filetype velocity set enc=utf-8
+
   autocmd Filetype xml set tabstop=4
   autocmd Filetype xml set shiftwidth=4
   autocmd Filetype xml set smarttab
@@ -170,6 +183,8 @@ if has("autocmd")
 else
 
   set autoindent		" always set autoindenting on
+  set foldmethod=syntax
+  set foldlevelstart=20
 
 endif " has("autocmd")
 
@@ -183,8 +198,6 @@ set autowrite		" Automatically save before commands like :next and :make
 set linebreak
 set hidden              " Hide buffers when they are abandoned
 set mouse=a             " Enable mouse usage (all modes) in terminals
-set foldmethod=syntax
-set foldlevelstart=2
 set nocp
 set completeopt=menu
 set wildignore=*.o,*.pyc,*.pyo
