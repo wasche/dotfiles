@@ -5,6 +5,10 @@ Host crawfish
 	HostName crawfish
 	User wasche
 
+Host lobster
+	HostName lobster
+	User root
+
 Host lumberjack
 	HostName lumberjack
 	User wasche
