@@ -16,6 +16,8 @@ source ~/.zsh/completion.zsh
 source ~/.zsh/env.zsh
 source ~/.zsh/prompt.zsh
 
+source ~/.zsh/templates.zsh
+
 source ~/.zsh/os.zsh
 
 if [[ -f ~/.zsh/special/zshrc ]]; then
