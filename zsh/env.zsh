@@ -11,7 +11,7 @@ compinit
 # make zsh not kill background jobs when it closes
 setopt nohup
 
-unsetopt clobber
+unsetopt clobber multibyte
 setopt extended_history auto_pushd inc_append_history hist_ignore_dups
 setopt hist_verify auto_continue multios interactive_comments autocd
 setopt extended_glob notify list_ambiguous
