@@ -42,6 +42,8 @@ j()
     make -C $TRTOP tree_setup
   elif [[ "$1" == "sql" ]]; then
     ant -f $TRTOP/build.xml sql-generate-tr
+  elif [[ "$1" == "tools" ]]; then
+    make -C $TRTOP/Servlets
   else
     echo "Try again? (tr|app|unit|f|lt|vfg)" 1>&2
     return 2
