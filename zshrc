@@ -1,3 +1,5 @@
+source ~/.zkbd/$TERM-${DISPLAY:-$VENDOR-$OSTYPE}
+
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/git-flow-completion/git-flow-completion.zsh
@@ -15,6 +17,8 @@ source ~/.zsh/aliases.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/env.zsh
 source ~/.zsh/prompt.zsh
+
+source ~/.zsh/templates.zsh
 
 source ~/.zsh/os.zsh
 
