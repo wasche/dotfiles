@@ -4,6 +4,9 @@ if [[ -d /opt/local ]]; then
   MANPATH="/opt/local/share/man:$MANPATH"
 fi
 
+# mac keyboard uses alt key to send high-order keys
+bindkey -m
+
 if which mvim >/dev/null 2>&1; then
   export EDITOR="mvim -f"
 fi
