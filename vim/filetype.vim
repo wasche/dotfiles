@@ -11,4 +11,6 @@ augroup filetypedetect
   au! BufRead,BufNewFile Gemfile setfiletype ruby
   au! BufRead,BufNewFile *.json setfiletype javascript
   au! BufRead,BufNewFile *.go setfiletype go
+  au! BufRead,BufNewFile /etc/nginx/nginx.conf setfiletype nginx
+  au! BufRead,BufNewFile /etc/nginx/conf.d/* setfiletype nginx
 augroup END
