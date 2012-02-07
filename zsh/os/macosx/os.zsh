@@ -4,8 +4,7 @@ if [[ -d /opt/local ]]; then
   MANPATH="/opt/local/share/man:$MANPATH"
 fi
 
-cwd=`dirname $0`
-source $cwd/zkbd.zsh
+source ~/.zsh/os/macosx/zkbd.zsh
 
 if which mvim >/dev/null 2>&1; then
   export EDITOR="mvim -f"
