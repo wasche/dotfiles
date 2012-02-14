@@ -33,7 +33,7 @@ $(HOME)/.pentadactyl/info/default/quickmarks: pentadactyl/info/default/quickmark
 $(HOME)/.bash/os.bash: bash/os/$(OS).bash
 	ln -fs $(abspath $<) $@
 
-$(HOME)/.zsh/os.zsh: zsh/os/$(OS).zsh
+$(HOME)/.zsh/os.zsh: zsh/os/$(OS)/os.zsh
 	ln -fs $(abspath $<) $@
 
 ta-bash: ta/bash
