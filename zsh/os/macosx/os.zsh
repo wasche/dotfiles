@@ -24,3 +24,10 @@ alias attach='open -a Mail.app'
 export GOROOT=/Users/wasche/src/go-lang
 export GOOS=darwin
 export GOARCH=amd64
+
+mongo()
+{
+  if [[ "start" == "$1" ]]; then
+    mongod run --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf --logpath /var/log/mongodb.log --logappend &
+  fi
+}
