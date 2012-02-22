@@ -41,7 +41,7 @@ j()
   elif [[ "$1" == "cfg" ]]; then
     make -C $TRTOP tree_setup
   elif [[ "$1" == "sql" ]]; then
-    ant -f $TRTOP/build.xml sql-generate-tr
+    ant -f $TRTOP/build.xml sql-generate-tr sql-generate-internal sql-generate-applications sql-generate-features sql-generate-tatools sql-generate-livetools sql-generate-toolsshared
   elif [[ "$1" == "tools" ]]; then
     make -C $TRTOP/Servlets
   else
