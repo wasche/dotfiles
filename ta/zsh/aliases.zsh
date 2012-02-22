@@ -45,7 +45,7 @@ j()
   elif [[ "$1" == "tools" ]]; then
     make -C $TRTOP/Servlets
   else
-    echo "Try again? (tr|app|unit|f|lt|vfg)" 1>&2
+    echo "Try again? (tr|app|unit|f|lt|cfg|tools)" 1>&2
     return 2
   fi
 }
