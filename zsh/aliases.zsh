@@ -47,3 +47,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias history='fc -l 1'
+
+isword()
+{
+  grep $1 /usr/share/dict/words
+}
