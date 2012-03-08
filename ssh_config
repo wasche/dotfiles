@@ -18,15 +18,15 @@ Host carrot
 	User root
 
 Host merge
-	HostName merge
+	HostName merge.tripadvisor.com
 	User root
 
 Host merge2
-	HostName merge2
+	HostName merge2.tripadvisor.com
 	User root
 
 Host merge3
-	HostName merge3
+	HostName merge3.tripadvisor.com
 	User root
 
 Host *-dev
@@ -35,6 +35,10 @@ Host *-dev
 Host wasche-dev
 	HostName wasche-dev
 	User root
+
+Host druid
+	HostName druid.dhcp.tripadvisor.com
+	User wasche
 
 Host dev*n
 	User root
