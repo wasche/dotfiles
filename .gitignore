@@ -8,3 +8,5 @@ ta/bash/os.bash
 ta/zsh/os.zsh
 zsh/history
 subversion/README.txt
+ta/bash/bash
+ta/zsh/zsh

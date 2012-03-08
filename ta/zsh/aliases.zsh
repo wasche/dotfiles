@@ -75,6 +75,15 @@ u()
   fi
 }
 
+fu()
+{
+  if [[ $# -gt 0 ]]; then
+    ant -f $TRTOP/build.xml -Dfunctest=$1 run-functests
+  else
+    make -C $TRTOP functional_test
+  fi
+}
+
 function mc()
 {
   if [[ $# -gt 0 ]]; then
@@ -119,9 +128,13 @@ function hc()
   fi
 }
 
-alias tripmonster='psql -U tripmonster -h tripmonster'
-alias dev-db='psql -h dev-db -U tripmaster'
-alias rivendell='psql -h rivendell -U tripmaster'
+alias tm='psql -h rivendell -U tripmaster'
+alias tm-dev='psql -h dev-db -U tripmaster'
+alias tm-media='psql -h rivendell -U tripmaster_media'
+alias tm-media-dev='psql -h dev-db -U tripmaster_media'
+alias tm-tools='psql -h rivendell -U tripmaster_tools'
+alias tm-tools-dev='psql -h tools-db -U tripmaster_tools'
+alias tm-test='psql -h test-db -U tripmaster tripmaster_test'
 
 alias dev='ssh root@wasche-dev'
 alias crawfish='ssh wasche@crawfish'
