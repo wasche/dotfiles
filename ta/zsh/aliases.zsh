@@ -135,6 +135,7 @@ alias tm-media-dev='psql -h dev-db -U tripmaster_media'
 alias tm-tools='psql -h rivendell -U tripmaster_tools'
 alias tm-tools-dev='psql -h tools-db -U tripmaster_tools'
 alias tm-test='psql -h test-db -U tripmaster tripmaster_test'
+alias tm-test-dev='psql -h test-db -U tripmaster tripmaster_test_wasche-dev'
 
 alias dev='ssh root@wasche-dev'
 alias crawfish='ssh wasche@crawfish'
