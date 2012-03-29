@@ -1,5 +1,4 @@
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/git-flow-completion/git-flow-completion.zsh
 
 source ~/.zsh/oh-my-zsh/lib/spectrum.zsh
@@ -23,6 +22,8 @@ source ~/.zsh/os.zsh
 if [[ -f ~/.zsh/special/zshrc ]]; then
   source ~/.zsh/special/zshrc
 fi
+
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 if [[ -f ~/.zsh.local ]]; then
   source ~/.zsh.local
