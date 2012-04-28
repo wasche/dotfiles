@@ -5,6 +5,8 @@ export CC="gcc"
 export ANT_HOME=/usr/local/ant
 export ANT_OPTS=-Xmx500M;
 
+export NODE_ENV='development'
+
 autoload -U compinit
 compinit
 
