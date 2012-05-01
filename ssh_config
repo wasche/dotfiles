@@ -76,5 +76,9 @@ Host roger
 	User root
 
 Host vodka
-	Hostname vodka
+	HostName vodka
+	User root
+
+Host tom
+	HostName tom
 	User root
