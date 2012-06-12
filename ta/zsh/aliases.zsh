@@ -44,8 +44,10 @@ j()
     ant -f $TRTOP/build.xml sql-generate-tr sql-generate-internal sql-generate-applications sql-generate-features sql-generate-tatools sql-generate-livetools sql-generate-toolsshared
   elif [[ "$1" == "tools" ]]; then
     make -C $TRTOP/Servlets
+  elif [[ "$1" == "all" ]]; then
+    ant -f $TRTOP/build.xml java
   else
-    echo "Try again? (tr|app|unit|f|lt|cfg|tools)" 1>&2
+    echo "Try again? (all|app|cfg|f|lt|tools|tr|unit)" 1>&2
     return 2
   fi
 }

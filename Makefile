@@ -1,4 +1,11 @@
 OS=$(shell ./os.sh)
+SUBLIME_SETTINGS_DIR=$(abspath config/sublime-text-2/Packages/User)
+
+ifeq ($(OS),ubuntu)
+	SUBLIME_DIR = $(HOME)/.config/sublime-text-2
+endif
+
+SUBLIME_TARGET=$(SUBLIME_DIR)/Packages/User
 
 base: $(HOME)/.vim \
 	$(HOME)/.vimrc \
@@ -49,3 +56,11 @@ $(HOME)/.zsh/special/os.zsh: ta/zsh/os/$(OS).zsh
 	ln -fs $(abspath $<) $@
 
 ta: ta-bash ta-zsh $(HOME)/.bash/special/os.bash $(HOME)/.zsh/special/os.zsh
+
+sublime:
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/Preferences.sublime-settings" "$(SUBLIME_TARGET)/Preferences.sublime-settings"
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/JavaScript.sublime-settings" "$(SUBLIME_TARGET)/JavaScript.sublime-settings"
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/SublimeLinter.sublime-settings" "$(SUBLIME_TARGET)/SublimeLinter.sublime-settings"
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/velocity syntax.sublime-settings" "$(SUBLIME_TARGET)/velocity syntax.sublime-settings"
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/Plain text.sublime-settings" "$(SUBLIME_TARGET)/Plain text.sublime-settings"
+
