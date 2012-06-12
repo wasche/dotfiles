@@ -52,3 +52,13 @@ isword()
 {
   grep $1 /usr/share/dict/words
 }
+
+mount-ssh()
+{
+  if [[ $# -eq 2 ]]; then
+    sshfs -o idmap=user $@
+  else
+    echo "Usage: mount-ssh user@machine:path local_path"
+    return 2
+  fi
+}
