@@ -1,22 +1,6 @@
 {
-    // By default, shift+tab will only unindent if the selection spans
-    // multiple lines. When pressing shift+tab at other times, it'll insert a
-    // tab character - this allows tabs to be inserted when tab_completion is
-    // enabled. Set this to true to make shift+tab always unindent, instead of
-    // inserting tabs.
-    "shift_tab_unindent": false,
-
-    // Exiting the application with hot_exit enabled will cause it to close
-    // immediately without prompting. Unsaved modifications and open files will
-    // be preserved and restored when next starting.
-    //
-    // Closing a window with an associated project will also close the window
-    // without prompting, preserving unsaved changes in the workspace file
-    // alongside the project.
-    "hot_exit": false,
-
-    // remember_open_files makes the application start up with the last set of
-    // open files. Changing this to false will have no effect if hot_exit is
-    // true
-    "remember_open_files": false
+	"font_size": 10,
+	"hot_exit": true,
+	"remember_open_files": true,
+	"shift_tab_unindent": true
 }
