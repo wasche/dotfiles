@@ -105,7 +105,7 @@
         "rules-count": "warning",
         "shorthand": "warning",
         "text-indent": "warning",
-        "unique-headings": "warning",
+        "unique-headings": false,
         "universal-selector": "warning",
         "vendor-prefix": true,
         "zero-units": "warning"
