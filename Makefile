@@ -25,6 +25,7 @@ base: $(HOME)/.vim \
 	$(HOME)/.zshrc \
 	$(HOME)/.zsh/os.zsh \
 	$(HOME)/.pentadactyl/info/default/quickmarks
+	mkdir -p $(HOME)/.node-completion
 	mkdir -p $(HOME)/bin
 	ln -fs bin/ack $(HOME)/bin/ack
 

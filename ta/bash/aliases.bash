@@ -1,31 +1,42 @@
 
 alias logdir='cd /etc/httpd-MAINLINE/logs'
 
-function gg() { cd $TRTOP/$@ }
-function ga() { gg Applications/$@ }
-function gc() { gg site/css2/$@ }
-function gi() { gg site/img2/$@ }
-function gj() { gg site/js3/$@ }
-function gv() { gg site/velocity_redesign/$@ }
-function gt() { gg tr/com/TripResearch/$@ }
+function gg {
+  cd $TRTOP/$@
+}
+function ga {
+  gg Applications/$@
+}
+function gc {
+  gg site/css2/$@
+}
+function gi {
+  gg site/img2/$@
+}
+function gj {
+  gg site/js3/$@
+}
+function gv {
+  gg site/velocity_redesign/$@
+}
+function gt {
+  gg tr/com/TripResearch/$@
+}
 
 alias vc='vim $TRTOP/config/hsots/$(hostname -s).ini'
 alias fs='$TRTOP/scripts/find-string --relative'
 
 alias sx='sudo $TRTOP/scripts/httpd_stop.sh'
 
-js()
-{
+function js {
   make -C $TRTOP/site/js3 -j5 "$@"
 }
 
-css()
-{
+function css {
   make -C $TRTOP/site/css2 -j5 "$@"
 }
 
-j()
-{
+function j {
   if [[ "$1" == "tr" ]]; then
     ant -f $TRTOP/build.xml jar-tr
   elif [[ "$1" == "app" ]]; then
@@ -52,24 +63,7 @@ j()
   fi
 }
 
-ie()
-{
-  if [[ "$1" == "6" ]]; then
-    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest01.tripadvisor.com 2>&1 > /dev/null &
-  elif [[ "$1" == "7" ]]; then
-    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest02.tripadvisor.com 2>&1 > /dev/null &
-  elif [[ "$1" == "8" ]]; then
-    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest03.tripadvisor.com 2>&1 > /dev/null &
-  elif [[ "$1" == "9" ]]; then
-    rdesktop -d tripadvisor -u wasche -g 1280x1024 -a 16 -k en-us -z wintest04.tripadvisor.com 2>&1 > /dev/null &
-  else
-    echo "Try again? (6|7|8|9)" 1>&2
-    return 2
-  fi
-}
-
-u()
-{
+function u {
   if [[ $# -gt 0 ]]; then
     ENSURE_PURE_UNIT_TESTS=true javatr.sh org.junit.runner.JUnitCore "$@"
   else
@@ -77,8 +71,7 @@ u()
   fi
 }
 
-fu()
-{
+function fu {
   if [[ $# -gt 0 ]]; then
     ant -f $TRTOP/build.xml -Dfunctest=$1 run-functests
   else
@@ -86,8 +79,7 @@ fu()
   fi
 }
 
-function mc()
-{
+function mc {
   if [[ $# -gt 0 ]]; then
     for i in 11211 11311 11411; do
       echo $@ | nc localhost $i
@@ -99,8 +91,7 @@ function mc()
   fi
 }
 
-function mcr()
-{
+function mcr {
   server="$1"
   shift
   if [[ $# -gt 0 ]]; then
@@ -114,8 +105,7 @@ function mcr()
   fi
 }
 
-function inspect()
-{
+function inspect {
   javatr.sh com.tripadvisor.inspect.FileDefinitionInspector $@
 }
 
@@ -128,8 +118,7 @@ alias tm-tools-dev='psql -h tools-db -U tripmaster_tools'
 alias tm-test='psql -h test-db -U tripmaster tripmaster_test'
 alias tm-test-dev='psql -h test-db -U tripmaster tripmaster_test_wasche-dev'
 
-function tab()
-{
+function tab {
   (
     cd $TRTOP
     if [[ $# -gt 0 ]]; then
