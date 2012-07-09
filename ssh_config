@@ -75,6 +75,18 @@ Host roger
 	HostName roger
 	User root
 
+Host fiver
+	HostName fiver
+	User root
+
+Host frank
+	HostName frank
+	User root
+
+Host trix
+	HostName trix
+	User root
+
 Host vodka
 	HostName vodka
 	User root
