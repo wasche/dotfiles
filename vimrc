@@ -207,6 +207,8 @@ set scrolloff=3
 set visualbell          " make the bell visual
 syntax on
 
+set backspace=indent,eol,start
+
 " backups/swap
 set backupdir=~/.vim/tmp,.
 set directory=~/.vim/tmp,.
