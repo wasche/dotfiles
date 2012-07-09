@@ -35,6 +35,9 @@ $(HOME)/.ssh/config: ssh_config
 	mkdir -p $(HOME)/.ssh
 	ln -fs $(abspath $<) $@
 
+$(HOME)/bin: bin
+	ln -fs $(abspath $<) $@
+
 $(HOME)/.pentadactyl/info/default/quickmarks: pentadactyl/info/default/quickmarks
 	mkdir -p $(HOME)/.pentadactyl/info/default
 	ln -fs $(abspath $<) $@
