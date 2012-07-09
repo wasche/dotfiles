@@ -1,4 +1,7 @@
-for config_file in ~/.bash/special/*.bash; do source $config_file; done
+. ~/.bash/special/env.bash
+. ~/.bash/special/aliases.bash
+. ~/.bash/special/search.bash
+. ~/.bash/special/automagic_trtop.bash
 
 # load os overrides last
-source ~/.bash/special/os.bash
+. ~/.bash/special/os.bash
