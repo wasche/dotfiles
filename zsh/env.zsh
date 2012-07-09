@@ -6,6 +6,7 @@ export ANT_HOME=/usr/local/ant
 export ANT_OPTS=-Xmx500M;
 
 export NODE_ENV='development'
+export PATH=$PATH:$HOME/bin
 
 autoload -U compinit
 compinit

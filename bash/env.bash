@@ -8,6 +8,7 @@ export ANT_OPTS=-Xmx500M;
 if [[ -d /usr/local/node/bin ]]; then
   export PATH=$PATH:/usr/local/node/bin
 fi
+export PATH=$PATH:$HOME/bin
 
 PS1="[\[\033[31m\]\u\[\033[0m\]@\[\033[31m\]\h\[\033[0m\]:\[\033[1;32m\]\W\[\033[0m\]]\$ "
 
