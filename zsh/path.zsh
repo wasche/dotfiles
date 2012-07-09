@@ -1,3 +1,5 @@
+export PATH=$PATH:~/bin
+
 if [[ -d ~/.gem/ruby/ ]] && ls ~/.gem/ruby/ >/dev/null 2>&1; then
   for dir in ~/.gem/ruby/*; do
     if [[ -d $dir/bin ]]; then
@@ -11,7 +13,7 @@ if [[ -d /usr/local/node/bin ]]; then
 fi
 
 if [[ -d /usr/local/rvm ]]; then
-  PATH="$PATH:/usr/local/rvm/bin"
+  PATH=$PATH:/usr/local/rvm/bin
 fi
 
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
