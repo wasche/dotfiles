@@ -1,6 +1,7 @@
 . ~/.bash/env.bash
 . ~/.bash/aliases.bash
 . ~/.bash/node_completion.bash
+. ~/.bash/templates.bash
 
 # load overrides last
 . ~/.bash/os.bash
