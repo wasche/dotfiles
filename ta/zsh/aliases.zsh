@@ -123,10 +123,10 @@ function hc()
 {
   if [[ $# -gt 0 ]]; then
     echo "Configuring hive for $@"
-    source $WHTOP/clusters/$@/config/env.bash $WHTOP/clusters/$@
+    bash $WHTOP/clusters/$@/config/env.bash $WHTOP/clusters/$@
   else
     echo "Configuring hive for adhoc"
-    source $WHTOP/clusters/adhoc/config/env.bash $WHTOP/clusters/adhoc
+    bash $WHTOP/clusters/adhoc/config/env.bash $WHTOP/clusters/adhoc
   fi
 }
 

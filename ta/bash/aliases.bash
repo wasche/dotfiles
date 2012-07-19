@@ -109,6 +109,17 @@ function inspect {
   javatr.sh com.tripadvisor.inspect.FileDefinitionInspector $@
 }
 
+function hc()
+{
+  if [[ $# -gt 0 ]]; then
+    echo "Configuring hive for $@"
+    bash $WHTOP/clusters/$@/config/env.bash $WHTOP/clusters/$@
+  else
+    echo "Configuring hive for adhoc"
+    bash $WHTOP/clusters/adhoc/config/env.bash $WHTOP/clusters/adhoc
+  fi
+}
+
 alias tm='psql -h rivendell -U tripmaster'
 alias tm-dev='psql -h dev-db -U tripmaster'
 alias tm-media='psql -h rivendell -U tripmaster_media'
