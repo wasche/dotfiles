@@ -70,10 +70,12 @@ ie()
 
 u()
 {
-  if [[ $# -gt 0 ]]; then
+  if [[ "$1" == "xml" ]]; then
+    ant run-unittests-xml | tee unit-tests.log
+  elif [[ $# -gt 0 ]]; then
     ENSURE_PURE_UNIT_TESTS=true javatr.sh org.junit.runner.JUnitCore "$@"
   else
-    ant run-unittests-verbose | tee unit-tests.log
+    ant run-unittests | tee unit-tests.log
   fi
 }
 
