@@ -1,5 +1,5 @@
 
-alias logdir='cd /etc/httpd-MAINLINE/logs'
+alias logs='cd /etc/httpd-MAINLINE/logs'
 
 function gg {
   cd $TRTOP/$@

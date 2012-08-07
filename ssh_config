@@ -7,7 +7,7 @@ Host crawfish
 
 Host lobster
 	HostName lobster
-	User wasche
+	User root
 
 Host lumberjack
 	HostName lumberjack
