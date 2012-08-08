@@ -134,6 +134,8 @@ function hc()
 
 alias tm='psql -h rivendell -U tripmaster'
 alias tm-dev='psql -h dev-db -U tripmaster'
+alias tm-dev-w='psql -h dev-db -U tripmaster_writable'
+alias tm-dev-member='psql -h dev-db -U tripmaster_member'
 alias tm-media='psql -h rivendell -U tripmaster_media'
 alias tm-media-dev='psql -h dev-db -U tripmaster_media'
 alias tm-tools='psql -h tools-db -U tripmaster'
