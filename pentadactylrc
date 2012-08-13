@@ -12,9 +12,9 @@ set passkeys+=^https?\://www\.google\.com/reader/:jAkv,ga,ge
 autocmd LocationChange 'spreadsheets\.google\.com' :normal gi
 autocmd LocationChange 'docs\.google\.com/document' :normal gi
 
-nnoremap <silent> <leader>d :toolbartoggle Web Developer Toolbar<CR>
-nnoremap <leader>g og 
-nnoremap <leader>G tg 
-nnoremap <M-f> /
+nmap -builtin <silent> <leader>d :toolbartoggle Web Developer Toolbar<CR>
+nmap -builtin <leader>g og 
+nmap -builtin <leader>G tg 
+nmap -builtin <M-f> /
 
 " vim: set ft=pentadactyl:
