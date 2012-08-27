@@ -1,0 +1,38 @@
+Aliases:
+
+fs logs sx vc
+
+Change to directory:
+gg - $TRTOP/$@
+ga - Applications/$@
+gc - site/css2/$@
+gi - site/img2/$@
+gj - site/js3/$@
+gv - site/velocity_redesign/$@
+gt - tr/com/TripResearch/$@
+
+Functions: (run w/o args for usage)
+
+j hc ie inspect mcr onoz
+
+css - compile css
+fu  - run functional tests
+js  - compile js
+mc  - clear memcache
+u   - run unit tests
+tab - run tabuild (default is -rf)
+
+Subversion helpers:
+
+svn-checkout
+svn-status-conflicts
+svn-status-deletes
+svn-branch-update
+svn-branch-diff
+
+Database aliases:
+
+tm tm-dev tm-dev-w tm-dev-member
+tm-media tm-media-dev
+tm-tools tm-tools-dev
+tm-test tm-test-dev

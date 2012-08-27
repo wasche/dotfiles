@@ -1,0 +1,26 @@
+#!/bin/bash
+# Show help for Wil's productivity enhancement suite.
+
+DIR=`dirname $0`
+SH=`basename $SHELL`
+OS=`$DIR/os.sh`
+SDIR="`dirname $DIR`/.$SH/special"
+
+echo
+echo "Standard aliases:"
+echo
+echo ".. ... .... cpu history la ll mem v"
+echo
+echo "Functions: (run w/o arguments for usage)"
+echo
+echo "mount-ssh"
+echo
+if [ -e "$DIR/$SH/os/help.txt" ]; then
+  echo "Machine specific:"
+  cat $DIR/$SH/os/help.txt
+fi
+
+if [ -e "$SDIR/help.txt" ]; then
+  cat $SDIR/help.txt
+fi
+
