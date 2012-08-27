@@ -132,7 +132,7 @@ function hc()
   fi
 }
 
-alias tm='psql -h rivendell -U tripmaster'
+alias tm='psql -h rivendell -U tripmaster_ro tripmaster'
 alias tm-dev='psql -h dev-db -U tripmaster'
 alias tm-dev-w='psql -h dev-db -U tripmaster_writable'
 alias tm-dev-member='psql -h dev-db -U tripmaster_member'
@@ -164,6 +164,13 @@ alias svn-status-conflicts="svntr st | egrep '^\s*C'"
 alias svn-status-deletes="svntr st | egrep '^\s*D'"
 alias svn-branch-update="svntr branch-update --script |& tee merge.log"
 alias svn-branch-diff="svntr diff -B"
+
+function svn-checkout()
+{
+  branch=$1:u
+  dir=$1:l
+  svntr checkout //$branch $dir
+}
 
 function onoz()
 {
