@@ -1,0 +1,37 @@
+#!/bin/bash
+# Show help for Wil's productivity enhancement suite.
+
+DIR=`dirname $0`
+SH=`basename $SHELL`
+OS=`$DIR/os.sh`
+SDIR="`dirname $DIR`/.$SH"
+SPDIR="$SDIR/special"
+
+echo -e "\e[1mAliases:\e[0m"
+if [ -e "$SDIR/help-aliases.txt" ]; then
+  cat $SDIR/help-aliases.txt
+fi
+if [ -e "$SPDIR/help-aliases.txt" ]; then
+  cat $SPDIR/help-aliases.txt
+fi
+
+echo
+echo -e "\e[1mFunctions:\e[0m (run w/o arguments for usage)"
+if [ -e "$SDIR/help-functions.txt" ]; then
+  cat $SDIR/help-functions.txt
+fi
+if [ -e "$SPDIR/help-functions.txt" ]; then
+  cat $SPDIR/help-functions.txt
+fi
+
+if [ -e "$SDIR/os/help.txt" ]; then
+  echo
+  echo -e "\e[1mMachine specific:\e[0m"
+  cat $SDIR/os/help.txt
+fi
+
+if [ -e "$SPDIR/help.txt" ]; then
+  echo
+  cat $SPDIR/help.txt
+fi
+

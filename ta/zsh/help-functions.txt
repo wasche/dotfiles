@@ -1,0 +1,8 @@
+j hc ie inspect mcr onoz
+
+css - compile css
+fu  - run functional tests
+js  - compile js
+mc  - clear memcache
+u   - run unit tests
+tab - run tabuild (default is -rf)

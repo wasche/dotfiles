@@ -1,4 +1,4 @@
-OS=$(shell ./os.sh)
+OS=$(shell ./bin/os.sh)
 SUBLIME_SETTINGS_DIR=$(abspath config/sublime-text-2/Packages/User)
 
 ifeq ($(OS),ubuntu)

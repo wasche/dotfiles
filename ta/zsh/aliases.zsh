@@ -9,7 +9,7 @@ function gj() { gg site/js3/$@ }
 function gv() { gg site/velocity_redesign/$@ }
 function gt() { gg tr/com/TripResearch/$@ }
 
-alias vc='vim $TRTOP/config/hsots/$(hostname -s).ini'
+alias vc='vim $TRTOP/config/hosts/$(hostname -s).ini'
 alias fs='$TRTOP/scripts/find-string --relative'
 
 alias sx='sudo $TRTOP/scripts/httpd_stop.sh'
@@ -103,16 +103,20 @@ function mc()
 
 function mcr()
 {
-  server="$1"
-  shift
   if [[ $# -gt 0 ]]; then
-    for i in 11211 11311 11411; do
-      echo $@ | nc $server $i
-    done
+    server="$1"
+    shift
+    if [[ $# -gt 0 ]]; then
+      for i in 11211 11311 11411; do
+        echo $@ | nc $server $i
+      done
+    else
+      for i in 11211 11311 11411; do
+        echo flush_all | nc $server $i
+      done
+    fi
   else
-    for i in 11211 11311 11411; do
-      echo flush_all | nc $server $i
-    done
+    echo "Usage: mcr server [memcache commands]"
   fi
 }
 
@@ -127,12 +131,11 @@ function hc()
     echo "Configuring hive for $@"
     bash $WHTOP/clusters/$@/config/env.bash $WHTOP/clusters/$@
   else
-    echo "Configuring hive for adhoc"
-    bash $WHTOP/clusters/adhoc/config/env.bash $WHTOP/clusters/adhoc
+    echo "Usage: hc (adhoc|prod)"
   fi
 }
 
-alias tm='psql -h rivendell -U tripmaster'
+alias tm='psql -h rivendell -U tripmaster_ro tripmaster'
 alias tm-dev='psql -h dev-db -U tripmaster'
 alias tm-dev-w='psql -h dev-db -U tripmaster_writable'
 alias tm-dev-member='psql -h dev-db -U tripmaster_member'
@@ -164,6 +167,13 @@ alias svn-status-conflicts="svntr st | egrep '^\s*C'"
 alias svn-status-deletes="svntr st | egrep '^\s*D'"
 alias svn-branch-update="svntr branch-update --script |& tee merge.log"
 alias svn-branch-diff="svntr diff -B"
+
+function svn-checkout()
+{
+  branch=$1:u
+  dir=$1:l
+  svntr checkout //$branch $dir
+}
 
 function onoz()
 {
