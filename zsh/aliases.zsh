@@ -56,7 +56,7 @@ isword()
 mount-ssh()
 {
   if [[ $# -eq 2 ]]; then
-    sshfs -o idmap=user $@
+    sshfs -oauto_cache,reconnect,defer_permissions,negative_vncache,noappledouble,idmap=user $@
   else
     echo "Usage: mount-ssh user@machine:path local_path"
     return 2
