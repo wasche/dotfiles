@@ -53,10 +53,16 @@ isword()
 
 mount-ssh()
 {
-  if [[ $# -eq 2 ]]; then
-    sshfs -oauto_cache,reconnect,defer_permissions,negative_vncache,noappledouble,idmap=user $@
+  if [[ $# -ge 2 ]]; then
+    user=`whoami`
+    host=$1
+    branch=$2
+    remote_path="src/$branch"
+    local_path="${host}-$branch"
+    shift;shift
+    sshfs -oauto_cache,reconnect,defer_permissions,negative_vncache,noappledouble,idmap=user,volname=$branch $user@$host:$remote_path $local_path
   else
-    echo "Usage: mount-ssh user@machine:path local_path"
+    echo "Usage: mount-ssh [user] host branch [local_path]"
     return 2
   fi
 }
