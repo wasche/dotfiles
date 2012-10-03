@@ -60,6 +60,12 @@ mount-ssh()
     remote_path="src/$branch"
     local_path="${host}-$branch"
     shift;shift
+    if [[ $# -eq 1 ]]; then
+      local_path=$1
+      shift
+    fi
+    mkdir -p $local_path
+    echo "sshfs -oauto_cache,reconnect,defer_permissions,negative_vncache,noappledouble,idmap=user,volname=$branch $user@$host:$remote_path $local_path"
     sshfs -oauto_cache,reconnect,defer_permissions,negative_vncache,noappledouble,idmap=user,volname=$branch $user@$host:$remote_path $local_path
   else
     echo "Usage: mount-ssh [user] host branch [local_path]"
