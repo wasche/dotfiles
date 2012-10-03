@@ -1,14 +1,16 @@
 OS=$(shell ./bin/os.sh)
-SUBLIME_SETTINGS_DIR=$(abspath config/sublime-text-2/Packages/User)
+SUBLIME_PACKAGES_DIR=$(abspath config/sublime-text-2/Packages)
+SUBLIME_SETTINGS_DIR=$(SUBLIME_PACKAGES_DIR)/User
 
 ifeq ($(OS),ubuntu)
 	SUBLIME_DIR=$(HOME)/.config/sublime-text-2
 endif
 ifeq ($(OS),macosx)
-	SUBLIME_DIR=$(HOME)/Library/Application Support/Sublime Text 2
+	SUBLIME_DIR=$(HOME)/Library/Application\ Support/Sublime\ Text\ 2
 endif
 
-SUBLIME_TARGET=$(SUBLIME_DIR)/Packages/User
+SUBLIME_PACKAGES=$(SUBLIME_DIR)/Packages
+SUBLIME_USER=$(SUBLIME_PACKAGES)/User
 
 base: $(HOME)/.vim \
 	$(HOME)/.vimrc \
@@ -65,15 +67,21 @@ $(HOME)/.zsh/special/os.zsh: ta/zsh/os/$(OS).zsh
 
 ta: ta-bash ta-zsh $(HOME)/.bash/special/os.bash $(HOME)/.zsh/special/os.zsh
 
-sublime:
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/Preferences.sublime-settings" "$(SUBLIME_TARGET)/Preferences.sublime-settings"
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/JavaScript.sublime-settings" "$(SUBLIME_TARGET)/JavaScript.sublime-settings"
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/SublimeLinter.sublime-settings" "$(SUBLIME_TARGET)/SublimeLinter.sublime-settings"
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/velocity syntax.sublime-settings" "$(SUBLIME_TARGET)/velocity syntax.sublime-settings"
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/Plain text.sublime-settings" "$(SUBLIME_TARGET)/Plain text.sublime-settings"
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/CSS.sublime-settings" "$(SUBLIME_TARGET)/CSS.sublime-settings"
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/HTML.sublime-settings" "$(SUBLIME_TARGET)/HTML.sublime-settings"
+$(SUBLIME_USER)/%.sublime-settings: $(SUBLIME_SETTINGS_DIR)/%.sublime-settings
+	ln -fs "$<" "$@"
 
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/velocity syntax.JSON-tmLanguage" "$(SUBLIME_TARGET)/velocity syntax.JSON-tmLanguage"
-	ln -fs "$(SUBLIME_SETTINGS_DIR)/velocity syntax.tmLanguage" "$(SUBLIME_TARGET)/velocity syntax.tmLanguage"
+sublime-settings: $(SUBLIME_USER)/Preferences.sublime-settings \
+	$(SUBLIME_USER)/JavaScript.sublime-settings \
+	$(SUBLIME_USER)/SublimeLinter.sublime-settings \
+	$(SUBLIME_USER)/CSS.sublime-settings \
+	$(SUBLIME_USER)/HTML.sublime-settings \
+	$(SUBLIME_USER)/velocity\ syntax.sublime-settings \
+	$(SUBLIME_USER)/Plain\ text.sublime-settings \
+
+$(SUBLIME_PACKAGES)/%: $(SUBLIME_PACKAGES_DIR)/%
+	ln -fs "$<" "$@"
+
+sublime-langs: $(SUBLIME_PACKAGES)/Velocity
+
+sublime: sublime-settings sublime-langs
 
