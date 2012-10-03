@@ -2,7 +2,10 @@ OS=$(shell ./bin/os.sh)
 SUBLIME_SETTINGS_DIR=$(abspath config/sublime-text-2/Packages/User)
 
 ifeq ($(OS),ubuntu)
-	SUBLIME_DIR = $(HOME)/.config/sublime-text-2
+	SUBLIME_DIR=$(HOME)/.config/sublime-text-2
+endif
+ifeq ($(OS),macosx)
+	SUBLIME_DIR=$(HOME)/Library/Application Support/Sublime Text 2
 endif
 
 SUBLIME_TARGET=$(SUBLIME_DIR)/Packages/User
@@ -68,4 +71,9 @@ sublime:
 	ln -fs "$(SUBLIME_SETTINGS_DIR)/SublimeLinter.sublime-settings" "$(SUBLIME_TARGET)/SublimeLinter.sublime-settings"
 	ln -fs "$(SUBLIME_SETTINGS_DIR)/velocity syntax.sublime-settings" "$(SUBLIME_TARGET)/velocity syntax.sublime-settings"
 	ln -fs "$(SUBLIME_SETTINGS_DIR)/Plain text.sublime-settings" "$(SUBLIME_TARGET)/Plain text.sublime-settings"
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/CSS.sublime-settings" "$(SUBLIME_TARGET)/CSS.sublime-settings"
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/HTML.sublime-settings" "$(SUBLIME_TARGET)/HTML.sublime-settings"
+
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/velocity syntax.JSON-tmLanguage" "$(SUBLIME_TARGET)/velocity syntax.JSON-tmLanguage"
+	ln -fs "$(SUBLIME_SETTINGS_DIR)/velocity syntax.tmLanguage" "$(SUBLIME_TARGET)/velocity syntax.tmLanguage"
 
