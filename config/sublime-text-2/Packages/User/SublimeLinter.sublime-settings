@@ -45,7 +45,7 @@
         "multistr"     : false,
         "onecase"      : false,
         "proto"        : false,
-        "regexdash"    : false,
+        "regexdash"    : true,
         "scripturl"    : false,
         "smarttabs"    : false,
         "shadow"       : false,
