@@ -15,6 +15,8 @@ source ~/.zsh/completion.zsh
 source ~/.zsh/env.zsh
 source ~/.zsh/prompt.zsh
 
+source ~/.zsh/todo.zsh
+
 source ~/.zsh/templates.zsh
 
 source ~/.zsh/os.zsh

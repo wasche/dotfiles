@@ -12,8 +12,14 @@ if [[ -d /usr/local/node/bin ]]; then
   export PATH=$PATH:/usr/local/node/bin
 fi
 
+if [[ -d /usr/local/share/npm/bin ]]; then
+  export PATH=$PATH:/usr/local/share/npm/bin
+fi
+
 if [[ -d /usr/local/rvm ]]; then
   PATH=$PATH:/usr/local/rvm/bin
 fi
 
-export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+if [[ -d /usr/local/lib/jsctags ]]; then
+  export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+fi
