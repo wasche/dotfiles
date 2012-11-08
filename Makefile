@@ -14,6 +14,7 @@ SUBLIME_USER=$(SUBLIME_PACKAGES)/User
 
 base: $(HOME)/.vim \
 	$(HOME)/.vimrc \
+	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
 	$(HOME)/.ssh/config \
 	$(HOME)/.pentadactylrc \
