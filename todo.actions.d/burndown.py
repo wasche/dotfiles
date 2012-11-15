@@ -9,7 +9,7 @@ CHANGELOG:
 """
 
 import sys
-import todotxt
+from todotxt import TodoTxt, Task, Project
 
 __version__ = "0.1"
 __date__ = "2012/11/06"
@@ -24,9 +24,20 @@ __history__ = """
 def usage():
     print "USAGE:  %s [todo.txt] [done.txt]" % (sys.argv[0], )
 
-def load(filename):
-    tasks = todotxt.read(filename)
-    print tasks
+def load(argv):
+    todos = TodoTxt(argv[0], argv[1])
+    for p in todos.projects():
+    	print p
+        total = len(p.tasks)
+        completed = filter(lambda t: t.completed, p.tasks)
+        remaining = filter(lambda t: not t.completed, p.tasks)
+        print "  Progress: {0}/{1} ({2:.0f}%)".format(len(completed), total, (len(completed) / float(total)) * 100)
+        print "  Remaining Tasks:"
+    	for t in remaining:
+    		print "    {0:02d} {1}".format(t.index, repr(t))
 
 if __name__ == "__main__":
-    load(sys.argv[1])
+	if len(sys.argv) != 3:
+		usage()
+	else:
+		load(sys.argv[1:])

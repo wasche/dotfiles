@@ -2,70 +2,48 @@
 """
 """
 
-import re
 from task import Task
 from project import Project
 
-DateFormat = re.compile('\d{4}-\d{2}-\d{2}')
-PriorityFormat = re.compile('\(([A-Z])\) ')
-ContextFormat = re.compile('@[^\s]+[\w_]')
-ProjectFormat = re.compile('\+[^\s]+[\w_]')
-MetaFormat = re.compile('[^\s:][\w_]+:[^\s]+[\w_]')
+class TodoTxt:
+    """Todo.txt File"""
 
-def read(filename):
-    tasks = []
+    _tasks = []
+    _projects = {}
 
-    idx = 1
-    with open(filename, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if line == "":
-                continue
+    def __init__(self, todoFile, doneFile):
+        self.todoFile = todoFile
+        self.doneFile = doneFile
+        self.read(todoFile)
+        self.read(doneFile, True)
 
-            task = Task(idx)
-            idx += 1
+    def projects(self):
+        return self._projects.itervalues()
 
-            # Rule 1: A completed task starts with an x.
-            if line[:1] == "x":
-                task.completed = True
-                line = line[3:]
+    def read(self, filename, archived=False):
+        idx = 1
+        with open(filename, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line == "":
+                    continue
 
-                # Rule 2: The date of completion appears directly after the x,
-                # separated by a space
-                m = DateFormat.search(line[:10])
-                if m != None:
-                    task.completedOn = m.group()
-                    line = line[12:]
+                task = Task(idx, archived)
+                task.parse(line)
+                self._tasks.append(task)
+                idx += 1
 
-            # Rule 3: If a priority exists, it always appears first
-            m = PriorityFormat.search(line[:4])
-            if m != None:
-                task.priority = m.group(1)
-                line = line[3:]
-
-            # Rule 4: A task's creation date may optionally appear directly after
-            # priority and a space
-            m = DateFormat.search(line[:10])
-            if m != None:
-                task.createdOn = m.group()
-                line = line[12:]
-
-            # Rule 5: contexts and projects may appear anywhere in the line after
-            # priority/prepended date.
-            for m in ContextFormat.finditer(line):
-                task.addContext(m.group())
-            for m in ProjectFormat.finditer(line):
-                task.addProject(m.group())
-            for m in MetaFormat.finditer(line):
-                task.addMetaData(m.group())
-
-            task.description = line
-            tasks.append(task)
-
-    return tasks
+                if task.projects is not None:
+                    for n in task.projects:
+                        if not self._projects.has_key(n):
+                            project = Project(n)
+                            self._projects[n] = project
+                        else:
+                            project = self._projects[n]
+                        project.addTask(task)
 
 if __name__ == "__main__":
     import sys
-    tasks = read(sys.argv[1])
-    for t in tasks:
+    todos = TodoTxt(sys.argv[1])
+    for t in todos.tasks:
         print str(t)
