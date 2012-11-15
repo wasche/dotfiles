@@ -18,10 +18,9 @@ from project import Project
 class TodoTxt:
     """todo.txt File"""
 
-    _tasks = []
-    _projects = {}
-
     def __init__(self, todoFile, doneFile):
+        self._tasks = []
+        self._projects = {}
         self.todoFile = todoFile
         self.doneFile = doneFile
         self.read(todoFile)
@@ -46,11 +45,8 @@ class TodoTxt:
                 if task.projects is not None:
                     for n in task.projects:
                         if not self._projects.has_key(n):
-                            project = Project(n)
-                            self._projects[n] = project
-                        else:
-                            project = self._projects[n]
-                        project.addTask(task)
+                            self._projects[n] = Project(n)
+                        self._projects[n].addTask(task)
 
 if __name__ == "__main__":
     import sys

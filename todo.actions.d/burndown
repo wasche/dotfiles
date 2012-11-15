@@ -12,5 +12,5 @@ shift
 }
 
 [ "$action" = "burndown" ] && {
-  python ${TODO_ACTIONS_DIR}/burndown.py "$TODO_FILE" "$DONE_FILE"
+  python ${TODO_ACTIONS_DIR}/burndown.py "$TODO_FILE" "$DONE_FILE" $@
 }

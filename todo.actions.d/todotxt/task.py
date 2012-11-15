@@ -11,19 +11,17 @@ MetaFormat = re.compile('([^\s:][\w_]+):([^\s]+[\w_])')
 class Task:
     """todo.txt Task"""
 
-    description = ''
-    priority = None
-    createdOn = None
-    completedOn = None
-    completed = False
-    contexts = None
-    projects = None
-    metadata = None
-    archived = False
-
     def __init__(self, index, archived=False):
         self.index = index
         self.archived = archived
+        self.description = ''
+        self.priority = None
+        self.createdOn = None
+        self.completedOn = None
+        self.completed = False
+        self.contexts = None
+        self.projects = None
+        self.metadata = None
 
     def addContext(self, context):
         if self.contexts is None:

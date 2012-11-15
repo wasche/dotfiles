@@ -30,9 +30,21 @@ def usage():
     print "USAGE:  {0} [todo.txt] [done.txt]".format(sys.argv[0])
 
 def load(argv):
-    todos = TodoTxt(argv[0], argv[1])
+    todoFile = argv.pop(0)
+    doneFile = argv.pop(0)
+
+    skip = set()
+    while len(argv) > 0:
+        arg = argv.pop(0)
+        if arg[:1] == '-':
+            skip.add(arg[1:])
+
+    todos = TodoTxt(todoFile, doneFile)
     for p in todos.projects():
-    	print p
+        if len(p.getContexts() & skip) > 0:
+            continue
+
+    	print p, '(', ''.join(p.getContexts()), ')'
         total = len(p.tasks)
         completed = filter(lambda t: t.completed, p.tasks)
         remaining = filter(lambda t: not t.completed, p.tasks)
@@ -42,7 +54,7 @@ def load(argv):
     		print "    {0:02d} {1}".format(t.index, repr(t))
 
 if __name__ == "__main__":
-	if len(sys.argv) != 3:
+	if len(sys.argv) < 3:
 		usage()
 	else:
 		load(sys.argv[1:])
