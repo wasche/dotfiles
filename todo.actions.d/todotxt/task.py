@@ -48,19 +48,19 @@ class Task:
 
             # Rule 2: The date of completion appears directly after the x, separated by a space
             m = DateFormat.search(s[:10])
-            if m != None:
+            if m is not None:
                 self.completedOn = m.group()
                 s = s[12:]
 
         # Rule 3: If a priority exists, it always appears first
         m = PriorityFormat.search(s[:4])
-        if m != None:
+        if m is not None:
             self.priority = m.group(1)
             s = s[3:]
 
         # Rule 4: creation date may optionally appear directly after priority and a space
         m = DateFormat.search(s[:10])
-        if m != None:
+        if m is not None:
             self.createdOn = m.group()
             s = s[12:]
 
@@ -82,7 +82,7 @@ class Task:
         while (w[-1][:1] == '+' and w[-1][1:] in self.projects) or (w[-1][:1] == '@' and w[-1][1:] in self.contexts):
             del w[-1]
 
-        self.description = ' '.join(w)
+        self.description = ' '.join(w).strip()
 
     def __repr__(self):
         s = []
