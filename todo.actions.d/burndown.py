@@ -1,28 +1,33 @@
 #!/usr/bin/env python
 
-""" TODO.TXT Burndown Chart Report
-USAGE:
-    burndown.py [todo.txt] [done.txt]
+"""todo.txt Burndown Chart Report
+Outputs a report of all projects, their progress, and remaining tasks.
 
-CHANGELOG:
-    2012.00.00
+Example:
+
+Project A
+  Progress: 5/7 (71%)
+  Remaining Tasks:
+    03 do something cool
+    06 do something cooler
 """
 
 import sys
 from todotxt import TodoTxt, Task, Project
 
-__version__ = "0.1"
-__date__ = "2012/11/06"
-__updated__ = "2012/11/06"
-__author__ = "Wil Asche (wil@asche.us)"
+__author__ = "Wil Asche"
 __copyright__ = "Copyright 2012, Wil Asche"
-__license__ = "GPL"
+__license__ = "MIT"
+__version__ = "0.1.0"
+__date__ = "2012/11/14"
+__updated__ = "2012/11/14"
+__email__ = "wil@asche.us"
 __history__ = """
-1.0 - Released.
+0.1 - Released.
 """
 
 def usage():
-    print "USAGE:  %s [todo.txt] [done.txt]" % (sys.argv[0], )
+    print "USAGE:  {0} [todo.txt] [done.txt]".format(sys.argv[0])
 
 def load(argv):
     todos = TodoTxt(argv[0], argv[1])

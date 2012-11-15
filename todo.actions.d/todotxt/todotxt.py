@@ -1,12 +1,22 @@
 #!/usr/bin/env python
-"""
+"""Module for interacting with todo.txt and done.txt
+
+Provides support for reading, modifying, and writing todo.txt and done.txt, as per the rules defined by the Todo.txt
+project (http://todotxt.com/) at https://github.com/ginatrapani/todo.txt-cli/wiki/The-Todo.txt-Format
+
+Formatting rules:
+Rule 1: A completed task starts with an x.
+Rule 2: The date of completion appears directly after the x, separated by a space
+Rule 3: If a priority exists, it appears first after completion
+Rule 4: Creation date may optionally appear directly after priority and a space
+Rule 5: Contexts and projects may appear anywhere in the line after priority/prepended date.
 """
 
 from task import Task
 from project import Project
 
 class TodoTxt:
-    """Todo.txt File"""
+    """todo.txt File"""
 
     _tasks = []
     _projects = {}

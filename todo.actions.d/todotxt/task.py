@@ -1,6 +1,4 @@
-"""
-
-"""
+"""A single task in a todo.txt file."""
 
 import re
 
@@ -11,7 +9,7 @@ ProjectFormat = re.compile('\+([^\s]+[\w_])')
 MetaFormat = re.compile('([^\s:][\w_]+):([^\s]+[\w_])')
 
 class Task:
-    """Todo.txt Task"""
+    """todo.txt Task"""
 
     description = ''
     priority = None

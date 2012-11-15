@@ -1,9 +1,7 @@
-"""
-
-"""
+"""A single project axis in a todo.txt"""
 
 class Project:
-    """Todo.txt Project"""
+    """todo.txt Project"""
 
     name = None
     tasks = []
