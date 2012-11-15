@@ -13,6 +13,7 @@ Project A
 """
 
 import sys
+from operator import attrgetter
 from todotxt import TodoTxt, Task, Project
 
 __author__ = "Wil Asche"
@@ -48,6 +49,7 @@ def load(argv):
         total = len(p.tasks)
         completed = filter(lambda t: t.completed, p.tasks)
         remaining = filter(lambda t: not t.completed, p.tasks)
+        remaining = sorted(remaining, key=lambda t: (t.priority or 'ZZ', t.index))
         print "  Progress: {0}/{1} ({2:.0f}%)".format(len(completed), total, (len(completed) / float(total)) * 100)
         print "  Remaining Tasks:"
     	for t in remaining:
