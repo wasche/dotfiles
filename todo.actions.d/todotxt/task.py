@@ -62,7 +62,7 @@ class Task:
         m = DateFormat.search(s[:10])
         if m is not None:
             self.createdOn = m.group()
-            s = s[12:]
+            s = s[11:]
 
         # Rule 5: contexts and projects may appear anywhere in the line after priority/prepended date.
         for m in ContextFormat.finditer(s):
