@@ -1,4 +1,4 @@
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 export JDK_HOME=$JAVA_HOME
 if [[ "$PATH" != *$JAVA_HOME/bin* ]]; then
   export PATH=$PATH:$JAVA_HOME/bin
