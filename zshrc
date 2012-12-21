@@ -31,6 +31,6 @@ if [[ -f ~/.zsh.local ]]; then
   source ~/.zsh.local
 fi
 
-source ~/.zsh/screen.zsh
+#source ~/.zsh/screen.zsh
 
 true
