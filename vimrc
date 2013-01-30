@@ -257,6 +257,11 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModeSelTarget = 1
 
+" better change word
+:nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
+nmap pw :inoremap <lt>Space> <lt>Space><lt>Esc>:iunmap <lt>lt>Space><lt>CR><CR> cw
+nmap p$ :inoremap <lt>CR> <lt>CR><lt>Esc>:iunmap <lt>lt>CR><lt>CR><CR> c$
+
 " better tab completion
 set wildmenu
 set wildmode=longest,list,full
