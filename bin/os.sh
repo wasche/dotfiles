@@ -6,7 +6,7 @@ OS=`uname -v | cut -d' ' -f1`
 if [[ "Darwin" == "$KERNEL" ]]; then
   echo "macosx"
 elif [[ "Linux" == "$KERNEL" ]]; then
-  if [[ "#29-Ubuntu" == "$OS" ]]; then
+  if [[ "Ubuntu" == "${OS:4}" ]]; then
     echo "ubuntu"
   else
     echo "linux"
