@@ -13,4 +13,5 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.go setfiletype go
   au! BufRead,BufNewFile /etc/nginx/nginx.conf setfiletype nginx
   au! BufRead,BufNewFile /etc/nginx/conf.d/* setfiletype nginx
+  au! BufRead,BufNewFile *.md setfiletype markdown
 augroup END
