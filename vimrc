@@ -180,6 +180,14 @@ if has("autocmd")
   autocmd Filetype sql set autoindent
   autocmd Filetype sql set enc=utf-8
 
+  autocmd Filetype markdown set tabstop=2
+  autocmd Filetype markdown set shiftwidth=2
+  autocmd Filetype markdown set smarttab
+  autocmd Filetype markdown set expandtab
+  autocmd Filetype markdown set softtabstop=2
+  autocmd Filetype markdown set autoindent
+  autocmd Filetype markdown set enc=utf-8
+
 else
 
   set autoindent		" always set autoindenting on
