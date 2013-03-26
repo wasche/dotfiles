@@ -1,0 +1,16 @@
+.npmignore
+.gitignore
+.gitmodules
+.travis.yml
+
+History.md
+Makefile
+
+docs/
+editors/
+examples/
+test/
+logos/
+
+coverage.html
+lib-cov

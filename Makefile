@@ -6,7 +6,7 @@ ifeq ($(OS),ubuntu)
 	SUBLIME_DIR=$(HOME)/.config/sublime-text-2
 endif
 ifeq ($(OS),macosx)
-	SUBLIME_DIR=$(HOME)/Library/Application\ Support/Sublime\ Text\ 2
+	SUBLIME_DIR=$(HOME)/Library/Application\ Support/Sublime\ Text\ 3
 endif
 
 SUBLIME_PACKAGES=$(SUBLIME_DIR)/Packages
@@ -69,7 +69,7 @@ $(HOME)/.zsh/special/os.zsh: ta/zsh/os/$(OS).zsh
 
 ta: ta-bash ta-zsh $(HOME)/.bash/special/os.bash $(HOME)/.zsh/special/os.zsh
 
-$(SUBLIME_USER)/%.sublime-settings: $(SUBLIME_SETTINGS_DIR)/%.sublime-settings
+$(SUBLIME_USER)/%: $(SUBLIME_SETTINGS_DIR)/%
 	ln -fs "$<" "$@"
 
 sublime-settings: $(SUBLIME_USER)/Preferences.sublime-settings \
@@ -77,13 +77,13 @@ sublime-settings: $(SUBLIME_USER)/Preferences.sublime-settings \
 	$(SUBLIME_USER)/SublimeLinter.sublime-settings \
 	$(SUBLIME_USER)/CSS.sublime-settings \
 	$(SUBLIME_USER)/HTML.sublime-settings \
-	$(SUBLIME_USER)/velocity\ syntax.sublime-settings \
-	$(SUBLIME_USER)/Plain\ text.sublime-settings \
+	$(SUBLIME_USER)/Velocity.sublime-settings \
+	$(SUBLIME_USER)/Plain.sublime-settings \
 
 $(SUBLIME_PACKAGES)/%: $(SUBLIME_PACKAGES_DIR)/%
 	ln -fs "$<" "$@"
 
-sublime-langs: $(SUBLIME_PACKAGES)/Velocity
+sublime-langs: $(SUBLIME_PACKAGES)/Velocity $(SUBLIME_PACKAGES)/Jade $(SUBLIME_PACKAGES)/Stylus
 
 sublime: sublime-settings sublime-langs
 
