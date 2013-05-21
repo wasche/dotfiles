@@ -46,8 +46,10 @@ j()
     make -C $TRTOP/Servlets
   elif [[ "$1" == "all" ]]; then
     ant -f $TRTOP/build.xml java
+  elif [[ "$1" == "merge" ]]; then
+    ant -f $TRTOP/build.xml merge-classes
   else
-    echo "Try again? (all|app|cfg|f|lt|tools|tr|unit)" 1>&2
+    echo "Try again? (all|app|cfg|f|lt|tools|tr|unit|merge)" 1>&2
     return 2
   fi
 }
