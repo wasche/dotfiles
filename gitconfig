@@ -29,7 +29,9 @@
 [branch]
   autosetupmerge = true
 [core]
-  excludesfile = /Users/wasche/.gitignore
+  excludesfile = ~/.gitignore
 
 [github]
   user = kurakin
+[push]
+	default = simple

@@ -3,3 +3,5 @@
 .DS_Store
 .svn
 *.swp
+*.sublime-project
+*.sublime-workspace
