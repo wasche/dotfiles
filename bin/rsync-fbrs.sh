@@ -10,14 +10,20 @@
 # last modified: 02 May 2013
 #
 fbrs_root="28942"
-fbrs_dir="/usr/local/tripadvisor/fbrs/$fbrs_root/"
 opts="--archive --delete --exclude=ff.media-* --exclude=ff.urs-* --exclude=ff.member-geo-ratings.dat* --exclude=ff.typeahead2.*"
 email=`whoami`"@tripadvisor.com"
 
-if [ "$1" = "--verbose" ]
-then
-opts=$opts" --verbose --progress --human-readable"
+if [ "$1" = "--verbose" ]; then
+  shift
+  opts=$opts" --verbose --progress --human-readable"
 fi
+
+if [ "$1" ]; then
+  fbrs_root=$1
+  shift
+fi
+
+fbrs_dir="/usr/local/tripadvisor/fbrs/$fbrs_root/"
 
 rsync_errors[0]="Success"
 rsync_errors[1]="Syntax or usage error"
@@ -43,12 +49,11 @@ rsync_errors[35]="Timeout waiting for daemon connection"
 logger Starting rsync of $fbrs_dir
 rsync $opts fbr01n::local/fbrs/$fbrs_root/ $fbrs_dir
 exit_status=$?
-if [ $exit_status -eq 0 ]
-then
-    logger rsync complete for $fbrs_root
+if [ $exit_status -eq 0 ]; then
+  logger rsync complete for $fbrs_root
 else
-    logger rsync failed!! for $fbrs_root
-    mail -s "Rsync of FBRS failed with status $?" -t $email << EOF
+  logger rsync failed!! for $fbrs_root
+  mail -s "Rsync of FBRS failed with status $?" -t $email << EOF
         Error message: ${rsync_errors[$exit_status]}
 EOF
 fi
