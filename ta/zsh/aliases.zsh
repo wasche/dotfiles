@@ -47,7 +47,7 @@ j()
   elif [[ "$1" == "all" ]]; then
     ant -f $TRTOP/build.xml java
   elif [[ "$1" == "merge" ]]; then
-    ant -f $TRTOP/build.xml merge-classes
+    ant -f $TRTOP/build.xml prepare merge-classes
   else
     echo "Try again? (all|app|cfg|f|lt|tools|tr|unit|merge)" 1>&2
     return 2
@@ -87,6 +87,15 @@ fu()
     ant -f $TRTOP/build.xml -Dfunctest=$1 run-functests
   else
     make -C $TRTOP functional_test
+  fi
+}
+
+ngu()
+{
+  if [[ $# -gt 0 ]]; then
+    ant run-testngUnitTests -DtestConfigFile=$1
+  else
+    ant run-testngUnitTests
   fi
 }
 
