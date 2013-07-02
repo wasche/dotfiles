@@ -6,4 +6,3 @@ export TODOTXT_DEFAULT_ACTION=ls
 alias t="todo.sh -t"
 zstyle ':completion:*:*:t:*' user-commands todo:'description for foo'
 
-alias n="t ls +next"
