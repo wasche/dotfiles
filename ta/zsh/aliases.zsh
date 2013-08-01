@@ -99,6 +99,15 @@ ngu()
   fi
 }
 
+apitest()
+{
+  if [[ $# -gt 0 ]]; then
+    $TRTOP/scripts/api/python/run_all.sh $1
+  else
+    $TRTOP/scripts/api/python/run_all.sh
+  fi
+}
+
 function mc()
 {
   if [[ $# -gt 0 ]]; then
@@ -157,9 +166,6 @@ alias tm-tools-dev='psql -h tools-db -U tripmaster_tools'
 alias tm-test='psql -h test-db -U tripmaster tripmaster_test'
 alias tm-test-dev='psql -h test-db -U tripmaster tripmaster_test_wasche-dev'
 
-alias dev='ssh root@wasche-dev'
-alias crawfish='ssh wasche@crawfish'
-
 function tab()
 {
   (
@@ -176,8 +182,18 @@ function tab()
 
 alias svn-status-conflicts="svntr st | egrep '^\s*C'"
 alias svn-status-deletes="svntr st | egrep '^\s*D'"
-alias svn-branch-update="svntr branch-update --script |& tee merge.log"
-alias svn-branch-diff="svntr diff -B"
+
+function svn-branch-diff()
+{
+  branch=`svntr branch`
+  svntr diff -B && cp diffs.txt /tmp/$branch.diff
+}
+
+function svn-branch-update()
+{
+  svn-branch-diff
+  svntr branch-update --script |& tee merge.log
+}
 
 function svn-checkout()
 {
