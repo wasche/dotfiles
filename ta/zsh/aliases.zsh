@@ -48,8 +48,10 @@ j()
     ant -f $TRTOP/build.xml java
   elif [[ "$1" == "merge" ]]; then
     ant -f $TRTOP/build.xml prepare merge-classes
+  elif [[ "$1" == "ngunit" ]]; then
+    ant -f $TRTOP/build.xml jar-testngUnitTests
   else
-    echo "Try again? (all|app|cfg|f|lt|tools|tr|unit|merge)" 1>&2
+    echo "Try again? (all|app|cfg|f|lt|tools|tr|unit|merge|ngunit)" 1>&2
     return 2
   fi
 }
@@ -102,7 +104,7 @@ ngu()
 apitest()
 {
   if [[ $# -gt 0 ]]; then
-    $TRTOP/scripts/api/python/run_all.sh $1
+    $TRTOP/scripts/api/python/run_all.sh $*
   else
     $TRTOP/scripts/api/python/run_all.sh
   fi

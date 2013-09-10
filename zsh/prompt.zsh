@@ -45,9 +45,9 @@ get_svn_cmd()
 update_prompt()
 {
   export RPROMPT="$BASE_RPROMPT"
+  SVN="$(get_svn_cmd)"
 
-  if [[ -d ./.svn ]]; then
-    SVN="$(get_svn_cmd)"
+  if $($SVN info >/dev/null 2>&1); then
     export SVN_REV=$($SVN info | grep 'Revision: ' | cut -f 2 -d ' ')
     export SVN_DIR=$PWD
     if [[ ! -z "$SVN_BRANCH" ]]; then
@@ -56,7 +56,7 @@ update_prompt()
     if [[ ! -z "$SVN_REV" ]]; then
       export RPROMPT="$RPROMPT ${cc}r$SVN_REV$c"
     fi
-  elif $(git branch >/dev/null 2>/dev/null); then
+  elif $(git branch >/dev/null 2>&1); then
     ref=$(git symbolic-ref HEAD 2>/dev/null) || return
     export GIT_BRANCH=${ref#refs/heads/}
 

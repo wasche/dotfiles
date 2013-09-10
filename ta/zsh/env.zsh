@@ -37,8 +37,9 @@ zstyle ':chpwd:profiles:/home/wasche/src/*' profile ta
 # configuration for profile 'ta':
 chpwd_profile_ta()
 {
-  #[[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+  # make sure to run it if current dir it outside $TRTOP
+  [[ ${PWD#${TRTOP}} == $PWD ]] && findtrtop && return 0
   # skip if current dir is under $TRTOP
-  [[ ${PWD#${TRTOP}} != ${PWD} ]] && return 1
+  [[ ${${PWD#${TRTOP}}:0:1} == "/" ]] && return 1
   findtrtop
 }
