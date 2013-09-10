@@ -110,6 +110,11 @@ apitest()
   fi
 }
 
+function sonar()
+{
+  ant -f $TRTOP/tests/codecoverage/sonar/build.xml local modules
+}
+
 function mc()
 {
   if [[ $# -gt 0 ]]; then
