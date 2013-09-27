@@ -209,6 +209,22 @@ function svn-checkout()
   svntr checkout //$branch $dir
 }
 
+function update()
+{
+  if [[ "$1" == "data" ]]; then
+    pushd ~/src/tr-data
+    svntr up
+    popd
+  elif [[ "$!" == "images" ]]; then
+    pushd ~/src/images
+    svntr up
+    popd
+  else
+    echo "Try again? (data|images)" 1>&2
+    return 2
+  fi
+}
+
 function onoz()
 {
   if [[ "$1" == "lb" ]] || [[ "$1" == "lookback" ]]; then
