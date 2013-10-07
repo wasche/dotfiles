@@ -212,13 +212,13 @@ function svn-checkout()
 function update()
 {
   if [[ "$1" == "data" ]]; then
-    pushd ~/src/tr-data
+    pushd ~/src/tr-data 2>&1 >/dev/null
     svntr up
-    popd
-  elif [[ "$!" == "images" ]]; then
-    pushd ~/src/images
+    popd 2>&1 >/dev/null
+  elif [[ "$1" == "images" ]]; then
+    pushd ~/src/images 2>&1 >/dev/null
     svntr up
-    popd
+    popd 2>&1 >/dev/null
   else
     echo "Try again? (data|images)" 1>&2
     return 2
