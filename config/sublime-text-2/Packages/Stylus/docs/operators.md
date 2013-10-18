@@ -1,4 +1,3 @@
-
 ## Operator Precedence
 
 Below is the operator precedence table, highest to lowest:
@@ -54,7 +53,7 @@ The logical `not` operator has low precedence, therefore the following example c
     
     !a and !b
     // => false
-    // pased as: (!a) and (!b)
+    // parsed as: (!a) and (!b)
 
 With:
 
@@ -133,7 +132,7 @@ Multiplicative and additive binary operators work as expected. Type conversion i
 ### Multiplicative: / * %
 
     2000ms + (1s * 2)
-    // => 4ms
+    // => 4000ms
 
     5s / 2
     // => 2.5s

@@ -1,4 +1,90 @@
+0.38.0 / 2013-09-24
+==================
 
+  * Fixed `push` not to modify the first element of another array, #1118.
+  * Fixed property lookup from mixins, #1127.
+  * Fixed support for `src` and `dest` in middleware, started tests for middleware #1143.
+  * Fixed `--resolve-url` that removed tails from urls, #1126.
+  * Fixed mime type for `.woff`, #1128.
+  * Fixed `.toString` for undefined functions, #1119.
+  * Fixed path overlap for non-string dest, #1115.
+  * Fixed `path.resolve` for non-true resolveURL, #1116.
+  * Fixed sync return in `stylus.render()`, #1138.
+  * Fixed duplicate calls from `this.calling`, #1122.
+
+0.37.0 / 2013-08-19
+==================
+
+  * Added optional params to the json bif, #1102.
+  * Added `--print` option to print CSS to stdout, #1108.
+  * Fixed json bif to return literals for colours, #875.
+  * Fixed include of the css files when `--resolve-url` is on, #1099.
+  * Fixed error in negating variables, #1101.
+  * Fixed bug in `p` function, #1111.
+  * Fixed tests under windows, #1105.
+  * Fixed regression after #1094, #1113.
+  * Fixed regression after #983, #1098.
+
+0.36.1 / 2013-08-06
+==================
+
+  * Fixed regression after #1090, #1094.
+
+0.36.0 / 2013-08-01
+==================
+
+  * Added `substr`, `replace` and `split` bifs, #1088.
+  * Added possibility to provide functions to src and dest, #930.
+  * Added explicit expose for events, #898.
+  * Added blocking and css manipulation possibility within 'end' event, #923.
+  * Fixed unneeded code for imports, #1090.
+  * Fixed mtime for literal imports, #983.
+  * Fixed empty string as possible quote value for string node, #956.
+  * Fixed non-symmetrical src and dest paths in middleware, #1037.
+
+0.35.1 / 2013-07-29
+==================
+
+  * Fixed the support for progressive JPEGs in `image-size`, #1087.
+
+0.35.0 / 2013-07-29
+==================
+
+  * Added jpeg and svg support to image-size, #1083.
+  * Added `tan` trigonometric function, also `sin` and `cos` now  understand `deg` units.
+  * Added fonts to data URI `url()` mimes, also the list of mimes is now configurable, #841, #1046.
+  * Added base conversion for numbers, #714.
+  * Fixes extends from nested mixins, #1084.
+  * Fixes coercion error, #1082.
+
+0.34.1 / 2013-07-12
+==================
+
+  * Fixed the regression after #865.
+
+0.34.0 / 2013-07-12
+==================
+
+  * Added built-in `use()` function to extend Stylus from inside  of `.styl` files, #788.
+  * Added optional resolver of relative urls, #1070.
+  * Fixes incorrect imports lookup inside function call, #1069.
+  * Fixes a lot of issues with trailing symbols in comments, #865.
+  * Fixes brace on a newline CSS code style.
+  * Some minor fixes to tmbundle: #975, #1033, #1034.
+ 
+0.33.1 / 2013-06-30 
+==================
+
+  * Fixed the `exports.version` to always show an actual one.
+
+0.33.0 / 2013-06-30 
+==================
+
+  * Added extendable placeholder selectors, #1014.
+  * Added optional argument to `image-size` function, #812.
+  * Fixed inline comments after selectors, #862.
+  * Fixed a bug with empty block in CSS syntax, #712.
+ 
 0.32.1 / 2013-02-27 
 ==================
 
