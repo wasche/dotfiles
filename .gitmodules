@@ -22,3 +22,9 @@
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/bundle/funcoo.vim"]
+	path = vim/bundle/funcoo.vim
+	url = git://github.com/rizzatti/funcoo.vim.git
+[submodule "vim/bundle/dash.vim"]
+	path = vim/bundle/dash.vim
+	url = git://github.com/rizzatti/dash.vim.git

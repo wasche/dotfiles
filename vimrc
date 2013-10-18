@@ -13,6 +13,10 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 
+" Dash documentation integration
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+
 filetype plugin indent on " needed by vundle
 
 set background=dark
