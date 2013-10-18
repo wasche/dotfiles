@@ -32,6 +32,9 @@ Host merge3
 Host *-dev
 	User root
 
+Host bro*
+	User root
+
 Host wasche-dev
 	HostName wasche-dev
 	User root
