@@ -12,7 +12,7 @@ fi
 
 export JAVA_HOME=`/usr/libexec/java_home`
 
-export ANT_HOME=/opt/local/share/java/apache-ant
+export ANT_HOME=/usr/local/Cellar/ant/1.9.2/libexec
 if [[ "$PATH" != *$ANT_HOME/bin* ]]; then
   export PATH=$PATH:$ANT_HOME/bin
 fi
