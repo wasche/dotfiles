@@ -14,6 +14,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 
 " Dash documentation integration
+" provides :Dash family of commands
+" @see https://github.com/rizzatti/dash.vim
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
