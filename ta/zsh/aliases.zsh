@@ -94,6 +94,7 @@ fu()
 
 ngu()
 {
+  export ANT_OPTS=-Xmx500M
   if [[ $# -gt 0 ]]; then
     ant run-testngUnitTests -DtestConfigFile=$1
   else
