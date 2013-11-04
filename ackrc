@@ -4,6 +4,8 @@ java=Makefile.def,Makefile.gen
 m4=.m4
 --type-set
 vm=.vm
+--type-set
+config=.ini
 --invert-file-match
 -G
 ^(data|langs)/|site/(js[23]|css2?)/.*-(c|gen)\.(js|css)
