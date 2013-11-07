@@ -72,3 +72,5 @@ mount-ssh()
     return 2
   fi
 }
+
+function regex { perl -lne '@a=m|'$1'|g;print "@a"' }
