@@ -94,10 +94,11 @@ fu()
 
 ngu()
 {
+  export ANT_OPTS=-Xmx500m
   if [[ $# -gt 0 ]]; then
-    ANT_OPTS=-Xmx500M ant run-testngUnitTests -DtestConfigFile=$1
+    ant run-testngUnitTests -DtestConfigFile=$1
   else
-    ANT_OPTS=-Xmx500M ant run-testngUnitTests
+    ant run-testngUnitTests
   fi
 }
 
