@@ -10,7 +10,7 @@
 # last modified: 02 May 2013
 #
 fbrs_root="28942"
-opts="--archive --delete --exclude=ff.media-* --exclude=ff.urs-* --exclude=ff.member-geo-ratings.dat* --exclude=ff.typeahead2.*"
+opts="--archive --delete --compress-level=1 --exclude=ff.media-* --exclude=ff.urs-* --exclude=ff.member-geo-ratings.dat* --exclude=ff.typeahead2.*"
 email=`whoami`"@tripadvisor.com"
 
 if [ "$1" = "--verbose" ]; then
