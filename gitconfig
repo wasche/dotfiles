@@ -32,6 +32,6 @@
   excludesfile = ~/.gitignore
 
 [github]
-  user = kurakin
+  user = wasche
 [push]
-  default = simple
+  default = current

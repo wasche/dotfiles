@@ -7,5 +7,7 @@
 	],
 	"remember_open_files": true,
 	"scroll_past_end": true,
+	"translate_tabs_to_spaces": true,
+    "tab_size": 2,
 	"shift_tab_unindent": true
 }
