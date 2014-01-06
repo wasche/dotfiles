@@ -32,7 +32,8 @@ base: $(HOME)/.vim \
 	$(HOME)/.zsh/os.zsh \
 	$(HOME)/.pentadactyl/info/default/quickmarks \
 	$(HOME)/bin \
-	$(HOME)/.todo.actions.d
+	$(HOME)/.todo.actions.d \
+	$(HOME)/.irssi
 	mkdir -p $(HOME)/.node-completion
 
 $(HOME)/.%: %

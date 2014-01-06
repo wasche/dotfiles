@@ -279,9 +279,37 @@ settings = {
     nick = "nazu";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "screwer"; };
+  "fe-common/core" = { theme = "elite"; };
 };
 hilights = (
   { text = "wil"; nick = "yes"; word = "yes"; },
   { text = "wasche"; nick = "yes"; word = "yes"; }
 );
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#social";
+        tag = "TA";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#tr-dev";
+        tag = "TA";
+      }
+    );
+    sticky = "yes";
+  };
+};
+mainwindows = {
+  2 = { first_line = "23"; lines = "20"; };
+  3 = { first_line = "1"; lines = "22"; };
+};
