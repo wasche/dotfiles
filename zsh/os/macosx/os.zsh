@@ -33,3 +33,5 @@ mdb()
     mongo $@
   fi
 }
+
+export NODE_PATH=/usr/local/share/npm/lib/node_modules
