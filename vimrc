@@ -194,6 +194,14 @@ if has("autocmd")
   autocmd Filetype markdown set autoindent
   autocmd Filetype markdown set enc=utf-8
 
+  autocmd Filetype r set tabstop=2
+  autocmd Filetype r set shiftwidth=2
+  autocmd Filetype r set smarttab
+  autocmd Filetype r set expandtab
+  autocmd Filetype r set softtabstop=2
+  autocmd Filetype r set autoindent
+  autocmd Filetype r set enc=utf-8
+
 else
 
   set autoindent		" always set autoindenting on
