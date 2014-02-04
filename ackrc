@@ -6,6 +6,8 @@ m4=.m4
 vm=.vm
 --type-set
 config=.ini
+--type-set
+dust=.dust
 --invert-file-match
 -G
 ^(data|langs)/|site/(js[23]|css2?)/.*-(c|gen)\.(js|css)

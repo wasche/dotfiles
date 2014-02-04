@@ -1,4 +1,4 @@
-/{
+{
     // Settings
     "passfail"      : false,  // Stop on first error.
     "maxerr"        : 100,    // Maximum errors before stopping.
@@ -16,14 +16,6 @@
     "prototypejs"   : false,
     "mootools"      : true,
     "dojo"          : false,
-
-    "predef"        : [  // Extra globals.
-        "ta", "FB", "_",
-        "JS_SECURITY_TOKEN", "IS_DEBUG",
-        "global", "require", "module",
-        "jasmine", "spyOn", "expect", "beforeEach", "it", "describe"
-    ],
-
 
     // Development.
     "debug"         : false,  // Allow debugger statements e.g. browser breakpoints.

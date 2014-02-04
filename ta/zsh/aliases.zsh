@@ -48,10 +48,12 @@ j()
     ant -f $TRTOP/build.xml java
   elif [[ "$1" == "merge" ]]; then
     ant -f $TRTOP/build.xml prepare merge-classes
+  elif [[ "$1" == "jr" ]]; then
+    ant -f $TRTOP/build.xml tr-jrebel
   elif [[ "$1" == "ngu" ]]; then
     ant -f $TRTOP/build.xml jar-testngUnitTests
   else
-    echo "Try again? (all|app|cfg|f|lt|tools|tr|unit|merge|ngu)" 1>&2
+    echo "Try again? (all|app|cfg|f|lt|tools|tr|jr|unit|merge|ngu)" 1>&2
     return 2
   fi
 }
@@ -164,16 +166,17 @@ function hc()
 }
 
 alias tm='psql -h rivendell -U tripmaster_ro tripmaster'
-alias tm-dev='psql -h dev-db -U tripmaster'
-alias tm-dev-w='psql -h dev-db -U tripmaster_writable'
-alias tm-dev-member='psql -h dev-db -U tripmaster_member'
+alias tm-dev='psql -h devdb03n -U tripmaster'
+alias tm-dev-w='psql -h devdb93n -U tripmaster_writable'
+alias tm-dev-member='psql -h devdb03n -U tripmaster_member'
 alias tm-media='psql -h rivendell -U tripmaster_media'
-alias tm-media-dev='psql -h dev-db -U tripmaster_media'
+alias tm-media-dev='psql -h devdb03n -U tripmaster_media'
 alias tm-tools='psql -h tools-db -U tripmaster'
 alias tm-tools-dev='psql -h tools-db -U tripmaster_tools'
 alias tm-test='psql -h test-db -U tripmaster tripmaster_test'
 alias tm-test-dev='psql -h test-db -U tripmaster tripmaster_test_wasche-dev'
 alias tm-perf='psql -h perfdb -U tripmaster_perf'
+alias tm-all='psql -h tripmonster -U tripmonster'
 
 function tab()
 {
