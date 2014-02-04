@@ -173,6 +173,7 @@ alias tm-tools='psql -h tools-db -U tripmaster'
 alias tm-tools-dev='psql -h tools-db -U tripmaster_tools'
 alias tm-test='psql -h test-db -U tripmaster tripmaster_test'
 alias tm-test-dev='psql -h test-db -U tripmaster tripmaster_test_wasche-dev'
+alias tm-perf='psql -h perfdb -U tripmaster_perf'
 
 function tab()
 {
