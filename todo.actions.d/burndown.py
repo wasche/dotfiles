@@ -44,11 +44,13 @@ def load(argv):
     for p in todos.projects():
         if len(p.getContexts() & skip) > 0:
             continue
+        remaining = filter(lambda t: not t.completed, p.tasks)
+        if len(remaining) == 0:
+            continue;
 
     	print p, '(', ''.join(p.getContexts()), ')'
         total = len(p.tasks)
         completed = filter(lambda t: t.completed, p.tasks)
-        remaining = filter(lambda t: not t.completed, p.tasks)
         remaining = sorted(remaining, key=lambda t: (t.priority or 'ZZ', t.index))
         print "  Progress: {0}/{1} ({2:.0f}%)".format(len(completed), total, (len(completed) / float(total)) * 100)
         print "  Remaining Tasks:"
