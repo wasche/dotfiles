@@ -28,6 +28,8 @@ __email__ = "wil@asche.us"
 __history__ = """
 0.2.0
     - skip completed projects
+    - add remaining LOE
+    - add days spent
 0.1.0 - Released.
 """
 
