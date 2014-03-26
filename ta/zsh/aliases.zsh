@@ -246,3 +246,20 @@ function onoz()
     return 2
   fi
 }
+
+# Greps config/features.ini for matching features
+# Feature lines become tab separated, remeber grep doesn't have \t by default
+# Use Ctrl+v<Tab> to create a literal tab character
+#
+# Examples:
+# featuregrep -e 'include_daodao[^\t]true.*exclude' -e 'exclude.*include_daodao[^\t]true'
+function featuregrep()
+{
+  cat $TRTOP/config/features.ini |
+  sed 's/;.*//g' |          # Remove comments
+  tr '\n' '\t' |            # Turn newlines into tabs
+  sed 's/[^[]*\[/[/' |      # Remove content before the first [feature]
+  sed 's/\s*\t\[/\n\[/g' |  # Add newline before each [feature]
+  grep "$@" |               # Search each feature
+  awk '{ print $1 }'        # Get the feature name
+}
