@@ -67,11 +67,13 @@ def load(argv):
             m = pDingo.search(context)
             if m:
                 cmd = "mysql -N -s -h timesink -u reader -preader timesink -e 'select format(sum(days_worked),2) from entries e join projects p on e.id = p.entry_id where login = \"wasche\" and project_id = {0};'".format(int(m.group(1)))
-                spent = float(Popen(cmd, stdout=PIPE, shell=True).stdout.read())
+                n = Popen(cmd, stdout=PIPE, shell=True).stdout.read()
+                if n[:4] != 'NULL':
+                    spent = float(n)
 
     	print p, '(', ''.join(p.getContexts()), ')'
         if spent >= 0:
-            print "  Progress: {0}/{1} ({2:.0f}%), {0:.2f} days spent".format(len(completed), total, (len(completed) / float(total)) * 100, spent)
+            print "  Progress: {0}/{1} ({2:.0f}%), {3:.2f} days spent".format(len(completed), total, (len(completed) / float(total)) * 100, spent)
         else:
             print "  Progress: {0}/{1} ({2:.0f}%)".format(len(completed), total, (len(completed) / float(total)) * 100)
         print "  Remaining Tasks:"
