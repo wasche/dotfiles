@@ -98,8 +98,11 @@ ngu()
 {
   export ANT_OPTS=-Xmx500m
   if [[ "$1" == "jailed" ]]; then
-    ant testNGTestMethodJailed -DtestNGUnitParallelMode=true 2>&1 | tee jailed.out
-    grep -B2 -e 'Failures: [1-9]' jailed.out | grep 'Single Method' | awk -F- '{sub(/^[ \t]+/, "", $2); print $2,$3}'
+    ant testNGTestMethodJailed -DtestNGUnitParallelMode=true 2>&1 | \
+      tee jailed.out | \
+      grep -A2 'Single Method' | \
+      awk 'BEGIN { RS = "--\n" ; FS = "\n" }{ split($2, b, " "); sub(",", "", b[7]); if (b[7] == "0") s = "PASSED"; else s = "FAILED" ; print s, substr($1, 40) }' | \
+      tee jailed-results.out
   elif [[ $# -gt 0 ]]; then
     ant run-testngUnitTests-nodeps -DtestConfigFile=$1
   else
