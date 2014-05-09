@@ -97,10 +97,13 @@ fu()
 ngu()
 {
   export ANT_OPTS=-Xmx500m
-  if [[ $# -gt 0 ]]; then
-    ant run-testngUnitTests -DtestConfigFile=$1
+  if [[ "$1" == "jailed" ]]; then
+    ant testNGTestMethodJailed -DtestNGUnitParallelMode=true 2>&1 | tee jailed.out
+    grep -B1 -e 'Tests run: ., Failures: [1-9]' jailed.out | grep Single | awk -F- '{sub(/^[ \t]+/, "", $2); print $2,$3}'
+  elif [[ $# -gt 0 ]]; then
+    ant run-testngUnitTests-nodeps -DtestConfigFile=$1
   else
-    ant run-testngUnitTests
+    ant run-testngUnitTests-nodeps
   fi
 }
 
