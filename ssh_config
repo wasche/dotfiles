@@ -101,3 +101,7 @@ Host tom
 Host gin
 	HostName gin
 	User root
+
+Host bear
+	HostName bear
+	User kurakin
