@@ -39,7 +39,7 @@ j()
   elif [[ "$1" == "lt" ]]; then
     ant -f $TRTOP/build.xml jar-livetools
   elif [[ "$1" == "cfg" ]]; then
-    make -C $TRTOP tree_setup && make -C $TRTOP site/config
+    make -C $TRTOP reconfig && make -C $TRTOP site/config
   elif [[ "$1" == "sql" ]]; then
     ant -f $TRTOP/build.xml sql-generate-tr sql-generate-internal sql-generate-applications sql-generate-features sql-generate-tatools sql-generate-toolsshared
   elif [[ "$1" == "tools" ]]; then
