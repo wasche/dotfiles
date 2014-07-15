@@ -173,7 +173,7 @@ function hc()
 
 alias tm='psql -h rivendell -U tripmaster_ro tripmaster'
 alias tm-dev='psql -h devdb03n -U tripmaster'
-alias tm-dev-w='psql -h devdb93n -U tripmaster_writable'
+alias tm-dev-w='psql -h dev-db -U tripmaster_writable'
 alias tm-dev-member='psql -h devdb03n -U tripmaster_member'
 alias tm-media='psql -h rivendell -U tripmaster_media'
 alias tm-media-dev='psql -h devdb03n -U tripmaster_media'
