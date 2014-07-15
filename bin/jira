@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// vim: filetype=javascript
 
 var querystring = require('querystring');
 var request = require('request');
@@ -198,7 +199,7 @@ program
       if (err) {
         console.error(err);
         process.exit(1);
-      } else {
+      } else if (res.statusCode !== 201) {
         console.log(res.statusCode);
         console.error(body);
         process.exit(1);
