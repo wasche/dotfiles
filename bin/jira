@@ -5,6 +5,7 @@ var querystring = require('querystring');
 var request = require('request');
 var program = require('commander');
 var util = require('util');
+var async = require('async');
 
 program
   .version('0.0.1');
@@ -65,6 +66,36 @@ function Issue(json){
   this.formalQA = json.fields.customfield_10207 && json.fields.customfield_10207.value;
   this.launchDate = json.fields.customfield_10400;
   this.codeReview = json.fields.customfield_10311 && json.fields.customfield_10311.slice(1,-1).split('|')[0];
+}
+
+Issue.prototype.loadWorkLog = function(callback){
+  var self = this;
+  request({
+    url: rootUri + 'issue/' + this.id + '/worklog'
+  , headers: {
+      'Authorization': 'Basic ' + process.env['SVNTR_AUTH']
+    }
+  , strictSSL: false
+  },
+  function(err, res, body){
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+    if (res.statusCode === 200) {
+      var data = JSON.parse(body);
+      self.worklogs = data.worklogs.map(function(log){
+        return {
+          author: log.author.name
+        , started: log.started
+        , time: log.timeSpentSeconds
+        , comment: log.comment || null
+        };
+      });
+    }
+    callback && callback();
+  });
+  return this;
 }
 
 String.prototype.lpad = function(len, c){
@@ -134,8 +165,8 @@ program
     request({
       url: rootUri + 'search',
       qs: {
-        jql: jql,
-        fields: issueFields.join(',')
+        jql: jql
+      , fields: issueFields.join(',')
       },
       headers: {
         'Authorization': 'Basic ' + process.env['SVNTR_AUTH']
@@ -148,23 +179,31 @@ program
         process.exit(1);
       }
       if (res.statusCode === 200) {
-        [['ID', 'Time', 'Status', 'Priority', 'Summary']]
-          .concat(
-            JSON.parse(body)
-              .issues
-              .map(function(i){ return new Issue(i); })
-              .map(function(i){
-                return [i.id, i.progress.progress/60/60 + 'h', i.status, i.priority, i.summary];
+        var issues = JSON.parse(body).issues
+          .map(function(i){
+            return new Issue(i);
+          });
+        async.each(issues, function(i, cb){
+          i.loadWorkLog(cb);
+        }, function(err){
+          [['ID', 'Time', 'Status', 'Priority', 'Summary']]
+            .concat(
+              issues.map(function(i){
+                var time = i.worklogs ? i.worklogs.reduce(function(time, log){
+                  return time + new Date(log.started).getTime() > date.getTime() ? log.time : 0;
+                }, 0) : 0;
+                return [i.id, time/60/60 + 'h', i.status, i.priority, i.summary];
               })
-          )
-          .map(function(arr){
-            arr[0] = arr[0].rpad(11);
-            arr[1] = arr[1].lpad(5).rpad(6);
-            arr[2] = arr[2].rpad(12);
-            arr[3] = arr[3].rpad(14);
-            return arr;
-          })
-          .forEach(function(arr){ console.log.apply(this, arr); });
+            )
+            .map(function(arr){
+              arr[0] = arr[0].rpad(11);
+              arr[1] = arr[1].lpad(5).rpad(6);
+              arr[2] = arr[2].rpad(12);
+              arr[3] = arr[3].rpad(14);
+              return arr;
+            })
+            .forEach(function(arr){ console.log.apply(this, arr); });
+        });
       } else {
         console.error(body);
       }
