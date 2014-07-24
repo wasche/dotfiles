@@ -57,9 +57,9 @@ function Issue(json){
   this.progress = json.fields.aggregateprogress;
   this.epic = json.fields.customfield_10006;
   this.themes = json.fields.customfield_10001;
-  this.pm = json.fields.customfield_10300.value;
-  this.engineers = json.fields.customfield_10313.map(function(o){ return o.name; });
-  this.lead = json.fields.customfield_10307.name;
+  this.pm = json.fields.customfield_10300 && json.fields.customfield_10300.value;
+  this.engineers = json.fields.customfield_10313 && json.fields.customfield_10313.map(function(o){ return o.name; });
+  this.lead = json.fields.customfield_10307 && json.fields.customfield_10307.name;
   this.qaStatus = json.fields.customfield_10309 && json.fields.customfield_10309.value;
   this.onOffSite = json.fields.customfield_10308 && json.fields.customfield_10308.value;
   this.steakStatus = json.fields.customfield_10304 && json.fields.customfield_10304.value;
@@ -133,9 +133,10 @@ program
         process.exit(1);
       }
       if (res.statusCode === 200) {
+        data = JSON.parse(body);
         [['ID', 'Status', 'Priority', 'Summary']]
           .concat(
-            JSON.parse(body)
+            data
               .issues
               .map(function(i){ return new Issue(i); })
               .map(function(i){
@@ -144,7 +145,7 @@ program
           )
           .map(function(arr){
             arr[0] = arr[0].rpad(11);
-            arr[1] = arr[1].rpad(12);
+            arr[1] = arr[1].rpad(17);
             arr[2] = arr[2].rpad(14);
             return arr;
           })
@@ -190,7 +191,13 @@ program
             .concat(
               issues.map(function(i){
                 var time = i.worklogs ? i.worklogs.reduce(function(time, log){
-                  return time + new Date(log.started).getTime() > date.getTime() ? log.time : 0;
+                  if (new Date(log.started).getTime() < date.getTime()) {
+                    return time;
+                  }
+                  if (process.env.SVNTR_USER != log.author) {
+                    return time;
+                  }
+                  return time + log.time;
                 }, 0) : 0;
                 return [i.id, time/60/60 + 'h', i.status, i.priority, i.summary];
               })
