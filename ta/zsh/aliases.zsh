@@ -39,9 +39,9 @@ j()
   elif [[ "$1" == "lt" ]]; then
     ant -f $TRTOP/build.xml jar-livetools
   elif [[ "$1" == "cfg" ]]; then
-    make -C $TRTOP tree_setup && make -C $TRTOP site/config
+    make -C $TRTOP reconfig && make -C $TRTOP site/config
   elif [[ "$1" == "sql" ]]; then
-    ant -f $TRTOP/build.xml sql-generate-tr sql-generate-internal sql-generate-applications sql-generate-features sql-generate-tatools sql-generate-livetools sql-generate-toolsshared
+    ant -f $TRTOP/build.xml sql-generate-tr sql-generate-internal sql-generate-applications sql-generate-features sql-generate-tatools sql-generate-toolsshared
   elif [[ "$1" == "tools" ]]; then
     make -C $TRTOP/Servlets
   elif [[ "$1" == "all" ]]; then
@@ -97,10 +97,16 @@ fu()
 ngu()
 {
   export ANT_OPTS=-Xmx500m
-  if [[ $# -gt 0 ]]; then
-    ant run-testngUnitTests -DtestConfigFile=$1
+  if [[ "$1" == "jailed" ]]; then
+    ant testNGTestMethodJailed -DtestNGUnitParallelMode=true 2>&1 | \
+      tee jailed.out | \
+      grep -A2 'Single Method' | \
+      awk 'BEGIN { RS = "--\n" ; FS = "\n" }{ split($2, b, " "); sub(",", "", b[7]); if (b[7] == "0") s = "PASSED"; else s = "FAILED" ; print s, substr($1, 40) }' | \
+      tee jailed-results.out
+  elif [[ $# -gt 0 ]]; then
+    ant run-testngUnitTests-nodeps -DtestConfigFile=$1
   else
-    ant run-testngUnitTests
+    ant run-testngUnitTests-nodeps
   fi
 }
 
@@ -167,7 +173,7 @@ function hc()
 
 alias tm='psql -h rivendell -U tripmaster_ro tripmaster'
 alias tm-dev='psql -h devdb03n -U tripmaster'
-alias tm-dev-w='psql -h devdb93n -U tripmaster_writable'
+alias tm-dev-w='psql -h dev-db -U tripmaster_writable'
 alias tm-dev-member='psql -h devdb03n -U tripmaster_member'
 alias tm-media='psql -h rivendell -U tripmaster_media'
 alias tm-media-dev='psql -h devdb03n -U tripmaster_media'
@@ -175,6 +181,7 @@ alias tm-tools='psql -h tools-db -U tripmaster'
 alias tm-tools-dev='psql -h tools-db -U tripmaster_tools'
 alias tm-test='psql -h test-db -U tripmaster tripmaster_test'
 alias tm-test-dev='psql -h test-db -U tripmaster tripmaster_test_wasche-dev'
+alias tm-perf='psql -h perfdb -U tripmaster_perf'
 alias tm-all='psql -h tripmonster -U tripmonster'
 
 function tab()
@@ -244,4 +251,21 @@ function onoz()
     echo "Try again? (lb|trip|access)" 1>&2
     return 2
   fi
+}
+
+# Greps config/features.ini for matching features
+# Feature lines become tab separated, remeber grep doesn't have \t by default
+# Use Ctrl+v<Tab> to create a literal tab character
+#
+# Examples:
+# featuregrep -e 'include_daodao[^\t]true.*exclude' -e 'exclude.*include_daodao[^\t]true'
+function featuregrep()
+{
+  cat $TRTOP/config/features.ini |
+  sed 's/;.*//g' |          # Remove comments
+  tr '\n' '\t' |            # Turn newlines into tabs
+  sed 's/[^[]*\[/[/' |      # Remove content before the first [feature]
+  sed 's/\s*\t\[/\n\[/g' |  # Add newline before each [feature]
+  grep "$@" |               # Search each feature
+  awk '{ print $1 }'        # Get the feature name
 }

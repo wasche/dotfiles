@@ -105,3 +105,7 @@ Host gin
 Host bear
 	HostName bear
 	User kurakin
+
+Host api-slave-3n
+	HostName api-slave-3n
+	User root
