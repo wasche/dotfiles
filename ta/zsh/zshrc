@@ -1,4 +1,0 @@
-for config_file (~/.zsh/special/*.zsh) source $config_file
-
-# load os overrides last
-source ~/.zsh/special/os.zsh
