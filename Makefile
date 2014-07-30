@@ -56,20 +56,6 @@ $(HOME)/.bash/os.bash: bash/os/$(OS).bash
 $(HOME)/.zsh/os.zsh: zsh/os/$(OS)/os.zsh
 	ln -fs $(abspath $<) $@
 
-ta-bash: ta/bash
-	ln -fs $(abspath $<) $(HOME)/.bash/special
-
-ta-zsh: ta/zsh
-	ln -fs $(abspath $<) $(HOME)/.zsh/special
-
-$(HOME)/.bash/special/os.bash: ta/bash/os/$(OS).bash
-	ln -fs $(abspath $<) $@
-
-$(HOME)/.zsh/special/os.zsh: ta/zsh/os/$(OS).zsh
-	ln -fs $(abspath $<) $@
-
-ta: ta-bash ta-zsh $(HOME)/.bash/special/os.bash $(HOME)/.zsh/special/os.zsh
-
 $(SUBLIME_USER)/%: $(SUBLIME_SETTINGS_DIR)/%
 	ln -fs "$<" "$@"
 

@@ -11,3 +11,5 @@ subversion/README.txt
 ta/bash/bash
 ta/zsh/zsh
 config/sublime-text-2/Packages/Velocity/velocity\ syntax.tmLanguage.cache
+bin/ta
+zsh/include.d
