@@ -22,8 +22,8 @@ source ~/.zsh/templates.zsh
 source ~/.zsh/os.zsh
 
 if [[ -d ~/.zsh/include.d ]]; then
-  for dir (~/.zsh/include.d/*(/)) {
-    if [[ -f $dir/zshrc ]]; then
+  for dir (~/.zsh/include.d/*) {
+    if [[ -d $dir && -f $dir/zshrc ]]; then
       source $dir/zshrc
     fi
   }
