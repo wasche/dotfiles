@@ -29,6 +29,10 @@ Host merge3
 	HostName merge3.tripadvisor.com
 	User root
 
+Host merge-tmp
+	HostName merge-tmp.tripadvisor.com
+	User root
+
 Host *-dev
 	User root
 
