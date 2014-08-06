@@ -19,6 +19,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
+Bundle 'groenewege/vim-less'
+
 filetype plugin indent on " needed by vundle
 
 set background=dark
@@ -152,6 +154,14 @@ if has("autocmd")
   autocmd Filetype stylus set softtabstop=2
   autocmd Filetype stylus set autoindent
   autocmd Filetype stylus set enc=utf-8
+
+  autocmd Filetype less set tabstop=2
+  autocmd Filetype less set shiftwidth=2
+  autocmd Filetype less set smarttab
+  autocmd Filetype less set expandtab
+  autocmd Filetype less set softtabstop=2
+  autocmd Filetype less set autoindent
+  autocmd Filetype less set enc=utf-8
 
   autocmd Filetype java nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
