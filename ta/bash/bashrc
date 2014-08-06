@@ -1,7 +1,0 @@
-. ~/.bash/special/env.bash
-. ~/.bash/special/aliases.bash
-. ~/.bash/special/search.bash
-. ~/.bash/special/automagic_trtop.bash
-
-# load os overrides last
-. ~/.bash/special/os.bash

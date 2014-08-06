@@ -21,8 +21,12 @@ source ~/.zsh/templates.zsh
 
 source ~/.zsh/os.zsh
 
-if [[ -f ~/.zsh/special/zshrc ]]; then
-  source ~/.zsh/special/zshrc
+if [[ -d ~/.zsh/include.d ]]; then
+  for dir (~/.zsh/include.d/*) {
+    if [[ -d $dir && -f $dir/zshrc ]]; then
+      source $dir/zshrc
+    fi
+  }
 fi
 
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh

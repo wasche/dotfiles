@@ -121,11 +121,11 @@ if has("autocmd")
   autocmd Filetype velocity set autoindent
   autocmd Filetype velocity set enc=utf-8
 
-  autocmd Filetype xml set tabstop=4
-  autocmd Filetype xml set shiftwidth=4
+  autocmd Filetype xml set tabstop=2
+  autocmd Filetype xml set shiftwidth=2
   autocmd Filetype xml set smarttab
   autocmd Filetype xml set expandtab
-  autocmd Filetype xml set softtabstop=4
+  autocmd Filetype xml set softtabstop=2
   autocmd Filetype xml set autoindent
   autocmd Filetype xml set enc=utf-8
 
