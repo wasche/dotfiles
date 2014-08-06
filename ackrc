@@ -8,6 +8,8 @@ vm=.vm
 config=.ini
 --type-set
 dust=.dust
+--type-set
+less=.less
 --invert-file-match
 -G
 ^(data|langs)/|site/(js[23]|css2?)/.*-(c|gen)\.(js|css)
