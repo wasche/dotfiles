@@ -4,6 +4,11 @@
 	[
 		"*.sublime-*"
 	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		"node_modules"
+	],
 	"font_size": 13,
 	"hot_exit": true,
 	"ignored_packages":
