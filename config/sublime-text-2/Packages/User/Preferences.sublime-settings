@@ -7,6 +7,7 @@
 	"folder_exclude_patterns":
 	[
 		".git",
+		".svn",
 		"node_modules"
 	],
 	"font_size": 13,
