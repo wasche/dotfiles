@@ -14,6 +14,7 @@ SUBLIME_USER=$(SUBLIME_PACKAGES)/User
 
 base: $(HOME)/.vim \
 	$(HOME)/.vimrc \
+	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
 	$(HOME)/.ssh/config \
@@ -59,6 +60,9 @@ $(HOME)/.zsh/os.zsh: zsh/os/$(OS)/os.zsh
 $(SUBLIME_USER)/%: $(SUBLIME_SETTINGS_DIR)/%
 	ln -fs "$<" "$@"
 
+$(SUBLIME_USER)/Default\ (OSX).sublime-keymap: $(SUBLIME_SETTINGS_DIR)/Default\ (OSX).sublime-keymap
+	ln -fs "$<" "$@"
+
 sublime-settings: $(SUBLIME_USER)/Preferences.sublime-settings \
 	$(SUBLIME_USER)/JavaScript.sublime-settings \
 	$(SUBLIME_USER)/SublimeLinter.sublime-settings \
@@ -66,6 +70,7 @@ sublime-settings: $(SUBLIME_USER)/Preferences.sublime-settings \
 	$(SUBLIME_USER)/HTML.sublime-settings \
 	$(SUBLIME_USER)/Velocity.sublime-settings \
 	$(SUBLIME_USER)/Plain.sublime-settings \
+	$(SUBLIME_USER)/Default\ (OSX).sublime-keymap
 
 $(SUBLIME_PACKAGES)/%: $(SUBLIME_PACKAGES_DIR)/%
 	ln -fs "$<" "$@"

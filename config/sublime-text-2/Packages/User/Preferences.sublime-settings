@@ -6,8 +6,9 @@
 	],
 	"folder_exclude_patterns":
 	[
-		"node_modules",
 		".git"
+		".svn",
+		"node_modules"
 	],
 	"font_size": 13,
 	"hot_exit": true,

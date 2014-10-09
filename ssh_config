@@ -106,6 +106,18 @@ Host gin
 	HostName gin
 	User root
 
+Host aztec
+	HostName aztec
+	User root
+
+Host maya
+	HostName maya
+	User root
+
+Host inca
+	HostName inca
+	User root
+
 Host bear
 	HostName bear
 	User kurakin
@@ -117,3 +129,14 @@ Host api-slave-3n
 Host silverfish
 	HostName silverfish.local
 	User wasche
+Host lapras
+	HostName lapras.nw.dev.tripadvisor.com
+	User wasche
+
+Host dragonite
+	HostName dragonite.dhcp.tripadvisor.com
+	User root
+
+Host triplist
+	HostName triplist.ext.tripadvisor.com
+	User root
