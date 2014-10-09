@@ -1,5 +1,14 @@
 {
 	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.sublime-*"
+	],
+	"folder_exclude_patterns":
+	[
+		"node_modules",
+		".git"
+	],
 	"font_size": 13,
 	"hot_exit": true,
 	"ignored_packages":
