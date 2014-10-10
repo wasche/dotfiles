@@ -44,6 +44,13 @@ get_svn_cmd()
 
 update_prompt()
 {
+  local cm="%{$fg[magenta]%}"
+  local cy="%{$fg[yellow]%}"
+  local cg="%{$fg[green]%}"
+  local cG="%{$fg_bold[green]%}"
+  local cc="%{$fg[cyan]%}"
+  local c="%{$reset_color%}"
+
   export RPROMPT="$BASE_RPROMPT"
   SVN="$(get_svn_cmd)"
 
