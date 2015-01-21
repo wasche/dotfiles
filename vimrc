@@ -268,13 +268,12 @@ nnoremap <leader>P :set paste!<CR>:set paste?<CR>
 nnoremap <leader>b :set binary noeol<CR>
 nnoremap <leader>m :! make<CR>
 
-" fix keys when running under tmux
 if &term =~ '^screen'
-    " tmux will send xterm-style keys when its xterm-keys option is on
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
+  " tmux will send xterm-style keys when its xterm-keys option is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
 endif
 
 " highlight search terms
