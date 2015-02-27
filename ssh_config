@@ -19,19 +19,19 @@ Host carrot
 
 Host merge
 	HostName merge.tripadvisor.com
-	User root
+	User wasche
 
 Host merge2
 	HostName merge2.tripadvisor.com
-	User root
+	User wasche
 
 Host merge3
 	HostName merge3.tripadvisor.com
-	User root
+	User wasche
 
 Host merge-tmp
 	HostName merge-tmp.tripadvisor.com
-	User root
+	User wasche
 
 Host *-dev
 	User root
@@ -45,6 +45,10 @@ Host wasche-dev
 
 Host druid
 	HostName druid.dhcp.tripadvisor.com
+	User wasche
+
+Host witch
+	HostName witch.dhcp.tripadvisor.com
 	User wasche
 
 Host dev*n
@@ -129,6 +133,7 @@ Host api-slave-3n
 Host silverfish
 	HostName silverfish.local
 	User wasche
+
 Host lapras
 	HostName lapras.nw.dev.tripadvisor.com
 	User wasche
