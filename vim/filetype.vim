@@ -15,4 +15,5 @@ augroup filetypedetect
   au! BufRead,BufNewFile /etc/nginx/conf.d/* setfiletype nginx
   au! BufRead,BufNewFile *.md setfiletype markdown
   au! BufRead,BufNewFile *.r setfiletype r
+  au! BufRead,BufNewFile *.hql setfiletype hql
 augroup END

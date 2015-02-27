@@ -214,6 +214,14 @@ if has("autocmd")
   autocmd Filetype r set autoindent
   autocmd Filetype r set enc=utf-8
 
+  autocmd Filetype hql set tabstop=2
+  autocmd Filetype hql set shiftwidth=2
+  autocmd Filetype hql set smarttab
+  autocmd Filetype hql set expandtab
+  autocmd Filetype hql set softtabstop=2
+  autocmd Filetype hql set autoindent
+  autocmd Filetype hql set enc=utf-8
+
 else
 
   set autoindent		" always set autoindenting on
