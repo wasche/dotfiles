@@ -23,6 +23,9 @@ Bundle 'rizzatti/dash.vim'
 
 Bundle 'groenewege/vim-less'
 
+Bundle 'kchmck/vim-coffee-script'
+
+syntax enable
 filetype plugin indent on " needed by vundle
 
 set background=dark
