@@ -145,3 +145,7 @@ Host dragonite
 Host triplist
 	HostName triplist.ext.tripadvisor.com
 	User root
+
+Host fbetl01d
+	HostName fbetl01d.d.tripadvisor.com
+	User wasche
