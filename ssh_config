@@ -2,7 +2,7 @@ Host *
 	Compression yes
 
 Host crawfish
-	HostName crawfish
+	HostName crawfish.ndmad2.tripadvisor.com
 	User wasche
 
 Host lobster
@@ -13,34 +13,10 @@ Host lumberjack
 	HostName lumberjack
 	User wasche
 
-Host carrot
-	HostName carrot
-	User root
-
-Host merge
-	HostName merge.tripadvisor.com
-	User wasche
-
-Host merge2
-	HostName merge2.tripadvisor.com
-	User wasche
-
-Host merge3
-	HostName merge3.tripadvisor.com
-	User wasche
-
-Host merge-tmp
-	HostName merge-tmp.tripadvisor.com
-	User wasche
-
 Host *-dev
 	User root
 
 Host bro*
-	User root
-
-Host wasche-dev
-	HostName wasche-dev
 	User root
 
 Host druid
@@ -55,7 +31,7 @@ Host dev*n
 	User root
 
 Host ruby
-	HostName ruby
+	HostName ruby.dev
 	User root
 
 Host thenest
@@ -98,6 +74,10 @@ Host trix
 	HostName trix
 	User root
 
+Host fred
+	HostName fred.ndmad2.tripadvisor.com
+	User root
+
 Host vodka
 	HostName vodka
 	User root
@@ -119,8 +99,8 @@ Host maya
 	User root
 
 Host inca
-	HostName inca
-	User root
+	HostName inca.d.tripadvisor.com
+	User wasche
 
 Host bear
 	HostName bear
@@ -148,4 +128,8 @@ Host triplist
 
 Host fbetl01d
 	HostName fbetl01d.d.tripadvisor.com
+	User wasche
+
+Host social-jobs
+	HostName social-jobs01d.d.tripadvisor.com
 	User wasche
