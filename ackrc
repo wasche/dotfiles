@@ -12,5 +12,3 @@ dust=.dust
 less=.less
 --invert-file-match
 --ignore-dir=node_modules
--G
-^(data|langs)/|site/(js[23]|css2?)/.*-(c|gen)\.(js|css)
