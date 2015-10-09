@@ -26,3 +26,9 @@ fi
 if [[ -d /usr/local/lib/jsctags ]]; then
   export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 fi
+
+if [[ -d /usr/local/opt/go ]]; then
+  export GOROOT=/usr/local/opt/go
+  export PATH=$PATH:$GOROOT/libexec/bin
+  export GOPATH=$HOME/src/go-lang
+fi

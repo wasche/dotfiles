@@ -29,10 +29,6 @@ fi
 
 alias attach='open -a Mail.app'
 
-export GOROOT=/Users/wasche/src/go-lang
-export GOOS=darwin
-export GOARCH=amd64
-
 mdb()
 {
   if [[ "start" == "$1" ]]; then
