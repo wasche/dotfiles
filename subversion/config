@@ -46,7 +46,7 @@ editor-cmd = vim
 
 [miscellany]
 ### '*' matches leading dots, e.g. '*.rej' matches '.foo.rej'.
-global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.iml *.rej *~ .*.swp .DS_Store *.sublime-* .idea
+global-ignores = *.o *.lo *.la *.al .libs *.so *.so.[0-9]* *.a *.pyc *.pyo *.iml *.rej *~ .*.swp .DS_Store *.sublime-* .idea .sync-config.cson
 ### Set log-encoding to the default encoding for log messages
 # log-encoding = latin1
 ### Set use-commit-times to make checkout/update/switch/revert

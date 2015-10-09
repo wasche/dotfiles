@@ -6,7 +6,7 @@ Host crawfish
 	User wasche
 
 Host lobster
-	HostName lobster
+	HostName lobster.dev.tripadvisor.com
 	User wasche
 
 Host lumberjack
@@ -31,7 +31,7 @@ Host dev*n
 	User root
 
 Host ruby
-	HostName ruby.dev
+	HostName ruby.dev.tripadvisor.com
 	User root
 
 Host thenest
@@ -47,35 +47,35 @@ Host devsocial
 	User root
 
 Host binky
-	HostName binky
+	HostName binky.nw.dev.tripadvisor.com
 	User root
 
 Host bongo
-	HostName bongo
+	HostName bongo.nw.dev.tripadvisor.com
 	User root
 
 Host jessica
-	HostName jessica
+	HostName jessica.nw.dev.tripadvisor.com
 	User root
 
 Host roger
-	HostName roger
+	HostName roger.nw.dev.tripadvisor.com
 	User root
 
 Host fiver
-	HostName fiver
+	HostName fiver.nw.dev.tripadvisor.com
 	User root
 
 Host frank
-	HostName frank
+	HostName frank.nw.dev.tripadvisor.com
 	User root
 
 Host trix
-	HostName trix
+	HostName trix.nw.dev.tripadvisor.com
 	User root
 
 Host fred
-	HostName fred.ndmad2.tripadvisor.com
+	HostName fred.nw.dev.tripadvisor.com
 	User root
 
 Host vodka
@@ -115,7 +115,11 @@ Host silverfish
 	User wasche
 
 Host lapras
-	HostName lapras.nw.dev.tripadvisor.com
+	HostName social.nw.dev.tripadvisor.com
+	User wasche
+
+Host social
+	HostName social.nw.dev.tripadvisor.com
 	User wasche
 
 Host dragonite
@@ -132,4 +136,16 @@ Host fbetl01d
 
 Host social-jobs
 	HostName social-jobs01d.d.tripadvisor.com
+	User wasche
+
+Host strlog
+	HostName strlog01n.dev.tripadvisor.com
+	User wasche
+
+Host sonar
+	HostName engagement-sonar.dev.tripadvisor.com
+	User wasche
+
+Host merge3
+	HostName merge3.ndmad2.tripadvisor.com
 	User wasche
