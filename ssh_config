@@ -140,3 +140,7 @@ Host dragonite
 Host triplist
 	HostName triplist.ext.tripadvisor.com
 	User root
+
+Host wisp
+	HostName wisp.dhcp.tripadvisor.com
+	User wasche
