@@ -1,7 +1,9 @@
 # do MacPorts setup on darwin
+export PATH=$PATH:/opt/X11/bin
+
 if [[ -d /opt/local ]]; then
-  PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-  MANPATH="/opt/local/share/man:$MANPATH"
+  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+  export MANPATH=/opt/local/share/man:$MANPATH
 fi
 
 source ~/.zsh/os/macosx/zkbd.zsh
@@ -17,13 +19,15 @@ if [[ "$PATH" != *$ANT_HOME/bin* ]]; then
   export PATH=$PATH:$ANT_HOME/bin
 fi
 
-PATH="$PATH:/usr/local/android:/Users/wasche/src/go-lang/bin"
+if [[ -d /usr/local/android ]]; then
+  export PATH=$PATH:/usr/local/android
+fi
+
+if [[ -d ~/src/go-lang/bin ]]; then
+  export PATH=$PATH:~/src/go-lang/bin
+fi
 
 alias attach='open -a Mail.app'
-
-export GOROOT=/Users/wasche/src/go-lang
-export GOOS=darwin
-export GOARCH=amd64
 
 mdb()
 {

@@ -7,13 +7,26 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
+            "annotations": {
+                "@disable": false,
+                "args": [],
+                "errors": [
+                    "FIXME"
+                ],
+                "excludes": [],
+                "warnings": [
+                    "TODO",
+                    "README",
+                    "todo"
+                ]
+            },
             "jshint": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
             }
         },
-        "mark_style": "outline",
+        "mark_style": "fill",
         "no_column_highlights_line": false,
         "paths": {
             "linux": [],

@@ -33,6 +33,7 @@ base: $(HOME)/.vim \
 	$(HOME)/.zsh/os.zsh \
 	$(HOME)/.pentadactyl/info/default/quickmarks \
 	$(HOME)/bin \
+	$(HOME)/lib \
 	$(HOME)/.todo.actions.d \
 	$(HOME)/.irssi
 	mkdir -p $(HOME)/.node-completion
@@ -45,6 +46,9 @@ $(HOME)/.ssh/config: ssh_config
 	ln -fs $(abspath $<) $@
 
 $(HOME)/bin: bin
+	ln -fs $(abspath $<) $@
+
+$(HOME)/lib: lib
 	ln -fs $(abspath $<) $@
 
 $(HOME)/.pentadactyl/info/default/quickmarks: pentadactyl/info/default/quickmarks

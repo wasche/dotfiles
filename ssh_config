@@ -2,56 +2,36 @@ Host *
 	Compression yes
 
 Host crawfish
-	HostName crawfish
+	HostName crawfish.ndmad2.tripadvisor.com
 	User wasche
 
 Host lobster
-	HostName lobster
+	HostName lobster.dev.tripadvisor.com
 	User wasche
 
 Host lumberjack
 	HostName lumberjack
 	User wasche
 
-Host carrot
-	HostName carrot
-	User root
-
-Host merge
-	HostName merge.tripadvisor.com
-	User root
-
-Host merge2
-	HostName merge2.tripadvisor.com
-	User root
-
-Host merge3
-	HostName merge3.tripadvisor.com
-	User root
-
-Host merge-tmp
-	HostName merge-tmp.tripadvisor.com
-	User root
-
 Host *-dev
 	User root
 
 Host bro*
-	User root
-
-Host wasche-dev
-	HostName wasche-dev
-	User root
+	User wasche
 
 Host druid
 	HostName druid.dhcp.tripadvisor.com
+	User wasche
+
+Host witch
+	HostName witch.dhcp.tripadvisor.com
 	User wasche
 
 Host dev*n
 	User root
 
 Host ruby
-	HostName ruby
+	HostName ruby.dev.tripadvisor.com
 	User root
 
 Host thenest
@@ -67,31 +47,35 @@ Host devsocial
 	User root
 
 Host binky
-	HostName binky
+	HostName binky.nw.dev.tripadvisor.com
 	User root
 
 Host bongo
-	HostName bongo
+	HostName bongo.nw.dev.tripadvisor.com
 	User root
 
 Host jessica
-	HostName jessica
+	HostName jessica.nw.dev.tripadvisor.com
 	User root
 
 Host roger
-	HostName roger
+	HostName roger.nw.dev.tripadvisor.com
 	User root
 
 Host fiver
-	HostName fiver
+	HostName fiver.nw.dev.tripadvisor.com
 	User root
 
 Host frank
-	HostName frank
+	HostName frank.nw.dev.tripadvisor.com
 	User root
 
 Host trix
-	HostName trix
+	HostName trix.nw.dev.tripadvisor.com
+	User root
+
+Host fred
+	HostName fred.nw.dev.tripadvisor.com
 	User root
 
 Host vodka
@@ -115,8 +99,8 @@ Host maya
 	User root
 
 Host inca
-	HostName inca
-	User root
+	HostName inca.d.tripadvisor.com
+	User wasche
 
 Host bear
 	HostName bear
@@ -129,8 +113,13 @@ Host api-slave-3n
 Host silverfish
 	HostName silverfish.local
 	User wasche
+
 Host lapras
-	HostName lapras.nw.dev.tripadvisor.com
+	HostName social.nw.dev.tripadvisor.com
+	User wasche
+
+Host social
+	HostName social.nw.dev.tripadvisor.com
 	User wasche
 
 Host dragonite
@@ -143,4 +132,24 @@ Host triplist
 
 Host wisp
 	HostName wisp.dhcp.tripadvisor.com
+	User wasche
+
+Host fbetl01d
+	HostName fbetl01d.d.tripadvisor.com
+	User wasche
+
+Host social-jobs
+	HostName social-jobs01d.d.tripadvisor.com
+	User wasche
+
+Host strlog
+	HostName strlog01n.dev.tripadvisor.com
+	User wasche
+
+Host sonar
+	HostName engagement-sonar.dev.tripadvisor.com
+	User wasche
+
+Host merge3
+	HostName merge3.ndmad2.tripadvisor.com
 	User wasche

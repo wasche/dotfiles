@@ -1,4 +1,7 @@
-export PATH=$PATH:~/bin
+# standard path elements
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
+
+export PATH=~/bin:$PATH
 
 if [[ -d ~/.gem/ruby/ ]] && ls ~/.gem/ruby/ >/dev/null 2>&1; then
   for dir in ~/.gem/ruby/*; do
@@ -17,9 +20,15 @@ if [[ -d /usr/local/share/npm/bin ]]; then
 fi
 
 if [[ -d /usr/local/rvm ]]; then
-  PATH=$PATH:/usr/local/rvm/bin
+  export PATH=$PATH:/usr/local/rvm/bin
 fi
 
 if [[ -d /usr/local/lib/jsctags ]]; then
   export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+fi
+
+if [[ -d /usr/local/opt/go ]]; then
+  export GOROOT=/usr/local/opt/go
+  export PATH=$PATH:$GOROOT/libexec/bin
+  export GOPATH=$HOME/src/go-lang
 fi

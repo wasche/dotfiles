@@ -23,6 +23,9 @@ Bundle 'rizzatti/dash.vim'
 
 Bundle 'groenewege/vim-less'
 
+Bundle 'kchmck/vim-coffee-script'
+
+syntax enable
 filetype plugin indent on " needed by vundle
 
 set background=dark
@@ -91,6 +94,14 @@ if has("autocmd")
   autocmd Filetype javascript set softtabstop=0
   autocmd Filetype javascript set autoindent
   autocmd Filetype javascript set enc=utf-8  
+
+  autocmd Filetype coffee set tabstop=2
+  autocmd Filetype coffee set shiftwidth=2
+  autocmd Filetype coffee set smarttab
+  autocmd Filetype coffee set expandtab
+  autocmd Filetype coffee set softtabstop=0
+  autocmd Filetype coffee set autoindent
+  autocmd Filetype coffee set enc=utf-8  
 
   autocmd Filetype java set tabstop=4
   autocmd Filetype java set shiftwidth=4
@@ -214,6 +225,14 @@ if has("autocmd")
   autocmd Filetype r set autoindent
   autocmd Filetype r set enc=utf-8
 
+  autocmd Filetype hql set tabstop=2
+  autocmd Filetype hql set shiftwidth=2
+  autocmd Filetype hql set smarttab
+  autocmd Filetype hql set expandtab
+  autocmd Filetype hql set softtabstop=2
+  autocmd Filetype hql set autoindent
+  autocmd Filetype hql set enc=utf-8
+
 else
 
   set autoindent		" always set autoindenting on
@@ -267,6 +286,14 @@ nnoremap <leader>w :bw<CR>
 nnoremap <leader>P :set paste!<CR>:set paste?<CR>
 nnoremap <leader>b :set binary noeol<CR>
 nnoremap <leader>m :! make<CR>
+
+if &term =~ '^screen'
+  " tmux will send xterm-style keys when its xterm-keys option is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
 
 " highlight search terms
 set hlsearch

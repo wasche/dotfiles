@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# https://github.com/justintv/twitch-api
+
+# Get list of followed channels
+#curl -H 'Accept: application/vnd.twitchtv.v3+json'\
+#  'https://api.twitch.tv/kraken/users/nazuraki/follows/channels'|\
+#  json_pp
+
+# Get detail on a channel
+#curl -H 'Accept: application/vnd.twitchtv.v3+json'\
+#  'https://api.twitch.tv/kraken/channels/tlovetech'|\
+#  json_pp
+
+# streaming if "stream" is not null
+curl -H 'Accept: application/vnd.twitchtv.v3+json'\
+  'https://api.twitch.tv/kraken/streams/soaryn/'|\
+  json_pp
