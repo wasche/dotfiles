@@ -17,7 +17,7 @@ Host *-dev
 	User root
 
 Host bro*
-	User root
+	User wasche
 
 Host druid
 	HostName druid.dhcp.tripadvisor.com
