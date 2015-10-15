@@ -1,5 +1,5 @@
 OS=$(shell ./bin/os.sh)
-SUBLIME_PACKAGES_DIR=$(abspath config/sublime-text-2/Packages)
+SUBLIME_PACKAGES_DIR=$(abspath sublime-text-2/Packages)
 SUBLIME_SETTINGS_DIR=$(SUBLIME_PACKAGES_DIR)/User
 
 ifeq ($(OS),ubuntu)
@@ -12,7 +12,8 @@ endif
 SUBLIME_PACKAGES=$(SUBLIME_DIR)/Packages
 SUBLIME_USER=$(SUBLIME_PACKAGES)/User
 
-base: $(HOME)/.vim \
+base: $(HOME)/.config \
+	$(HOME)/.vim \
 	$(HOME)/.vimrc \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
@@ -82,4 +83,3 @@ $(SUBLIME_PACKAGES)/%: $(SUBLIME_PACKAGES_DIR)/%
 sublime-langs: $(SUBLIME_PACKAGES)/Velocity $(SUBLIME_PACKAGES)/Jade $(SUBLIME_PACKAGES)/Stylus
 
 sublime: sublime-settings sublime-langs
-
