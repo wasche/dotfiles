@@ -42,6 +42,10 @@ base: $(HOME)/.config \
 $(HOME)/.%: %
 	ln -fs $(abspath $<) $@
 
+$(HOME)/.config: config
+	ln -fs $(abspath $<) $@
+	mkfifo ~/.config/pianobar/ctl
+
 $(HOME)/.ssh/config: ssh_config
 	mkdir -p $(HOME)/.ssh
 	ln -fs $(abspath $<) $@
