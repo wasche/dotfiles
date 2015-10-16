@@ -1,5 +1,4 @@
 .apm
 compile-cache
-config.cson
 packages
 storage
