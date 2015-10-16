@@ -28,3 +28,6 @@ git submodule init
 git submodule update
 make
 popd
+
+# finish the install
+dotfiles/install/mac/install.sh
