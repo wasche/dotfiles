@@ -74,3 +74,5 @@ mount-ssh()
 }
 
 function regex { perl -lne '@a=m|'$1'|g;print "@a"' }
+
+alias silverfish='mosh --server=/usr/local/bin/mosh-server silverfish "tmux attach || tmux new"'
