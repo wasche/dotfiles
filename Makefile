@@ -1,5 +1,5 @@
 OS=$(shell ./bin/os.sh)
-SUBLIME_PACKAGES_DIR=$(abspath config/sublime-text-2/Packages)
+SUBLIME_PACKAGES_DIR=$(abspath sublime-text-2/Packages)
 SUBLIME_SETTINGS_DIR=$(SUBLIME_PACKAGES_DIR)/User
 
 ifeq ($(OS),ubuntu)
@@ -12,7 +12,8 @@ endif
 SUBLIME_PACKAGES=$(SUBLIME_DIR)/Packages
 SUBLIME_USER=$(SUBLIME_PACKAGES)/User
 
-base: $(HOME)/.vim \
+base: $(HOME)/.config \
+	$(HOME)/.vim \
 	$(HOME)/.vimrc \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
@@ -33,6 +34,7 @@ base: $(HOME)/.vim \
 	$(HOME)/.zsh/os.zsh \
 	$(HOME)/.pentadactyl/info/default/quickmarks \
 	$(HOME)/bin \
+	$(HOME)/lib \
 	$(HOME)/.todo.actions.d \
 	$(HOME)/.irssi
 	mkdir -p $(HOME)/.node-completion
@@ -40,11 +42,18 @@ base: $(HOME)/.vim \
 $(HOME)/.%: %
 	ln -fs $(abspath $<) $@
 
+$(HOME)/.config: config
+	ln -fs $(abspath $<) $@
+	mkfifo ~/.config/pianobar/ctl
+
 $(HOME)/.ssh/config: ssh_config
 	mkdir -p $(HOME)/.ssh
 	ln -fs $(abspath $<) $@
 
 $(HOME)/bin: bin
+	ln -fs $(abspath $<) $@
+
+$(HOME)/lib: lib
 	ln -fs $(abspath $<) $@
 
 $(HOME)/.pentadactyl/info/default/quickmarks: pentadactyl/info/default/quickmarks
@@ -78,4 +87,3 @@ $(SUBLIME_PACKAGES)/%: $(SUBLIME_PACKAGES_DIR)/%
 sublime-langs: $(SUBLIME_PACKAGES)/Velocity $(SUBLIME_PACKAGES)/Jade $(SUBLIME_PACKAGES)/Stylus
 
 sublime: sublime-settings sublime-langs
-

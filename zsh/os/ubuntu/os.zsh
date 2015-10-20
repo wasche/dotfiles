@@ -17,11 +17,3 @@ if which apt-cache >/dev/null 2>&1; then
   alias aptcs='apt-cache search'
 fi
 
-# Go
-if [[ -d /usr/local/go/bin ]]; then
-  export GOROOT=/usr/local/go
-  export GOOS=linux
-  export GOARCH=amd64
-  export PATH=$PATH:/usr/local/go/bin
-fi
-

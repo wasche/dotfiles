@@ -23,6 +23,9 @@ Bundle 'rizzatti/dash.vim'
 
 Bundle 'groenewege/vim-less'
 
+Bundle 'kchmck/vim-coffee-script'
+
+syntax enable
 filetype plugin indent on " needed by vundle
 
 set background=dark
@@ -91,6 +94,14 @@ if has("autocmd")
   autocmd Filetype javascript set softtabstop=0
   autocmd Filetype javascript set autoindent
   autocmd Filetype javascript set enc=utf-8  
+
+  autocmd Filetype coffee set tabstop=2
+  autocmd Filetype coffee set shiftwidth=2
+  autocmd Filetype coffee set smarttab
+  autocmd Filetype coffee set expandtab
+  autocmd Filetype coffee set softtabstop=0
+  autocmd Filetype coffee set autoindent
+  autocmd Filetype coffee set enc=utf-8  
 
   autocmd Filetype java set tabstop=4
   autocmd Filetype java set shiftwidth=4

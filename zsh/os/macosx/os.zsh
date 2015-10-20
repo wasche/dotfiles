@@ -8,6 +8,10 @@ fi
 
 source ~/.zsh/os/macosx/zkbd.zsh
 
+# fix home/end
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+
 if which mvim >/dev/null 2>&1; then
   export EDITOR="mvim -f"
 fi
@@ -28,10 +32,6 @@ if [[ -d ~/src/go-lang/bin ]]; then
 fi
 
 alias attach='open -a Mail.app'
-
-export GOROOT=/Users/wasche/src/go-lang
-export GOOS=darwin
-export GOARCH=amd64
 
 mdb()
 {
