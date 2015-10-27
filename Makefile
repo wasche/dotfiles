@@ -1,12 +1,15 @@
 OS=$(shell ./bin/os.sh)
 SUBLIME_PACKAGES_DIR=$(abspath sublime-text-2/Packages)
 SUBLIME_SETTINGS_DIR=$(SUBLIME_PACKAGES_DIR)/User
+INTELLIJ_SETTINGS_DIR=$(abspath IntelliJIdea)
+INTELLIJ_VER=15
 
 ifeq ($(OS),ubuntu)
 	SUBLIME_DIR=$(HOME)/.config/sublime-text-2
 endif
 ifeq ($(OS),macosx)
 	SUBLIME_DIR=$(HOME)/Library/Application\ Support/Sublime\ Text\ 3
+	INTELLIJ_PREFS=$(HOME)/Library/Preferences/IntelliJIdea$(INTELLIJ_VER)
 endif
 
 SUBLIME_PACKAGES=$(SUBLIME_DIR)/Packages
@@ -36,8 +39,8 @@ base: $(HOME)/.config \
 	$(HOME)/bin \
 	$(HOME)/lib \
 	$(HOME)/.todo.actions.d \
-	$(HOME)/.irssi
-	mkdir -p $(HOME)/.node-completion
+	$(HOME)/.irssi \
+	intellij
 
 $(HOME)/.%: %
 	ln -fs $(abspath $<) $@
@@ -87,3 +90,9 @@ $(SUBLIME_PACKAGES)/%: $(SUBLIME_PACKAGES_DIR)/%
 sublime-langs: $(SUBLIME_PACKAGES)/Velocity $(SUBLIME_PACKAGES)/Jade $(SUBLIME_PACKAGES)/Stylus
 
 sublime: sublime-settings sublime-langs
+
+$(INTELLIJ_PREFS): $(INTELLIJ_SETTINGS_DIR)
+	ln -fs "$<" "$@"
+
+intellij: $(INTELLIJ_PREFS)
+

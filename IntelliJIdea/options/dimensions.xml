@@ -1,0 +1,40 @@
+<application>
+  <component name="DimensionService">
+    <location key="NewModule_or_Project.wizard.0.0.2560.1440" x="963" y="369" />
+    <location key="WELCOME_SCREEN.0.0.2560.1440" x="1279" y="230" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.2560.1440" x="998" y="556" />
+    <location key="SettingsEditor.0.0.2560.1440" x="658" y="302" />
+    <location key="OptionsEditor.0.0.2560.1440" x="768" y="310" />
+    <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.2560.1440" x="987" y="534" />
+    <location key="WebDeployment.AddServerDialog.v.1.0.0.2560.1440" x="1057" y="623" />
+    <location key="FileChooserDialogImpl.0.0.2560.1440" x="1068" y="503" />
+    <location key="ftp.server.browser.0.0.2560.1440" x="1198" y="513" />
+    <location key="#Deployment.0.0.2560.1440" x="851" y="385" />
+    <location key="#com.intellij.ide.util.MemberChooser.0.0.2560.1440" x="1093" y="443" />
+    <location key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.2560.1440" x="744" y="390" />
+    <location key="#xdebugger.evaluate.0.0.2560.1440" x="1094" y="645" />
+    <location key="StructurePopup.0.0.2560.1440" x="1045" y="508" />
+    <location key="RollbackChangesDialog.0.0.2560.1440" x="1067" y="463" />
+    <location key="CommitChangelistDialog2.0.0.2560.1440" x="928" y="440" />
+    <location key="svn.passwordDialog.0.0.2560.1440" x="1053" y="632" />
+    <location key="StructurePopup.0.0.1440.900" x="485" y="238" />
+    <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.2560.1440" x="1018" y="490" />
+    <location key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog.0.0.2560.1440" x="1018" y="490" />
+    <size key="ftp.server.browser.0.0.2560.1440" width="303" height="489" />
+    <size key="#Deployment.0.0.2560.1440" width="810" height="728" />
+    <size key="SettingsEditor.0.0.2560.1440" width="1207" height="1008" />
+    <size key="GridCell.Tab.0.left.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.0.center.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.0.right.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.0.bottom.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.1.left.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.1.center.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.1.right.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.1.bottom.0.0.2560.1440" width="2539" height="418" />
+    <size key="javadoc.popup.0.0.2560.1440" width="600" height="419" />
+    <size key="StructurePopup.0.0.2560.1440" width="470" height="421" />
+    <size key="StructurePopup.0.0.1440.900" width="470" height="421" />
+    <size key="#xdebugger.evaluate.0.0.2560.1440" width="702" height="696" />
+    <size key="javadoc.popup.0.0.1440.900" width="600" height="419" />
+  </component>
+</application>
