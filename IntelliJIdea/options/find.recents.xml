@@ -1,11 +1,6 @@
 <application>
   <component name="FindRecents">
     <findStrings>
-      <find>LevelProg</find>
-      <find>LevelProgress</find>
-      <find>LevelProgre</find>
-      <find>OX</find>
-      <find>includeModule</find>
       <find>ox</find>
       <find>requirejs</find>
       <find>backbone</find>
@@ -20,6 +15,22 @@
       <find>placement</find>
       <find>defer</find>
       <find>uiOverlays</find>
+      <find>RedesignTweakFilter</find>
+      <find>RedesignTweak</find>
+      <find>pagePosition</find>
+      <find>includeModule</find>
+      <find>setVelocity</find>
+      <find>local_search</find>
+      <find>pagePosit</find>
+      <find>contribution</find>
+      <find>quick_review</find>
+      <find>addObject</find>
+      <find>WaR_page1_success</find>
+      <find>record</find>
+      <find>productattr</find>
+      <find>MOBILE_SHOW</find>
+      <find>MOBILE_SHOW_FOR</find>
+      <find>BadgeCriteria</find>
     </findStrings>
   </component>
 </application>

@@ -50,6 +50,10 @@
   <action id="NewElement">
     <keyboard-shortcut first-keystroke="ctrl enter" />
   </action>
+  <action id="NewFile">
+    <keyboard-shortcut first-keystroke="shift meta n" />
+  </action>
+  <action id="NewScratchFile" />
   <action id="OptimizeImports">
     <keyboard-shortcut first-keystroke="ctrl meta o" />
   </action>

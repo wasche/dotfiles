@@ -2,65 +2,69 @@
   <component name="StatisticsApplicationUsages">
     <group name="vcs">
       <project id="ue-2889" values="svn" collectionTime="1445007414592" />
-      <project id="ue-3124" values="svn" collectionTime="1445949167606" />
+      <project id="mainline" values="svn" collectionTime="1446479832433" />
+      <project id="ue-3124" values="svn" collectionTime="1446480104802" />
       <project id="ue-3040" values="svn" collectionTime="1445619378547" />
-      <project id="mainline" values="svn" collectionTime="1445948974932" />
     </group>
     <group name="run-configuration-type">
       <project id="ue-2889" values="Remote" collectionTime="1445007414594" />
-      <project id="ue-3124" values="Remote" collectionTime="1445949167607" />
+      <project id="mainline" values="Remote" collectionTime="1446479832433" />
+      <project id="ue-3124" values="Remote" collectionTime="1446480104803" />
       <project id="ue-3040" values="Remote" collectionTime="1445619378549" />
-      <project id="mainline" values="Remote" collectionTime="1445948974934" />
     </group>
     <group name="language-level">
       <project id="ue-2889" values="JDK_1_8" collectionTime="1445007414629" />
-      <project id="ue-3124" values="JDK_1_8" collectionTime="1445949167726" />
+      <project id="mainline" values="JDK_1_8" collectionTime="1446479832452" />
+      <project id="ue-3124" values="JDK_1_8" collectionTime="1446480104873" />
       <project id="ue-3040" values="JDK_1_8" collectionTime="1445619378611" />
-      <project id="mainline" values="JDK_1_8" collectionTime="1445948975012" />
     </group>
     <group name="svn working copy format">
       <project id="ue-2889" values="1.8" collectionTime="1445007414630" />
-      <project id="ue-3124" values="1.8" collectionTime="1445949167726" />
+      <project id="mainline" values="1.8" collectionTime="1446479832452" />
+      <project id="ue-3124" values="1.8" collectionTime="1446480104873" />
       <project id="ue-3040" values="1.8" collectionTime="1445619378612" />
-      <project id="mainline" values="1.8" collectionTime="1445948975013" />
     </group>
     <group name="file-type">
-      <project id="ue-2889" values="CLASS,ARCHIVE,Perl,Images,JSON,IDEA_MODULE,Manifest,JSP,PATCH,Groovy,XML,Native,CSS,Less,C++,SQL,JavaScript,HTML,Properties,DTD,PLAIN_TEXT,UNKNOWN,JAVA" collectionTime="1445007414608" />
-      <project id="ue-3124" values="Images,CLASS,UNKNOWN,IDEA_MODULE,PATCH,XML,CSS,Perl,JSP,JAVA,Manifest,Native,Properties,Less,C++,Groovy,PLAIN_TEXT,JavaScript,JSON,ARCHIVE,HTML,SQL,DTD" collectionTime="1445949167724" />
-      <project id="ue-3040" values="CLASS,DTD,JSP,Groovy,ARCHIVE,IDEA_MODULE,Images,UNKNOWN,PLAIN_TEXT,Manifest,XML,PATCH,Less,JavaScript,CSS,SQL,Perl,C++,HTML,JSON,JAVA,Native,Properties" collectionTime="1445619378599" />
-      <project id="mainline" values="C++,JavaScript,Images,IDEA_MODULE,UNKNOWN,PLAIN_TEXT,JSON,Groovy,JAVA,Native,HTML,JSP,Perl,DTD,Properties,PATCH,CLASS,XML,SQL,ARCHIVE,CSS,Less" collectionTime="1445948974996" />
+      <project id="ue-2889" values="C++,JavaScript,CLASS,HTML,Manifest,PLAIN_TEXT,CSS,Native,SQL,UNKNOWN,Groovy,JSP,Less,Properties,JAVA,Perl,IDEA_MODULE,JSON,ARCHIVE,XML,PATCH,DTD,Images" collectionTime="1445007414608" />
+      <project id="mainline" values="PLAIN_TEXT,JSP,JAVA,DTD,HTML,Manifest,Less,CLASS,IDEA_MODULE,Properties,JSON,C++,UNKNOWN,PATCH,Native,XML,SQL,JavaScript,Groovy,CSS,Perl,ARCHIVE,Images" collectionTime="1446479832451" />
+      <project id="ue-3124" values="XML,Manifest,JavaScript,Less,C++,IDEA_MODULE,CLASS,JAVA,DTD,Groovy,PATCH,JSON,Native,HTML,CSS,Perl,ARCHIVE,PLAIN_TEXT,Images,SQL,UNKNOWN,Properties,JSP" collectionTime="1446480104872" />
+      <project id="ue-3040" values="Images,C++,JSP,JAVA,JavaScript,UNKNOWN,CSS,ARCHIVE,Perl,Groovy,DTD,CLASS,PATCH,Native,XML,HTML,JSON,Manifest,IDEA_MODULE,PLAIN_TEXT,Properties,Less,SQL" collectionTime="1445619378599" />
     </group>
     <group name="module type">
       <project id="ue-2889" values="JAVA_MODULE" collectionTime="1445007414593" />
-      <project id="ue-3124" values="JAVA_MODULE" collectionTime="1445949167607" />
+      <project id="mainline" values="JAVA_MODULE" collectionTime="1446479832433" />
+      <project id="ue-3124" values="JAVA_MODULE" collectionTime="1446480104803" />
       <project id="ue-3040" values="JAVA_MODULE" collectionTime="1445619378548" />
-      <project id="mainline" values="JAVA_MODULE" collectionTime="1445948974933" />
     </group>
     <group name="deployment server">
       <project id="ue-2889" values="SFTP" collectionTime="1445007414630" />
+      <project id="ue-3124" values="SFTP" collectionTime="1446480104873" />
       <project id="ue-3040" values="SFTP" collectionTime="1445619378612" />
-      <project id="mainline" values="SFTP" collectionTime="1445948975013" />
+      <project id="mainline" values="SFTP" collectionTime="1446479832452" />
     </group>
   </component>
   <component name="UsageTrigger">
     <counts>
-      <entry feature="CreateFile.CreateFileAction" count="4" />
-      <entry feature="execute.Remote.Debug" count="15" />
+      <entry feature="CreateFile.CreateFileAction" count="7" />
+      <entry feature="execute.Remote.Debug" count="22" />
+      <entry feature="ide.settings.Auto_Import" count="2" />
       <entry feature="ide.settings.CSS" count="1" />
-      <entry feature="ide.settings.Deployment" count="4" />
+      <entry feature="ide.settings.Deployment" count="5" />
       <entry feature="ide.settings.Editor_Tabs" count="1" />
       <entry feature="ide.settings.File_and_Code_Templates" count="1" />
       <entry feature="ide.settings.General" count="1" />
       <entry feature="ide.settings.HTML" count="1" />
+      <entry feature="ide.settings.Inspections" count="1" />
       <entry feature="ide.settings.JSON" count="1" />
-      <entry feature="ide.settings.Java" count="8" />
-      <entry feature="ide.settings.Keymap" count="9" />
+      <entry feature="ide.settings.Java" count="10" />
+      <entry feature="ide.settings.Keymap" count="10" />
+      <entry feature="ide.settings.Kotlin" count="1" />
       <entry feature="ide.settings.Less" count="1" />
       <entry feature="ide.settings.Live_Templates" count="6" />
       <entry feature="ide.settings.Other_File_Types" count="1" />
       <entry feature="ide.settings.Subversion" count="1" />
       <entry feature="ide.settings.System_Settings" count="1" />
-      <entry feature="ideaapp.started" count="10" />
+      <entry feature="ideaapp.started" count="11" />
       <entry feature="welcome.screen.WelcomeScreen.OpenProject" count="5" />
     </counts>
   </component>

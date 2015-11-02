@@ -20,17 +20,21 @@
     <location key="StructurePopup.0.0.1440.900" x="485" y="238" />
     <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.2560.1440" x="1018" y="490" />
     <location key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog.0.0.2560.1440" x="1018" y="490" />
+    <location key="FileChooserDialogImpl.0.0.1440.900" x="376" y="207" />
+    <location key="OptionsEditor.0.0.1440.900" x="208" y="40" />
+    <location key="#Inspections.0.0.2560.1440" x="920" y="407" />
+    <location key="VCS.EditChangelistDialog.0.0.2560.1440" x="1118" y="605" />
     <size key="ftp.server.browser.0.0.2560.1440" width="303" height="489" />
     <size key="#Deployment.0.0.2560.1440" width="810" height="728" />
     <size key="SettingsEditor.0.0.2560.1440" width="1207" height="1008" />
-    <size key="GridCell.Tab.0.left.0.0.2560.1440" width="2539" height="418" />
-    <size key="GridCell.Tab.0.center.0.0.2560.1440" width="2539" height="418" />
-    <size key="GridCell.Tab.0.right.0.0.2560.1440" width="2539" height="418" />
-    <size key="GridCell.Tab.0.bottom.0.0.2560.1440" width="2539" height="418" />
-    <size key="GridCell.Tab.1.left.0.0.2560.1440" width="2539" height="418" />
-    <size key="GridCell.Tab.1.center.0.0.2560.1440" width="2539" height="418" />
-    <size key="GridCell.Tab.1.right.0.0.2560.1440" width="2539" height="418" />
-    <size key="GridCell.Tab.1.bottom.0.0.2560.1440" width="2539" height="418" />
+    <size key="GridCell.Tab.0.left.0.0.2560.1440" width="2539" height="419" />
+    <size key="GridCell.Tab.0.center.0.0.2560.1440" width="2539" height="419" />
+    <size key="GridCell.Tab.0.right.0.0.2560.1440" width="2539" height="419" />
+    <size key="GridCell.Tab.0.bottom.0.0.2560.1440" width="2539" height="419" />
+    <size key="GridCell.Tab.1.left.0.0.2560.1440" width="2539" height="419" />
+    <size key="GridCell.Tab.1.center.0.0.2560.1440" width="2539" height="419" />
+    <size key="GridCell.Tab.1.right.0.0.2560.1440" width="2539" height="419" />
+    <size key="GridCell.Tab.1.bottom.0.0.2560.1440" width="2539" height="419" />
     <size key="javadoc.popup.0.0.2560.1440" width="600" height="419" />
     <size key="StructurePopup.0.0.2560.1440" width="470" height="421" />
     <size key="StructurePopup.0.0.1440.900" width="470" height="421" />

@@ -9,10 +9,10 @@
     <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
     <property name="lastTip" value="1" />
     <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Dependencies" />
-    <property name="fileTypeChangedCounter" value="3" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/src/ue-3124&#10;/Users/wasche/.ssh/id_rsa&#10;/Users/wasche/.ssh/id_rsa.pub" />
-    <property name="KEYMAP" value="debug&#10;introdu&#10;organize&#10;new&#10;upload" />
-    <property name="settings.code.style.selected.tab.JAVA" value="Wrapping and Braces" />
+    <property name="fileTypeChangedCounter" value="5" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/.ssh/id_rsa&#10;/Users/wasche/src/ue-3124&#10;/Users/wasche/.ssh/id_rsa.pub" />
+    <property name="KEYMAP" value="New&#10;intention&#10;popup&#10;show&#10;insp" />
+    <property name="settings.code.style.selected.tab.JAVA" value="Tabs and Indents" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="ExpandBeforeRunStepsPanel" value="true" />
@@ -21,8 +21,9 @@
     <property name="evlsprt3.IU-143.249" value="14" />
     <property name="decompiler.legal.notice.accepted" value="true" />
     <property name="evlsprt3.IU-143.379" value="10" />
+    <property name="FileTemplates.SelectedTemplate" value="HTML File" />
+    <property name="settings.code.style.selected.tab.kotlin" value="Imports" />
+    <property name="kotlin.lastUpdateCheck" value="1445959715822" />
     <property name="ProjectStructure.SecondLevelElements" value="0.1815029" />
-    <property name="FileTemplates.CurrentTab" value="Includes" />
-    <property name="FileTemplates.SelectedTemplate" value="File Header" />
   </component>
 </application>

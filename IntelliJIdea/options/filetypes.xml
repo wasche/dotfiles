@@ -1,7 +1,9 @@
 <application>
   <component name="FileTypeManager" version="15">
     <extensionMap>
+      <mapping ext="dust" type="PLAIN_TEXT" />
       <mapping ext="vm" type="PLAIN_TEXT" />
+      <mapping ext="ini" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
