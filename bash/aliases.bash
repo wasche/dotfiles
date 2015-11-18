@@ -1,5 +1,5 @@
 
-alias mkdir='noglob mkdir'
+#alias mkdir='noglob mkdir'
 alias ll='ls -l'
 alias la='ls -Al'
 
