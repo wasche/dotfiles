@@ -21,7 +21,6 @@ base: $(HOME)/.config \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
-	$(HOME)/.pentadactylrc \
 	$(HOME)/.screenrc \
 	$(HOME)/.ackrc \
 	$(HOME)/.subversion \
@@ -38,7 +37,6 @@ base: $(HOME)/.config \
 	$(HOME)/bin \
 	$(HOME)/lib \
 	$(HOME)/.todo.actions.d \
-	$(HOME)/.irssi \
 	intellij
 
 $(HOME)/.%: %
@@ -52,10 +50,6 @@ $(HOME)/bin: bin
 	ln -fs $(abspath $<) $@
 
 $(HOME)/lib: lib
-	ln -fs $(abspath $<) $@
-
-$(HOME)/.pentadactyl/info/default/quickmarks: pentadactyl/info/default/quickmarks
-	mkdir -p $(HOME)/.pentadactyl/info/default
 	ln -fs $(abspath $<) $@
 
 $(HOME)/.bash/os.bash: bash/os/$(OS).bash
