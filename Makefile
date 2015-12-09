@@ -21,7 +21,6 @@ base: $(HOME)/.config \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
-	$(HOME)/.ssh/config \
 	$(HOME)/.pentadactylrc \
 	$(HOME)/.screenrc \
 	$(HOME)/.ackrc \
@@ -48,10 +47,6 @@ $(HOME)/.%: %
 $(HOME)/.config: config
 	ln -fs $(abspath $<) $@
 	mkfifo ~/.config/pianobar/ctl
-
-$(HOME)/.ssh/config: ssh_config
-	mkdir -p $(HOME)/.ssh
-	ln -fs $(abspath $<) $@
 
 $(HOME)/bin: bin
 	ln -fs $(abspath $<) $@
