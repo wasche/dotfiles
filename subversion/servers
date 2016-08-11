@@ -157,4 +157,4 @@ store-plaintext-passwords = no
 # store-auth-creds = no
 # store-ssl-client-cert-pp = no
 # store-ssl-client-cert-pp-plaintext = no
-http-timeout  = 0
+http-timeout = 0
