@@ -10,7 +10,7 @@
     </option>
     <option name="openPaths">
       <list>
-        <option value="$USER_HOME$/src/ue-3124" />
+        <option value="$USER_HOME$/src/mainline" />
       </list>
     </option>
     <option name="lastPath" value="$USER_HOME$/src/mainline" />
@@ -19,12 +19,12 @@
         <entry key="$USER_HOME$/src/mainline">
           <value>
             <RecentProjectMetaInfo>
-              <option name="build" value="IU-143.379" />
+              <option name="build" value="IU-143.1183" />
               <option name="productionCode" value="IU" />
               <option name="eap" value="true" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
-              <option name="projectOpenTimestamp" value="1446480105013" />
-              <option name="buildTimestamp" value="1445313600000" />
+              <option name="projectOpenTimestamp" value="1452180479600" />
+              <option name="buildTimestamp" value="1449032400000" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
