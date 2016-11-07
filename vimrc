@@ -194,12 +194,12 @@ if has("autocmd")
   autocmd Filetype make set noexpandtab
   autocmd Filetype make set autoindent
 
-  autocmd filetype go set tabstop=4
-  autocmd filetype go set shiftwidth=4
-  autocmd filetype go set noexpandtab
-  autocmd filetype go set autoindent
-  autocmd filetype go set smarttab
-  autocmd filetype go set enc=utf-8
+  autocmd Filetype go set tabstop=4
+  autocmd Filetype go set shiftwidth=4
+  autocmd Filetype go set noexpandtab
+  autocmd Filetype go set autoindent
+  autocmd Filetype go set smarttab
+  autocmd Filetype go set enc=utf-8
 
   autocmd Filetype sql set tabstop=2
   autocmd Filetype sql set shiftwidth=2
