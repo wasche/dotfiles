@@ -33,7 +33,6 @@ base: $(HOME)/.config \
 	$(HOME)/.zsh \
 	$(HOME)/.zshrc \
 	$(HOME)/.zsh/os.zsh \
-	$(HOME)/.pentadactyl/info/default/quickmarks \
 	$(HOME)/bin \
 	$(HOME)/lib \
 	$(HOME)/.todo.actions.d \
