@@ -1,0 +1,55 @@
+<application>
+  <component name="FileBasedIndex">
+    <option name="registeredIndices">
+      <list>
+        <option value="java.method.parameter.types" />
+        <option value="java.anonymous.baseref" />
+        <option value="jvm.static.member.type" />
+        <option value="jvm.static.member.name" />
+        <option value="java.method.name" />
+        <option value="java.field.name" />
+        <option value="java.class.extlist" />
+        <option value="java.annotations" />
+        <option value="Less.variables" />
+        <option value="Less.mixins" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetMultifileClassPartIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetFileFacadeShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetFileFacadeClassByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetFilePartClassIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetFileFacadeFqNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetProbablyNothingPropertyShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetProbablyNothingFunctionShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetAnnotationsIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetTopLevelExtensionsByReceiverTypeIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetTopLevelPropertyFqnNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetTopLevelFunctionFqnNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetSuperClassIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetFunctionShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetPropertyShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetFullClassNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetClassShortNameIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetTopLevelPropertyByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetTopLevelFunctionByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetTopLevelClassByPackageIndex" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.JetExactPackagesIndex" />
+        <option value="gr.anonymous.class" />
+        <option value="gr.class.super" />
+        <option value="gr.script.class" />
+        <option value="gr.annot.members" />
+        <option value="gr.annot.method.name" />
+        <option value="gr.method.name" />
+        <option value="gr.field.name" />
+        <option value="gr.script.fqn" />
+        <option value="gr.class.fqn" />
+        <option value="properties.index" />
+        <option value="Css.attr" />
+        <option value="Css.id" />
+        <option value="Css.class" />
+        <option value="dom.elementClass" />
+        <option value="dom.namespaceKey" />
+        <option value="java.class.fqn" />
+        <option value="java.class.shortname" />
+      </list>
+    </option>
+  </component>
+</application>

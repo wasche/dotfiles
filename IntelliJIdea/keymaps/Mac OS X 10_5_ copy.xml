@@ -1,0 +1,97 @@
+<keymap version="1" name="Mac OS X 10.5+ copy" parent="Mac OS X 10.5+">
+  <action id="CommentByBlockComment">
+    <keyboard-shortcut first-keystroke="meta alt divide" />
+    <keyboard-shortcut first-keystroke="shift ctrl divide" />
+    <keyboard-shortcut first-keystroke="shift meta divide" />
+  </action>
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="meta slash" />
+  </action>
+  <action id="Compile">
+    <keyboard-shortcut first-keystroke="shift meta c" />
+  </action>
+  <action id="Console.Execute.Multiline" />
+  <action id="CopyPaths" />
+  <action id="EditorDown">
+    <keyboard-shortcut first-keystroke="down" />
+  </action>
+  <action id="EditorLeft">
+    <keyboard-shortcut first-keystroke="left" />
+  </action>
+  <action id="EditorLineEnd">
+    <keyboard-shortcut first-keystroke="end" />
+    <keyboard-shortcut first-keystroke="meta right" />
+  </action>
+  <action id="EditorLineStart">
+    <keyboard-shortcut first-keystroke="home" />
+    <keyboard-shortcut first-keystroke="meta left" />
+  </action>
+  <action id="EditorRight">
+    <keyboard-shortcut first-keystroke="right" />
+  </action>
+  <action id="EditorSplitLine" />
+  <action id="FileChooser.NewFolder" />
+  <action id="Generate">
+    <keyboard-shortcut first-keystroke="ctrl n" />
+  </action>
+  <action id="IntroduceConstant">
+    <keyboard-shortcut first-keystroke="ctrl meta c" />
+  </action>
+  <action id="IntroduceField">
+    <keyboard-shortcut first-keystroke="ctrl meta f" />
+  </action>
+  <action id="IntroduceVariable">
+    <keyboard-shortcut first-keystroke="ctrl meta v" />
+  </action>
+  <action id="KotlinShellExecute" />
+  <action id="NewClass">
+    <keyboard-shortcut first-keystroke="meta n" />
+  </action>
+  <action id="NewElement">
+    <keyboard-shortcut first-keystroke="ctrl enter" />
+  </action>
+  <action id="NewFile">
+    <keyboard-shortcut first-keystroke="shift meta n" />
+  </action>
+  <action id="NewScratchFile" />
+  <action id="OptimizeImports">
+    <keyboard-shortcut first-keystroke="ctrl meta o" />
+  </action>
+  <action id="PropertyInspectorActions.AddProperty">
+    <keyboard-shortcut first-keystroke="ctrl enter" />
+  </action>
+  <action id="PublishGroup.Upload">
+    <keyboard-shortcut first-keystroke="ctrl meta u" />
+  </action>
+  <action id="PublishGroup.UploadTo" />
+  <action id="QuickImplementations">
+    <keyboard-shortcut first-keystroke="alt space" />
+    <keyboard-shortcut first-keystroke="meta y" />
+    <keyboard-shortcut first-keystroke="shift meta i" />
+  </action>
+  <action id="RemoteHost.NewRemoteItem">
+    <keyboard-shortcut first-keystroke="ctrl enter" />
+  </action>
+  <action id="RemoteHostView.CopyPaths" />
+  <action id="ShowIntentionActions">
+    <keyboard-shortcut first-keystroke="alt enter" />
+    <keyboard-shortcut first-keystroke="meta enter" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="ctrl alt enter" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="ctrl alt down" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="ctrl alt left" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="ctrl alt up" />
+  </action>
+  <action id="ToggleFullScreen" />
+  <action id="ViewSource" />
+</keymap>

@@ -5,8 +5,8 @@ brew install ssh-copy-id
 brew install mosh
 brew install tmux
 
-hub clone powerline/fonts
-pushd fonts
+git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts
+pushd /tmp/powerline-fonts
 ./install.sh
 popd
-rm -rf fonts
+rm -rf /tmp/powerline-fonts

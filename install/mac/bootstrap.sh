@@ -22,7 +22,7 @@ if [ "$ans" -ne "n" ]; then
 fi
 
 # setup dotfiles
-hub clone -p $USER/dotfiles
+git clone git@github.com:wasche/dotfiles.git
 pushd dotfiles
 git submodule init
 git submodule update
@@ -30,4 +30,4 @@ make
 popd
 
 # finish the install
-dotfiles/install/mac/install.sh
+./dotfiles/install/mac/install.sh

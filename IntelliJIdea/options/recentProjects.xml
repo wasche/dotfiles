@@ -1,0 +1,70 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/src/mainline" />
+        <option value="$USER_HOME$/src/ue-3124" />
+        <option value="$USER_HOME$/src/ue-3040" />
+        <option value="$USER_HOME$/src/ue-2889" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/src/ue-3124" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/src/mainline" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/src/mainline">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IU-143.379" />
+              <option name="productionCode" value="IU" />
+              <option name="eap" value="true" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1446480105013" />
+              <option name="buildTimestamp" value="1445313600000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/src/ue-2889">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IU-143.116" />
+              <option name="productionCode" value="IU" />
+              <option name="eap" value="true" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1444755573592" />
+              <option name="buildTimestamp" value="1444190400000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/src/ue-3040">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IU-143.379" />
+              <option name="productionCode" value="IU" />
+              <option name="eap" value="true" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1445615641014" />
+              <option name="buildTimestamp" value="1445313600000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/src/ue-3124">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="IU-143.379" />
+              <option name="productionCode" value="IU" />
+              <option name="eap" value="true" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1446479832592" />
+              <option name="buildTimestamp" value="1445313600000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>

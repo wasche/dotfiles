@@ -11,6 +11,7 @@ try_which() {
 }
 
 try_alias ls ls --color=auto || try_alias ls ls -G
+try_alias grep grep --color=auto
 
 alias mkdir='noglob mkdir'
 alias ll='ls -l'

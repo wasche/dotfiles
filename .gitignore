@@ -8,3 +8,4 @@ config/sublime-text-2/Packages/Velocity/velocity\ syntax.tmLanguage.cache
 bin/ta
 zsh/include.d
 subversion/auth
+atom/.node-gyp

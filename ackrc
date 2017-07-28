@@ -10,5 +10,4 @@ config=.ini
 dust=.dust
 --type-set
 less=.less
---invert-file-match
 --ignore-dir=node_modules

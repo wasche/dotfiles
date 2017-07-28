@@ -1,12 +1,15 @@
 OS=$(shell ./bin/os.sh)
 SUBLIME_PACKAGES_DIR=$(abspath sublime-text-2/Packages)
 SUBLIME_SETTINGS_DIR=$(SUBLIME_PACKAGES_DIR)/User
+INTELLIJ_SETTINGS_DIR=$(abspath IntelliJIdea)
+INTELLIJ_VER=15
 
 ifeq ($(OS),ubuntu)
 	SUBLIME_DIR=$(HOME)/.config/sublime-text-2
 endif
 ifeq ($(OS),macosx)
 	SUBLIME_DIR=$(HOME)/Library/Application\ Support/Sublime\ Text\ 3
+	INTELLIJ_PREFS=$(HOME)/Library/Preferences/IntelliJIdea$(INTELLIJ_VER)
 endif
 
 SUBLIME_PACKAGES=$(SUBLIME_DIR)/Packages
@@ -18,8 +21,6 @@ base: $(HOME)/.config \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
-	$(HOME)/.ssh/config \
-	$(HOME)/.pentadactylrc \
 	$(HOME)/.screenrc \
 	$(HOME)/.ackrc \
 	$(HOME)/.subversion \
@@ -32,12 +33,10 @@ base: $(HOME)/.config \
 	$(HOME)/.zsh \
 	$(HOME)/.zshrc \
 	$(HOME)/.zsh/os.zsh \
-	$(HOME)/.pentadactyl/info/default/quickmarks \
 	$(HOME)/bin \
 	$(HOME)/lib \
 	$(HOME)/.todo.actions.d \
-	$(HOME)/.irssi
-	mkdir -p $(HOME)/.node-completion
+	intellij
 
 $(HOME)/.%: %
 	ln -fs $(abspath $<) $@
@@ -46,18 +45,10 @@ $(HOME)/.config: config
 	ln -fs $(abspath $<) $@
 	mkfifo ~/.config/pianobar/ctl
 
-$(HOME)/.ssh/config: ssh_config
-	mkdir -p $(HOME)/.ssh
-	ln -fs $(abspath $<) $@
-
 $(HOME)/bin: bin
 	ln -fs $(abspath $<) $@
 
 $(HOME)/lib: lib
-	ln -fs $(abspath $<) $@
-
-$(HOME)/.pentadactyl/info/default/quickmarks: pentadactyl/info/default/quickmarks
-	mkdir -p $(HOME)/.pentadactyl/info/default
 	ln -fs $(abspath $<) $@
 
 $(HOME)/.bash/os.bash: bash/os/$(OS).bash
@@ -87,3 +78,9 @@ $(SUBLIME_PACKAGES)/%: $(SUBLIME_PACKAGES_DIR)/%
 sublime-langs: $(SUBLIME_PACKAGES)/Velocity $(SUBLIME_PACKAGES)/Jade $(SUBLIME_PACKAGES)/Stylus
 
 sublime: sublime-settings sublime-langs
+
+$(INTELLIJ_PREFS): $(INTELLIJ_SETTINGS_DIR)
+	ln -fs "$<" "$@"
+
+intellij: $(INTELLIJ_PREFS)
+
