@@ -27,6 +27,7 @@ if [[ -d /usr/local/android ]]; then
   export PATH=$PATH:/usr/local/android
 fi
 
+export GOPATH=/usr/local/go-packages
 if [[ -d ~/src/go-lang/bin ]]; then
   export PATH=$PATH:~/src/go-lang/bin
 fi
