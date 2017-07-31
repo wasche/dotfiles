@@ -11,6 +11,7 @@ endif
 base: $(HOME)/.config \
 	$(HOME)/.vim \
 	$(HOME)/.vimrc \
+	$(HOME)/.tmux \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
@@ -19,8 +20,6 @@ base: $(HOME)/.config \
 	$(HOME)/.subversion \
 	$(HOME)/.gitconfig \
 	$(HOME)/.gitignore \
-	$(HOME)/.bash \
-	$(HOME)/.bashrc \
 	$(HOME)/.bash/os.bash \
 	$(HOME)/.bash_profile \
 	$(HOME)/.zsh \
