@@ -35,7 +35,6 @@ $(HOME)/.%: %
 
 $(HOME)/.config: config
 	ln -fs $(abspath $<) $@
-	mkfifo ~/.config/pianobar/ctl
 
 $(HOME)/bin: bin
 	ln -fs $(abspath $<) $@
