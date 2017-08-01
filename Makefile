@@ -8,7 +8,7 @@ ifeq ($(OS),macosx)
 	INTELLIJ_PREFS=$(HOME)/Library/Preferences/IntelliJIdea$(INTELLIJ_VER)
 endif
 
-base: $(HOME)/.config \
+base: \
 	$(HOME)/.vim \
 	$(HOME)/.vimrc \
 	$(HOME)/.tmux \
