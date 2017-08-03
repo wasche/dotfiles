@@ -41,9 +41,6 @@ $(HOME)/bin: bin
 $(HOME)/lib: lib
 	ln -fs $(abspath $<) $@
 
-$(HOME)/.bash/os.bash: bash/os/$(OS).bash
-	ln -fs $(abspath $<) $@
-
 $(HOME)/.zsh/os.zsh: zsh/os/$(OS)/os.zsh
 	ln -fs $(abspath $<) $@
 
