@@ -19,8 +19,6 @@ base: \
 	$(HOME)/.subversion \
 	$(HOME)/.gitconfig \
 	$(HOME)/.gitignore \
-	$(HOME)/.bash/os.bash \
-	$(HOME)/.bash_profile \
 	$(HOME)/.zsh \
 	$(HOME)/.zshrc \
 	$(HOME)/.zsh/os.zsh \
