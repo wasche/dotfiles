@@ -51,10 +51,10 @@ update_prompt()
     export SVN_REV=$($SVN info | grep 'Revision: ' | cut -f 2 -d ' ')
     export SVN_DIR=$PWD
     if [[ ! -z "$SVN_BRANCH" ]]; then
-      PROMPT="$PROMPT $SVN_BRANCH"
+      PROMPT="$PROMPT  ⭠$SVN_BRANCH"
     fi
     if [[ ! -z "$SVN_REV" ]]; then
-      PROMPT="$PROMPT r$SVN_REV"
+      PROMPT="$PROMPT  r$SVN_REV"
     fi
   elif $(git branch >/dev/null 2>&1); then
     ref=$(git symbolic-ref HEAD 2>/dev/null) || return

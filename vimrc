@@ -4,7 +4,11 @@ set nocompatible
 
 filetype off
 
+
 execute pathogen#infect()
+let g:airline#extensions#tabline#enabled = 1
+set guifont=Source\ Code\ Pro\ for\ Powerline
+let g:airline_powerline_fonts = 1
 
 syntax enable
 filetype plugin indent on
@@ -42,7 +46,7 @@ if has("autocmd")
   autocmd Filetype python set autoindent
   autocmd Filetype python set enc=utf-8
   autocmd Filetype python set keywordprg=pydoc
-  autocmd Filetype python set iskeyword=a-z,A-Z,48-57,_,.  
+  autocmd Filetype python set iskeyword=a-z,A-Z,48-57,_,.
 
   autocmd Filetype ruby set tabstop=2
   autocmd Filetype ruby set shiftwidth=2
@@ -74,7 +78,7 @@ if has("autocmd")
   autocmd Filetype javascript set expandtab
   autocmd Filetype javascript set softtabstop=0
   autocmd Filetype javascript set autoindent
-  autocmd Filetype javascript set enc=utf-8  
+  autocmd Filetype javascript set enc=utf-8
 
   autocmd Filetype coffee set tabstop=2
   autocmd Filetype coffee set shiftwidth=2
@@ -82,7 +86,7 @@ if has("autocmd")
   autocmd Filetype coffee set expandtab
   autocmd Filetype coffee set softtabstop=0
   autocmd Filetype coffee set autoindent
-  autocmd Filetype coffee set enc=utf-8  
+  autocmd Filetype coffee set enc=utf-8
 
   autocmd Filetype java set tabstop=4
   autocmd Filetype java set shiftwidth=4
@@ -91,7 +95,7 @@ if has("autocmd")
   autocmd Filetype java set softtabstop=4
   autocmd Filetype java set autoindent
   autocmd Filetype java set enc=utf-8
-  autocmd Filetype java setlocal omnifunc=javacomplete#Complete  
+  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 
   autocmd Filetype css set tabstop=2
   autocmd Filetype css set shiftwidth=2
@@ -159,7 +163,7 @@ if has("autocmd")
 
   autocmd Filetype java nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
   autocmd Filetype java nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
-  autocmd Filetype java nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>  
+  autocmd Filetype java nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
 
   autocmd Filetype ant set tabstop=2
   autocmd Filetype ant set shiftwidth=2
