@@ -15,7 +15,6 @@ base: \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
-	$(HOME)/.screenrc \
 	$(HOME)/.ackrc \
 	$(HOME)/.subversion \
 	$(HOME)/.gitconfig \
