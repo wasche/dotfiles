@@ -30,10 +30,10 @@ get_svn_cmd()
 update_prompt()
 {
   # colors
-  local _bo=$'\e[48;2;255;135;0m';   _bo="%{$_bo%}"
+  local _bo=$'\e[48;2;226;105;40m';  _bo="%{$_bo%}"
   local _bg=$'\e[48;2;58;58;58m';    _bg="%{$_bg%}"
   local _cg=$'\e[38;2;58;58;58m';    _cg="%{$_cg%}"
-  local _co=$'\e[38;2;255;135;0m';   _co="%{$_co%}"
+  local _co=$'\e[38;2;225;105;40m';  _co="%{$_co%}"
   local _cw=$'\e[38;2;244;244;244m'; _cw="%{$_cw%}"
   local _cb="%{$fg[black]%}"
   local _r="%{$reset_color%}"
