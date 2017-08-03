@@ -4,29 +4,10 @@ set nocompatible
 
 filetype off
 
-" setup vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-
-" Dash documentation integration
-" provides :Dash family of commands
-" @see https://github.com/rizzatti/dash.vim
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
-
-Bundle 'groenewege/vim-less'
-
-Bundle 'kchmck/vim-coffee-script'
+execute pathogen#infect()
 
 syntax enable
-filetype plugin indent on " needed by vundle
+filetype plugin indent on
 
 set background=dark
 colorscheme desert
