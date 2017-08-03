@@ -1,5 +1,0 @@
-audio_quality = high
-user = kurakin@gmail.com
-password_command = gpg2 --decrypt ~/.config/pianobar/password
-autostart_station = 1008523299662388321
-event_command = /Users/wasche/.config/pianobar/notify.sh

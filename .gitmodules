@@ -7,27 +7,18 @@
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "zsh/oh-my-zsh"]
-	path = zsh/oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule "vim/bundle/vundle"]
-	path = vim/bundle/vundle
-	url = http://github.com/gmarik/vundle.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "vim/bundle/funcoo.vim"]
-	path = vim/bundle/funcoo.vim
-	url = git://github.com/rizzatti/funcoo.vim.git
-[submodule "vim/bundle/dash.vim"]
-	path = vim/bundle/dash.vim
-	url = git://github.com/rizzatti/dash.vim.git
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
