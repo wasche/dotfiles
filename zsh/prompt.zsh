@@ -4,3 +4,17 @@ ln -sf $DIR/spaceship-prompt/spaceship.zsh /usr/local/share/zsh/site-functions/p
 
 autoload -U promptinit; promptinit
 prompt spaceship
+SPACESHIP_PROMPT_ORDER=(
+  user
+  dir
+  host
+  git
+  docker
+  kubecontext
+  exec_time
+  line_sep
+  battery
+  jobs
+  exit_code
+  char
+)
