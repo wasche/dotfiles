@@ -2,6 +2,8 @@ export EDITOR="vim"
 
 export CC="gcc"
 
+export USER_HOME=$HOME
+
 export ANT_HOME=/usr/local/ant
 export ANT_OPTS=-Xmx500M;
 

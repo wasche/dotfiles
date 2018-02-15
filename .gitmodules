@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "zsh/spaceship-prompt"]
+	path = zsh/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
