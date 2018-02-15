@@ -15,13 +15,10 @@ base: \
 	$(HOME)/.tmux.conf \
 	$(HOME)/.todo.cfg \
 	$(HOME)/.jshintrc \
-	$(HOME)/.screenrc \
 	$(HOME)/.ackrc \
 	$(HOME)/.subversion \
 	$(HOME)/.gitconfig \
 	$(HOME)/.gitignore \
-	$(HOME)/.bash/os.bash \
-	$(HOME)/.bash_profile \
 	$(HOME)/.zsh \
 	$(HOME)/.zshrc \
 	$(HOME)/.zsh/os.zsh \
@@ -40,9 +37,6 @@ $(HOME)/bin: bin
 	ln -fs $(abspath $<) $@
 
 $(HOME)/lib: lib
-	ln -fs $(abspath $<) $@
-
-$(HOME)/.bash/os.bash: bash/os/$(OS).bash
 	ln -fs $(abspath $<) $@
 
 $(HOME)/.zsh/os.zsh: zsh/os/$(OS)/os.zsh
