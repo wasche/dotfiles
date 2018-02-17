@@ -12,6 +12,7 @@ let g:airline_powerline_fonts = 1
 
 syntax enable
 filetype plugin indent on
+set modelines=2
 
 set background=dark
 colorscheme desert

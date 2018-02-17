@@ -31,3 +31,5 @@ if [[ -f ~/.zsh.local ]]; then
 fi
 
 true
+
+export PATH="$HOME/.yarn/bin:$PATH"
