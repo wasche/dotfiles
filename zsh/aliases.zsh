@@ -14,8 +14,8 @@ try_alias ls ls --color=auto || try_alias ls ls -G
 try_alias grep grep --color=auto
 
 alias mkdir='noglob mkdir'
-alias ll='ls -l'
-alias la='ls -Al'
+alias ll='ls -lh'
+alias la='ls -Alh'
 
 try_which gitk gitview
 alias ga="gitk --all $|"

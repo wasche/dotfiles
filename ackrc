@@ -13,6 +13,8 @@ less=.less
 --type-set
 gradle=.gradle
 --type-set
-jsx=.jsx
+react=.jsx
+--type-set
+sass=.sass
 --ignore-dir=node_modules
 --ignore-dir=.idea
