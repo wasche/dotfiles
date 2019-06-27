@@ -16,5 +16,7 @@ gradle=.gradle
 react=.jsx
 --type-set
 sass=.sass
+--type-set
+jsx=.jsx
 --ignore-dir=node_modules
 --ignore-dir=.idea
