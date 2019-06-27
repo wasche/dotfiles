@@ -1,5 +1,5 @@
-export JAVA_HOME=/usr/jdk1.8
-export JDK_HOME=/usr/jdk1.8
+export JAVA_HOME=/usr/jdk11
+export JDK_HOME=/usr/jdk11
 if [[ "$PATH" != *$JAVA_HOME/bin* ]]; then
   export PATH=$PATH:$JAVA_HOME/bin
 fi
