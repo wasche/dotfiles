@@ -77,3 +77,6 @@ mount-ssh()
 function regex { perl -lne '@a=m|'$1'|g;print "@a"' }
 
 alias silverfish='mosh --server=/usr/local/bin/mosh-server silverfish "tmux attach || tmux new"'
+
+# Creates Node container with mapped current folder and runs Bash shell
+alias node-box='docker run -v $PWD:/src -w /src -u node -it node /bin/bash'
